@@ -218,19 +218,31 @@
 
 /* User Dashboard styling */
 .myaccount-heading h4 span {
-    color: #bb0b0b;
+    color: #e94d65;
 }
 
 .account-menu-list {
     background-color: #fff;
-    padding: 10px;
     box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
     border-radius: 5px;
 }
-
+.menu-header{
+    margin: 0;
+    padding: 2px 10px;
+    font-size: 20px;
+    background-color: #e94d65;
+    color: #fff;
+    border-radius: 15px 15px 0px 0px;
+}
+.account-menu-list ul {
+    padding: 5px;
+}
 .account-menu-list ul li {
     padding: 3px 0px;
     border-bottom: 1px solid #EBEBEB;
+}
+.account-menu-list ul li:hover {
+    border-bottom: 1px solid #d60303;
 }
 
 .account-menu-list ul li a{
@@ -245,7 +257,7 @@
 }
 
 .account-menu-list ul li a:hover{
-    color: #bb0b0b;
+    color: #d60303;
 }
 
 

@@ -22,15 +22,13 @@
     <div class="container pt-5 pb-5">
        <div class="row">
         <div class="col-md-12">
-            <div class="myaccount-heading">
-                <h4>Welcome Back - <span>Md Al Mamun</span></h4>
-            </div>
+            
         </div>
        </div>
        <div class="row">
         <div class="col-md-3">
             <div class="account-menu-list">
-                <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                {{-- <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                     <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="true">Profile</button>
                     <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-applied-job" type="button" role="tab" aria-controls="v-pills-applied-job" aria-selected="false">Appliyed Job List</button>
                     <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Job Post List</button>
@@ -38,17 +36,26 @@
                     <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-all-tender" type="button" role="tab" aria-controls="v-pills-all-tender" aria-selected="false">All Tender</button>
                     <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile-edit" type="button" role="tab" aria-controls="v-pills-profile-edit" aria-selected="false">Profile Edit</button>
                     <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-logout" type="button" role="tab" aria-controls="v-pills-logout" aria-selected="false">Logout</button>
-                </div>
-
+                </div> --}}
+                <p class="text-uppercase menu-header text-center">User Information</p>
+                <ul>
+                    <li><a href="#">My Pfofile</a></li>
+                    <li><a href="#">Applyed Job List</a></li>
+                    <li><a href="#">Job Post List</a></li>
+                    <li><a href="#">Vat List</a></li>
+                    <li><a href="#">All Tender</a></li>
+                    <li><a href="#">Profile Edit</a></li>
+                    <li><a href="#">Logout</a></li>
+                </ul>
             </div>
         </div>
         <div class="col-md-9">
             <div class="right-content-wrap shadow p-2 ">
                 <div class="tab-content" id="v-pills-tabContent">
                     <div class="tab-pane fade show active" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-home-tab">
-                        <p>
-                            our profile
-                        </p>
+                        <div class="myaccount-heading">
+                            <h4>Welcome Back - <span>Md Al Mamun</span></h4>
+                        </div>
                     </div>
                     <div class="tab-pane fade" id="v-pills-applied-job" role="tabpanel" aria-labelledby="v-pills-profile-tab">
                         <div class="data-table-wrap">
