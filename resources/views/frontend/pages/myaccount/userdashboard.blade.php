@@ -19,7 +19,7 @@
 
 <!-- Start content -->
 <div class="rs-about style2">
-    <div class="container pt-5 pb-5">
+    <div class="container py-5">
 
         <div class="row">
             <div class="tab tab-menu col-3">
@@ -32,10 +32,10 @@
                 <button class="tablinks" onclick="openCity(event, 'logout')">Logout</button>
             </div>
       
-            <div id="my-profile" class="tabcontent col-8">
+            <div id="my-profile" class="tabcontent col-9 px-4 py-4">
                     <h4>Welcome Back - <span>Md Al Mamun</span></h4>
             </div>
-            <div class="tabcontent col-8" id="applied-job">
+            <div class="tabcontent col-9 px-4 py-4" id="applied-job">
                 <div class="table-responsive">
                     <table id="applied-job-table" class="table table-striped">
                         <thead>
@@ -262,7 +262,8 @@
                     </table>
                 </div>
             </div> 
-            <div class="tabcontent col-8" id="job-post-list">
+
+            <div class="tabcontent col-9 px-4 py-4" id="job-post-list">
                 <div class="table-responsive">
                     <table id="job-post-list-table" class="table table-striped">
                         <thead>
@@ -487,10 +488,10 @@
                             </tr>
                         </tbody>
                     </table>
->>>>>>> 3bb4638270f8fc51494ad10ef4cc233d964b7665
                 </div>
             </div>
-           <div class="tabcontent col-8" id="vat-list">
+
+           <div class="tabcontent col-9 px-4 py-4" id="vat-list">
                 <div class="table-responsive">
                     <table id="vat-list-table" class="table table-striped">
                         <thead>
@@ -709,7 +710,8 @@
                         </tbody>
                     </table>
                 </div>
-           </div><div class="tabcontent col-8" id="all-tender">
+           </div>
+           <div class="tabcontent col-9 px-4 py-4" id="all-tender">
                 <div class="table-responsive">
                     <table id="all-tender-table" class="table table-striped">
                         <thead>
@@ -930,7 +932,7 @@
                 </div>
            </div>
       
-            <div id="logout" class="tabcontent col-8">
+            <div id="logout" class="tabcontent col-9 px-4 py-4">
                 <h3>logout</h3>
                 <p>You are loged out</p>
             </div>    
@@ -960,17 +962,19 @@
 
         
     function openCity(evt, cityName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
     }
 
     // Get the element with id="defaultOpen" and click on it
