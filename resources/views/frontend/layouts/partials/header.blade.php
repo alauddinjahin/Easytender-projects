@@ -60,8 +60,8 @@
                                             <a href="#">Tender</a>
                                             <ul class="sub-menu">
                                                 <li><a href="{{ URL('/offer-tender')}}">Offer Tender</a></li>
-                                                <li><a href="#">My Tender</a></li>
-                                                <li><a href="{{ URL('/my-offer')}}">My Offer</a></li>
+                                                <li><a href="{{ URL('/my-offer')}}">My Tender</a></li>
+                                                <!-- <li><a href="{{ URL('/my-offer')}}">My Offer</a></li> -->
                                                 <li><a href="{{ URL('/all-tender')}}">All Tender</a></li>
                                             </ul>
                                         </li>
