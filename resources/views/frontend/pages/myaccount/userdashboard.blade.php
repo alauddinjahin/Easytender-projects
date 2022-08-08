@@ -37,7 +37,7 @@
             </div>
             <div class="tabcontent col-9 px-4 py-4" id="applied-job">
                 <div class="table-responsive">
-                    <table id="applied-job-table" class="table table-striped">
+                    <table id="applied-job-table" class="table table-striped nowrap">
                         <thead>
                             <tr>
                                 <th>JOb ID</th>
@@ -265,7 +265,7 @@
 
             <div class="tabcontent col-9 px-4 py-4" id="job-post-list">
                 <div class="table-responsive">
-                    <table id="job-post-list-table" class="table table-striped">
+                    <table id="job-post-list-table" class="table table-striped nowrap">
                         <thead>
                             <tr >
                                 <th>SL No</th>
@@ -493,7 +493,7 @@
 
            <div class="tabcontent col-9 px-4 py-4" id="vat-list">
                 <div class="table-responsive">
-                    <table id="vat-list-table" class="table table-striped">
+                    <table id="vat-list-table" class="table table-striped nowrap">
                         <thead>
                             <tr>
                                 <th>SL no</th>
@@ -713,7 +713,7 @@
            </div>
            <div class="tabcontent col-9 px-4 py-4" id="all-tender">
                 <div class="table-responsive">
-                    <table id="all-tender-table" class="table table-striped">
+                    <table id="all-tender-table" class="table table-striped nowrap">
                         <thead>
                             <tr>
                                 <th>SL no</th>
@@ -938,6 +938,7 @@
             </div>    
         </div>
         
+        
     </div>
 </div>
 <!-- end content -->
@@ -945,21 +946,18 @@
 @endsection
 
 @push('css')
-    <link rel="stylesheet" href="{{ asset('backend/css/user-dashboard.css')}}">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="{{ asset('backend/css/user-dashboard.css')}}">
 @endpush
 
 @push('js')
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
 <script src="{{ asset('frontend/custom.js')}}"></script>
-<script src="{{ asset('frontend/vendor/datatable/jquery.dataTables.min.js')}}"></script>
-<script src="{{ asset('frontend/vendor/datatable/dataTables.bootstrap5.min.js')}}"></script>
-
 <script>
     $(document).ready(function () {
-        $("#applied-job-table, #job-post-list-table, #vat-list-table, #all-tender-table").DataTable();
+        $("#test-table,#applied-job-table, #job-post-list-table, #vat-list-table, #all-tender-table").DataTable();
     });
-
-
-
         
     function openCity(evt, cityName) {
         var i, tabcontent, tablinks;
