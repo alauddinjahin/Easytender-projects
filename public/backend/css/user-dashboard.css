@@ -1,0 +1,75 @@
+
+/* Style the tab */
+.tab {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  height: 370px;
+}
+
+.tab button {
+  display: block;
+  color: black;
+  padding: 11px 15px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #fff;
+  border-left: 2px solid #e94d65;
+  color: #e94d65;
+}
+
+.tab button.active {
+  background-color: #fff;
+  border-left: 2px solid #e94d65;
+  color: #e94d65;
+}
+
+/* Style the tab content */
+.tabcontent {
+  padding: 0px 12px;
+  border-left: none;
+  background-color: #fdfdfd;
+}
+
+.tab-menu{
+  padding: 0;
+}
+
+.menu-header {
+  display: block;
+  border-radius: 10px 10px 0px 0px;
+  background-color: #e3556a;
+  color: #f1f1f1;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px 4px;
+  font-size: 20px;
+}
+
+.tab-content-title{
+  text-transform: uppercase;
+  font-size: 30px;
+  background-color: #f89dab;
+}
+
+.page-item.active .page-link {
+  z-index: 9;
+  color: #fff;
+  background-color: #e3556a;
+  border-color: #e3556a;
+}
+
+.page-link{
+  color: #e74960;
+  text-decoration: none;
+  background-color: #fff;
+}
+
