@@ -35,10 +35,14 @@
 /* Style the tab content */
 .tabcontent {
   padding: 0px 12px;
-  border-left: none;
-  background-color: #fdfdfd;
+  border: none;
+ 
 }
-
+.profile-content{
+  background-color: #f2f1f1;
+  margin-left: 10px;
+  border-radius: 10px;
+}
 .tab-menu{
   padding: 0;
 }
@@ -73,3 +77,19 @@
   background-color: #fff;
 }
 
+.fa{
+  color: #e74960;
+}
+.profile-image img{
+  background: #e74960;
+  border-radius: 15px;
+}
+.line{
+  border:2px solid #e74960
+}
+
+.btn-profile-edit{
+  border: 2px solid #e74960;
+  border-radius: 3px;
+  
+}
