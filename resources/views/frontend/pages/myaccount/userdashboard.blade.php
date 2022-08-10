@@ -46,7 +46,7 @@
                                 <span class="text-uppercase display-6">Mr Anonimous User</span>
                             </div>
                             <div class="col-2">
-                                <button class="btn btn-profile-edit"><i class="fa fa-pencil"></i> </button>
+                                <button class="btn btn-profile-edit" data-bs-toggle="modal" data-bs-target="#profile-edit-modal"><i class="fa fa-pencil"></i> </button>
                             </div>
                         </div>
                         <div class="line"></div>
@@ -956,9 +956,64 @@
                 <p>You are loged out</p>
             </div>    
         </div>
-        
-        
     </div>
+
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="profile-edit-modal" data-bs-backdrop="static">
+    
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-uppercase" id="profile-edit-modal-label">Profile Update</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="line"></div>
+              <div class="modal-body">
+                <form action="" method="post">
+                    @csrf
+                    <div class="form-group row mb-3">
+                        <div class="col-md-3">
+                            <label for="name" class="col-form-label">Your Name:</label>
+                        </div>
+                        <div class="col-md-9">
+                            <input type="text" name="name" class="form-control " id="name" placeholder="Type Your Name">
+                        </div>
+                    </div> 
+                    <div class="form-group row mb-3">
+                        <div class="col-md-3">
+                            <label for="email" class="col-form-label">Your Email:</label>
+                        </div>
+                        <div class="col-md-9">
+                            <input type="text" name="email" class="form-control " id="email" placeholder="test@example" readonly>
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                        <div class="col-md-3">
+                            <label for="phone" class="col-form-label">Your Phone:</label>
+                        </div>
+                        <div class="col-md-9">
+                            <input type="text" name="phone" class="form-control " id="phone" placeholder="Type Your Phone Number">
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                        <div class="col-md-3">
+                            <label for="address" class="col-form-label">Your Address:</label>
+                        </div>
+                        <div class="col-md-9">
+                            <input type="text" name="address" class="form-control " id="address" placeholder="Type Your Address">
+                        </div>
+                    </div>
+                </form>
+              </div>
+              <div class="line"></div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-custom">Update</button>
+              </div>
+        </div>
+    </div>
+  </div>
 </div>
 <!-- end content -->
     
