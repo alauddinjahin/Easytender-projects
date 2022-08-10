@@ -39,7 +39,7 @@
  
 }
 .profile-content{
-  background-color: #f2f1f1;
+  background-color: #f7f5f5;
   margin-left: 10px;
   border-radius: 10px;
 }
@@ -80,16 +80,20 @@
 .fa{
   color: #e74960;
 }
+.profile-content{
+  min-height: 400px;
+}
 .profile-image img{
-  background: #e74960;
+  border: 1px solid #e74960;
   border-radius: 15px;
 }
+
 .line{
-  border:2px solid #e74960
+  border:1px solid #e74960
 }
 
 .btn-profile-edit{
-  border: 2px solid #e74960;
+  border: 1px solid #e74960;
   border-radius: 3px;
-  
+  float: right;
 }

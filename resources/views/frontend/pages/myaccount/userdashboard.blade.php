@@ -32,26 +32,29 @@
                 <button class="tablinks" onclick="openCity(event, 'logout')">Logout</button>
             </div>
       
-            <div id="my-profile" class="tabcontent col-9 px-4 py-4">
-                <div class="row profile-content p-2">
+            <div id="my-profile" class="tabcontent col-9">
+                <div class="row profile-content py-2">
                     <div class="col-md-3 profile-image" >
                         <img src="{{asset('/backend/images/users/demo_user.webp')}}" class="img-thumbnail" alt="My Photo" >
-                    </div>
-                    <div class="col-md-9">
-                        <span class="text-uppercase display-6">Mr Anonimous User</span>
-                        <button class="btn btn-profile-edit"><i class="fa fa-pencil"></i> </button>
-
-                        <div class="line"></div>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem temporibus suscipit inventore quidem? Libero, odit aliquid velit repudiandae optio tempore ea veniam rem, quibusdam natus quia dicta, provident impedit facere?</p>
-                    </div>
-                    <div class="col-md-12 user-short-info">
                         <span><i class="fa fa-envelope"> </i> example@gmail.com</span><br>
                         <span><i class="fa fa-phone"> </i> 01910922069</span><br>
                         <span><i class="fa fa-map-marker"> </i> Mirpur, Dhaka</span>
                     </div>
+                    <div class="col-md-9">
+                        <div class="row">
+                            <div class="col-10">
+                                <span class="text-uppercase display-6">Mr Anonimous User</span>
+                            </div>
+                            <div class="col-2">
+                                <button class="btn btn-profile-edit"><i class="fa fa-pencil"></i> </button>
+                            </div>
+                        </div>
+                        <div class="line"></div>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem temporibus suscipit inventore quidem? Libero, odit aliquid velit repudiandae optio tempore ea veniam rem, quibusdam natus quia dicta, provident impedit facere?</p>
+                    </div>
                 </div>
             </div>
-            <div class="tabcontent col-9 px-4 py-4" id="applied-job">
+            <div class="tabcontent col-9" id="applied-job">
                 <div class="table-responsive">
                     <table id="applied-job-table" class="table table-striped nowrap">
                         <thead>
@@ -279,7 +282,7 @@
                 </div>
             </div> 
 
-            <div class="tabcontent col-9 px-4 py-4" id="job-post-list">
+            <div class="tabcontent col-9" id="job-post-list">
                 <div class="table-responsive">
                     <table id="job-post-list-table" class="table table-striped nowrap">
                         <thead>
@@ -507,7 +510,7 @@
                 </div>
             </div>
 
-           <div class="tabcontent col-9 px-4 py-4" id="vat-list">
+           <div class="tabcontent col-9 " id="vat-list">
                 <div class="table-responsive">
                     <table id="vat-list-table" class="table table-striped nowrap">
                         <thead>
@@ -727,7 +730,7 @@
                     </table>
                 </div>
            </div>
-           <div class="tabcontent col-9 px-4 py-4" id="all-tender">
+           <div class="tabcontent col-9 " id="all-tender">
                 <div class="table-responsive">
                     <table id="all-tender-table" class="table table-striped nowrap">
                         <thead>
@@ -948,7 +951,7 @@
                 </div>
            </div>
       
-            <div id="logout" class="tabcontent col-9 px-4 py-4">
+            <div id="logout" class="tabcontent col-9 px-4 ">
                 <h3>logout</h3>
                 <p>You are loged out</p>
             </div>    
