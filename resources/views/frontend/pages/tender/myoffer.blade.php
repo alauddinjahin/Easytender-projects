@@ -22,8 +22,8 @@
         <div class="container">
             <div class="row shadow p-2">
                 <div class="col-md-12">
-                    <div class="data-table-wrap">
-                        <table id="example" class="table table-striped" style="width:100%">
+                    <div class="table-responsive">
+                        <table id="example" class="table table-striped nowrap">
                             <thead>
                                 <tr>
                                     <th>JOb ID</th>
@@ -257,13 +257,13 @@
 @endsection
 
 @push('css')
+    <link rel="stylesheet" href="{{ asset('frontend/vendor/datatable/css/jquery.dataTables.min.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/custom.css')}}">
 @endpush
 
 @push('js')
-<script src="{{ asset('frontend/custom.js')}}"></script>
 <script src="{{ asset('frontend/vendor/datatable/jquery.dataTables.min.js')}}"></script>
-<script src="{{ asset('frontend/vendor/datatable/dataTables.bootstrap5.min.js')}}"></script>
+<script src="{{ asset('frontend/custom.js')}}"></script>
 
 <script>
     $(document).ready(function () {
