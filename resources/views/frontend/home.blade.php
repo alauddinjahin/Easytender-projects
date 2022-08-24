@@ -31,7 +31,7 @@
     <!-- Slider End -->
 
     <!-- Start client list section -->
-    <div class="container mb-100">
+    {{-- <div class="container mb-100">
         <div class="row custom-client-row">
             <div class="col-md-4 custom-bg-for-one">
                 <div class="custom-section-parent">
@@ -73,7 +73,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- end client list section -->
 
     <!-- Premium Services Section Start -->

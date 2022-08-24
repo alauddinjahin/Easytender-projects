@@ -42,7 +42,7 @@ Route::get('/my-offer', function(){
 
 
 // Admin Route list 
-Route::group(['prefix'=>'admins','as'=>'admin.'], function(){
+Route::group(['prefix'=>'admin','as'=>'admin.'], function(){
     Route::get('/', function(){
         return view('backend.admindashboard');
     });
