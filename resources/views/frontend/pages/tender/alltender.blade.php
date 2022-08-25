@@ -22,8 +22,8 @@
     <div class="container">
         <div class="row mt-5 mb-5">
             <div id="btnContainer">
-                <button class="btn float-end" onclick="listView()" title="Grid view"><i class="fa fa-bars"></i></button> 
-                <button class="btn float-end active" onclick="gridView()" title="List view"><i class="fa fa-th-large"></i></button>
+                <button class="btn float-end" id="listView" title="Grid view"><i class="fa fa-bars"></i></button> 
+                <button class="btn float-end active" id="gridView" title="List view"><i class="fa fa-th-large"></i></button>
             </div>
             <div class="col-md-4 column  m-0 p-0">
                 <div class="all-vat-card px-3 py-4">
@@ -234,9 +234,88 @@
                     </div>
                 </div>
             </div>
+            {{-- End grid view --}}
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped" id="all-tender-table">
+                    <tr>
+                        <th>Job Id</th>
+                        <th>Tender Id</th>
+                        <th>Last Droping Date</th>
+                        <th>Method</th>
+                        <th>Service Chare</th>
+                        <th>Action </th>
+                    </tr>
+                    <tr>
+                        <td>12121</td>
+                        <td>456767</td>
+                        <td>2022-08-09 12:23:13</td>
+                        <td>MLM</td>
+                        <td>500TK</td>
+                        <td class="text-center"><div class="custom-apply-btn"><a href="#">Apply</a></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>12121</td>
+                        <td>456767</td>
+                        <td>2022-08-09 12:23:13</td>
+                        <td>MLM</td>
+                        <td>500TK</td>
+                        <td class="text-center"><div class="custom-apply-btn"><a href="#">Apply</a></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>12121</td>
+                        <td>456767</td>
+                        <td>2022-08-09 12:23:13</td>
+                        <td>MLM</td>
+                        <td>500TK</td>
+                        <td class="text-center"><div class="custom-apply-btn"><a href="#">Apply</a></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>12121</td>
+                        <td>456767</td>
+                        <td>2022-08-09 12:23:13</td>
+                        <td>MLM</td>
+                        <td>500TK</td>
+                        <td class="text-center"><div class="custom-apply-btn"><a href="#">Apply</a></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>12121</td>
+                        <td>456767</td>
+                        <td>2022-08-09 12:23:13</td>
+                        <td>MLM</td>
+                        <td>500TK</td>
+                        <td class="text-center"><div class="custom-apply-btn"><a href="#">Apply</a></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>12121</td>
+                        <td>456767</td>
+                        <td>2022-08-09 12:23:13</td>
+                        <td>MLM</td>
+                        <td>500TK</td>
+                        <td class="text-center"><div class="custom-apply-btn"><a href="#">Apply</a></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>12121</td>
+                        <td>456767</td>
+                        <td>2022-08-09 12:23:13</td>
+                        <td>MLM</td>
+                        <td>500TK</td>
+                        <td class="text-center"><div class="custom-apply-btn"><a href="#">Apply</a></div>
+                        </td>
+                    </tr>
+                    
+                </table>
+            </div>
             
         </div>
     </div>
+    
+
 <!-- end content -->
     
 @endsection
@@ -247,35 +326,23 @@
 
 @push('js')
     <script>
-        // Get the elements with class="column"
-        var elements = document.getElementsByClassName("column");
+       (function($){
+            $(document).ready(function(){
+                $(document).on('click', '#gridView', gridView);
+                $(document).on('click', '#listView', listView);
+                $('.table-responsive').hide();
+            });
+        })(jQuery)
 
-        // Declare a loop variable
-        var i;
-
-        // List View
         function listView() {
-            for (i = 0; i < elements.length; i++) {
-                elements[i].style.width = "100%";
-            }
+            $('.all-vat-card').hide(); 
+            $('.table-responsive').show();
         }
 
-        // Grid View
         function gridView() {
-            for (i = 0; i < elements.length; i++) {
-                elements[i].style.width = "33.33%";
-            }
+            $('.table-responsive').hide();
+            $('.all-vat-card').show();
         }
 
-        /* Optional: Add active class to the current button (highlight it) */
-        var container = document.getElementById("btnContainer");
-        var btns = container.getElementsByClassName("btn");
-        for (var i = 0; i < btns.length; i++) {
-        btns[i].addEventListener("click", function() {
-            var current = document.getElementsByClassName("active");
-            current[0].className = current[0].className.replace(" active", "");
-            this.className += " active";
-        });
-        }
     </script>
 @endpush
