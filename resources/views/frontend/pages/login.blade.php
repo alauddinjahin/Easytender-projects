@@ -24,7 +24,7 @@
                         </label>
                         <div class="last-password pt-30 d-flex justify-content-between">
                             <a href="#">Lost your password?</a>
-                            <a class="btn btn-success btn-sm text-white" href="{{ URL('/register')}}">SignIn</a>
+                            <a class="btn btn-success btn-sm text-white" href="{{ URL('/register')}}">Sign Up</a>
                         </div>
                     </div>
                 </div>

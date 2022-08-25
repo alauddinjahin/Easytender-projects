@@ -32,8 +32,12 @@ Route::get('/offer-tender', function(){
     return view('frontend.pages.tender.offertender');
 });
 
-Route::get('/myaccount', function(){
-    return view('frontend.pages.myaccount.userdashboard');
+// Route::get('/myaccount', function(){
+//     return view('frontend.pages.myaccount.userdashboard');
+// });
+
+Route::get('/myaccount/client', function(){
+    return view('frontend.pages.myaccount.client-dashboard');
 });
 
 Route::get('/my-offer', function(){
