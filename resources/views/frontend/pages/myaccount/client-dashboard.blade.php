@@ -33,7 +33,7 @@
                 <h1>dashboard</h1>
             </div>
 
-            <div id="my-profile" class="tabcontent col-9">
+            <div class="tabcontent col-9" id="my-profile" >
                 <div class="row profile-content py-2">
                     <div class="col-md-3 profile-image" >
                         <img src="{{asset('/backend/images/users/demo_user.webp')}}" class="img-thumbnail" alt="My Photo" >
@@ -580,12 +580,11 @@
 @endpush
 
 @push('js')
-<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="{{ asset('frontend/vendor/datatable/jquery.dataTables.min.js')}}"></script>
 <script src="{{ asset('frontend/custom.js')}}"></script>
 <script>
     $(document).ready(function () {
-        $("#dashboard, #my-job-list-table, #payment-history-table").DataTable();
+        $("#my-job-list-table, #payment-history-table").DataTable();
     });
         
     function openCity(evt, cityName) {

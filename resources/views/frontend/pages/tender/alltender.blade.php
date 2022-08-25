@@ -322,6 +322,11 @@
 
 @push('css')
 <link rel="stylesheet" type="text/css" href="{{ asset('frontend/custom.css')}}">
+<style>
+    .active{
+        background-color: rgb(237, 231, 231)
+    }
+</style>
 @endpush
 
 @push('js')
@@ -335,11 +340,15 @@
         })(jQuery)
 
         function listView() {
+            $('#listView').addClass('active');
+            $('#gridView').removeClass('active');
             $('.all-vat-card').hide(); 
             $('.table-responsive').show();
         }
 
         function gridView() {
+            $('#gridView').addClass('active');
+            $('#listView').removeClass('active');
             $('.table-responsive').hide();
             $('.all-vat-card').show();
         }
