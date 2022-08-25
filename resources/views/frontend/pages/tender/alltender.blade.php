@@ -21,8 +21,11 @@
 
     <div class="container">
         <div class="row mt-5 mb-5">
-
-            <div class="col-md-4 m-0 p-0">
+            <div id="btnContainer">
+                <button class="btn float-end" onclick="listView()" title="Grid view"><i class="fa fa-bars"></i></button> 
+                <button class="btn float-end active" onclick="gridView()" title="List view"><i class="fa fa-th-large"></i></button>
+            </div>
+            <div class="col-md-4 column  m-0 p-0">
                 <div class="all-vat-card px-3 py-4">
                     <table class="all-vat-card-wrap">
                         <tr>
@@ -57,7 +60,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 m-0 p-0">
+            <div class="col-md-4 column m-0 p-0">
                 <div class="all-vat-card px-3 py-4">
                     <table class="all-vat-card-wrap">
                         <tr>
@@ -92,7 +95,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 m-0 p-0">
+            <div class="col-md-4 column m-0 p-0">
                 <div class="all-vat-card px-3 py-4">
                     <table class="all-vat-card-wrap">
                         <tr>
@@ -127,7 +130,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 m-0 p-0">
+            <div class="col-md-4 column m-0 p-0">
                 <div class="all-vat-card px-3 py-4">
                     <table class="all-vat-card-wrap">
                         <tr>
@@ -162,7 +165,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 m-0 p-0">
+            <div class="col-md-4 column m-0 p-0">
                 <div class="all-vat-card px-3 py-4">
                     <table class="all-vat-card-wrap">
                         <tr>
@@ -197,7 +200,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 m-0 p-0">
+            <div class="col-md-4 column m-0 p-0">
                 <div class="all-vat-card px-3 py-4">
                     <table class="all-vat-card-wrap">
                         <tr>
@@ -240,4 +243,39 @@
 
 @push('css')
 <link rel="stylesheet" type="text/css" href="{{ asset('frontend/custom.css')}}">
+@endpush
+
+@push('js')
+    <script>
+        // Get the elements with class="column"
+        var elements = document.getElementsByClassName("column");
+
+        // Declare a loop variable
+        var i;
+
+        // List View
+        function listView() {
+        for (i = 0; i < elements.length; i++) {
+            elements[i].style.width = "100%";
+        }
+        }
+
+        // Grid View
+        function gridView() {
+        for (i = 0; i < elements.length; i++) {
+            elements[i].style.width = "33%";
+        }
+        }
+
+        /* Optional: Add active class to the current button (highlight it) */
+        var container = document.getElementById("btnContainer");
+        var btns = container.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+        });
+        }
+    </script>
 @endpush
