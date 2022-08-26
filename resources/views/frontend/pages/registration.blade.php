@@ -22,8 +22,16 @@
                             <input id="tname" name="text" class="form-control-mod" type="password" required="">
                             <label>Confirm Password <span>*</span></label>
                             <input id="tname" name="text" class="form-control-mod" type="password" required="">
+                            <div class="row"> 
+                                <div class="col-md-6">
+                                    <input type="radio" name="user_type" id="client">Client
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="radio" name="user_type" id="freelancer">Freelancer
+                                </div>
+                            </div>
                         </div>
-                        <button class="add-btn" type="submit">Log In</button>
+                        <button class="add-btn" type="submit">Register</button>
                         <label>
                             <input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever">
                             <span>Remember me</span>
@@ -43,3 +51,9 @@
     </div>
     <!-- My Account Section Start -->
 @endsection
+
+
+@push('css')
+  
+    }
+@endpush

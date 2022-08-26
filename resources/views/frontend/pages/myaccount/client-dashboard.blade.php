@@ -64,12 +64,20 @@
                     <div class="col-md-6 pb-3" >
                         <div class="card">
                             <div class="card-header text-center text-uppercase h4 box">
+                                <span>Dadeline over</span>
+                            </div>
+                            <div class="card-body h3">
+                                Total: 121 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 pb-3" >
+                        <div class="card">
+                            <div class="card-header text-center text-uppercase h4 box">
                                 <span>Payment</span>
                             </div>
                             <div class="card-body h3">
-                                Payable: 12343 BDT <br>
-                                Pay: 3432 @production
-                                @endproduction
+                                Pay: 3432 
                             </div>
                         </div>
                     </div>
