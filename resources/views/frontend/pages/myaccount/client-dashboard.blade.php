@@ -22,15 +22,46 @@
     <div class="container py-5">
 
         <div class="row">
-            <div class="tab tab-menu col-3">
+            <div class="tab tab-menu col-md-3">
                 <span class="menu-header">User Information</span>
                 <button class="tablinks active" onclick="openCity(event, 'dashboard')" id="defaultOpen">My Dashboard</button>
                 <button class="tablinks" onclick="openCity(event, 'my-profile')">My Profile</button>
                 <button class="tablinks" onclick="openCity(event, 'my-job-list')">My Job List</button>
                 <button class="tablinks" onclick="openCity(event, 'payment-history')">Payment History</button>
             </div>
-            <div class="tabcontent col-9" id="dashboard">
-                <h1>dashboard</h1>
+            <div class="tabcontent col-md-9" id="dashboard">
+                <div class="row px-3">
+                    <div class="col-md-6 py-3">
+                        <div class="card">
+                            <div class="card-header text-center text-uppercase h3">
+                                <span>Offered Job</span>
+                            </div>
+                            <div class="card-body display-5">
+                                Total: 6543
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 py-3">
+                        <div class="card">
+                            <div class="card-header text-center text-uppercase h3">
+                                <span>Completed Job</span>
+                            </div>
+                            <div class="card-body display-5">
+                                Total: 654
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 py-3">
+                        <div class="card">
+                            <div class="card-header text-center text-uppercase h3">
+                                <span>Pending Job</span>
+                            </div>
+                            <div class="card-body display-5">
+                                Total: 35
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="tabcontent col-9" id="my-profile" >
@@ -575,8 +606,14 @@
 @endsection
 
 @push('css')
-<link rel="stylesheet" href="{{ asset('frontend/vendor/datatable/css/jquery.dataTables.min.css') }}">
-<link rel="stylesheet" href="{{ asset('backend/css/user-dashboard.css')}}">
+    <link rel="stylesheet" href="{{ asset('frontend/vendor/datatable/css/jquery.dataTables.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/css/user-dashboard.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('frontend/custom.css')}}">
+    <style>
+        ..summery-card{
+  background-color: #f48696 !important;
+}a{}
+    </style>
 @endpush
 
 @push('js')

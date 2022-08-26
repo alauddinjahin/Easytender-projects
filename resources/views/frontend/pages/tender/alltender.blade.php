@@ -25,7 +25,7 @@
                 <button class="btn float-end" id="listView" title="Grid view"><i class="fa fa-bars"></i></button> 
                 <button class="btn float-end active" id="gridView" title="List view"><i class="fa fa-th-large"></i></button>
             </div>
-            <div class="col-md-4 column  m-0 p-0">
+            <div class="col-md-4  m-0 p-0">
                 <div class="all-vat-card px-3 py-4">
                     <table class="all-vat-card-wrap">
                         <tr>
@@ -60,7 +60,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 column m-0 p-0">
+            <div class="col-md-4 m-0 p-0">
                 <div class="all-vat-card px-3 py-4">
                     <table class="all-vat-card-wrap">
                         <tr>
@@ -95,7 +95,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 column m-0 p-0">
+            <div class="col-md-4 m-0 p-0">
                 <div class="all-vat-card px-3 py-4">
                     <table class="all-vat-card-wrap">
                         <tr>
@@ -130,7 +130,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 column m-0 p-0">
+            <div class="col-md-4 m-0 p-0">
                 <div class="all-vat-card px-3 py-4">
                     <table class="all-vat-card-wrap">
                         <tr>
@@ -165,7 +165,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 column m-0 p-0">
+            <div class="col-md-4 m-0 p-0">
                 <div class="all-vat-card px-3 py-4">
                     <table class="all-vat-card-wrap">
                         <tr>
@@ -200,7 +200,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 column m-0 p-0">
+            <div class="col-md-4 m-0 p-0">
                 <div class="all-vat-card px-3 py-4">
                     <table class="all-vat-card-wrap">
                         <tr>

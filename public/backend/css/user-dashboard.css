@@ -2,7 +2,7 @@
 /* Style the tab */
 .tab {
   background-color: #f1f1f1;
-  border-radius: 10px;
+  padding-bottom: 15px;
   /* height: 370px; */
 }
 
@@ -17,6 +17,7 @@
   cursor: pointer;
   transition: 0.3s;
   font-size: 17px;
+  background-color: #f1f1f1;
 }
 
 /* Change background color of buttons on hover */
@@ -51,7 +52,7 @@
   display: block;
   border-radius: 10px 10px 0px 0px;
   background-color: #e3556a;
-  color: #f1f1f1;
+  color: #fff;
   text-transform: uppercase;
   text-align: center;
   padding: 10px 4px;
@@ -103,6 +104,10 @@
   color: #ffffff;
   text-transform: uppercase;
   
+}
+
+.summery-card{
+  background-color: #f48696 !important;
 }
 
 /* .current{
