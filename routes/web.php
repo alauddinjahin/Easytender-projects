@@ -39,8 +39,8 @@ Route::get('/offer-tender', function(){
 Route::get('/myaccount/client', function(){
     return view('frontend.pages.myaccount.client-dashboard');
 });
-Route::get('/freelancer/approve', function(){
-    return view('frontend.pages.freelancer-approve');
+Route::get('/myaccount/freelancer', function(){
+    return view('frontend.pages.freelancer-dashboard');
 });
 
 Route::get('/my-offer', function(){
