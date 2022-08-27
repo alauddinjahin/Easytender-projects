@@ -190,6 +190,7 @@
                                 <th>Charge</th>
                                 <th>Last Salling Date</th>
                                 <th>Method</th>
+                                <th>Status</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -201,6 +202,9 @@
                                 <td>61</td>
                                 <td>2011-04-25</td>
                                 <td>LTM</td>
+                                <td>
+                                    <span class="badge bg-info">Publish</span>
+                                </td>
                                 <td>
                                     <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
                                     <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
@@ -214,6 +218,9 @@
                                 <td>2011-04-25</td>
                                 <td>LTM</td>
                                 <td>
+                                    <span class="badge bg-warning">UnPublish</span>
+                                </td>
+                                <td>
                                     <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
                                     <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
                                 </td>
@@ -225,6 +232,9 @@
                                 <td>61</td>
                                 <td>2011-04-25</td>
                                 <td>LTM</td>
+                                <td>
+                                    <span class="badge bg-primary">Processing</span>
+                                </td>
                                 <td>
                                     <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
                                     <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
@@ -238,17 +248,8 @@
                                 <td>2011-04-25</td>
                                 <td>LTM</td>
                                 <td>
-                                    <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
-                                    <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
+                                    <span class="badge bg-success">Completed</span>
                                 </td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>Tiger Nixon</td>
-                                <td>1212, 76, 564</td>
-                                <td>61</td>
-                                <td>2011-04-25</td>
-                                <td>LTM</td>
                                 <td>
                                     <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
                                     <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
@@ -262,17 +263,8 @@
                                 <td>2011-04-25</td>
                                 <td>LTM</td>
                                 <td>
-                                    <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
-                                    <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
+                                    <span class="badge bg-primary">Processing</span>
                                 </td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>Tiger Nixon</td>
-                                <td>1212, 76, 564</td>
-                                <td>61</td>
-                                <td>2011-04-25</td>
-                                <td>LTM</td>
                                 <td>
                                     <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
                                     <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
@@ -286,17 +278,23 @@
                                 <td>2011-04-25</td>
                                 <td>LTM</td>
                                 <td>
+                                    <span class="badge bg-danger">Failed</span>
+                                </td>
+                                <td>
                                     <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
                                     <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
                                 </td>
                             </tr>
                             <tr>
-                                <td>01</td>
+                                <td>05</td>
                                 <td>Tiger Nixon</td>
                                 <td>1212, 76, 564</td>
                                 <td>61</td>
                                 <td>2011-04-25</td>
                                 <td>LTM</td>
+                                <td>
+                                    <span class="badge bg-success">Completed</span>
+                                </td>
                                 <td>
                                     <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
                                     <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
@@ -310,17 +308,8 @@
                                 <td>2011-04-25</td>
                                 <td>LTM</td>
                                 <td>
-                                    <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
-                                    <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
+                                    <span class="badge bg-primary">Processing</span>
                                 </td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>Tiger Nixon</td>
-                                <td>1212, 76, 564</td>
-                                <td>61</td>
-                                <td>2011-04-25</td>
-                                <td>LTM</td>
                                 <td>
                                     <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
                                     <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
@@ -333,6 +322,9 @@
                                 <td>61</td>
                                 <td>2011-04-25</td>
                                 <td>LTM</td>
+                                <td>
+                                    <span class="badge bg-primary">Processing</span>
+                                </td>
                                 <td>
                                     <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
                                     <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>

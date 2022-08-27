@@ -121,7 +121,7 @@
                                 <td>2011-04-25</td>
                                 <td>LTM</td>
                                 <td>
-                                    <span class="badge bg-success">Start Job</span>
+                                    <span class="badge bg-info">Start Job</span>
                                 </td>
                                 <td>
                                     <a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#jobDetailsModal" role="button">Job Details</a>
@@ -149,7 +149,7 @@
                                 <td>2011-04-25</td>
                                 <td>LTM</td>
                                 <td>
-                                    <span class="badge bg-info">Completed</span>
+                                    <span class="badge bg-success">Completed</span>
                                 </td>
                                 <td>
                                     <a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#jobDetailsModal" role="button">Job Details</a>
@@ -164,20 +164,6 @@
                                 <td>LTM</td>
                                 <td>
                                     <span class="badge bg-danger">Failed</span>
-                                </td>
-                                <td>
-                                    <a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#jobDetailsModal" role="button">Job Details</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>System Architect</td>
-                                <td>Tiger Nixon</td>
-                                <td>Edinburgh</td>
-                                <td>610 BDT</td>
-                                <td>2011-04-25</td>
-                                <td>LTM</td>
-                                <td>
-                                    <span class="badge bg-warning">Dateline over</span>
                                 </td>
                                 <td>
                                     <a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#jobDetailsModal" role="button">Job Details</a>
