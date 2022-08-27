@@ -119,8 +119,6 @@
                             </div>
                             <div class="col-md-9">
                                 <select name="vat_id" id="vat_id" multiple data-placeholder="Type Your vat-id"></select>
-
-                                <!-- <input type="text" name="vat_id" class="form-control" id="vat-id" placeholder="Type Your vat-id" multiple> -->
                             </div>
                         </div> 
                         <div class="form-group row mb-3">
@@ -149,7 +147,7 @@
                                 <label for="charge" class="col-form-label">Service Charge:</label>
                             </div>
                             <div class="col-md-9">
-                                <input type="text" name="charge" class="form-control " id="charge" placeholder="Type Service charge">
+                                <input type="number" name="charge" class="form-control " id="charge" placeholder="Type Service charge">
                             </div>
                         </div>
                         <div class="form-group row mb-3">
@@ -158,6 +156,17 @@
                             </div>
                             <div class="col-md-9">
                                 <input type="number" name="total_charge" class="form-control " id="total-charge" placeholder="0.00" readonly>
+                            </div>
+                        </div>
+                        <div class="form-group row mb-3">
+                            <div class="col-md-3">
+                                <label class="col-form-label">Publish status:</label>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="d-flex gap-4"> 
+                                    <label for="publish" class="d-flex gap-1"><input type="radio" name="publish_status" id="publish"> <small>Publish</small></label>
+                                    <label for="unpublish" class="d-flex gap-1"><input type="radio" name="publish_status" id="unpublish" checked> <small>Unpublish</small></label>
+                                </div>
                             </div>
                         </div>
                         <div class="form-group row mb-3">
@@ -691,10 +700,10 @@
         $(document).ready(function(){
             $("#Offered-list-table, #payment-history-table, #freelancers-table").DataTable();
             
-            // $(document).on('click', '.btn-bids', tenderDetails);
             $(document).on('click', '#btn-add-file-upload', addFileUploadMore);
             $(document).on('click', '.btn-remove-file-upload', removeFileUploadMore);
-            $(document).on('keyup', '#last-selling-date, #charge', updateTotalCharge);
+            $(document).on('change', '#vat_id', updateTotalCharge);
+            $(document).on('keyup', '#charge', updateTotalCharge);
             $(document).on('keyup', '#charge-edit', updateTotalChargeintoModal);
 
             init();
@@ -755,9 +764,7 @@
     }
     
     function updateTotalCharge() {
-        const charge = $("#charge").val();
-        const total = charge * 5;
-        $("#total-charge").val(total);
+        $("#total-charge").val($("#charge").val() * $("#vat_id option").length);
     }
     
     function updateTotalChargeintoModal() {
