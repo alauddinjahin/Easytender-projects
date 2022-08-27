@@ -11,7 +11,7 @@
                 <div class="col-lg-6 md-mb-50 p-4">
                     <div class="rs-login">
                         <h2 class="title pb-30 md-pb-15">Regitration</h2>
-                        <div class="form-group mb-30">
+                        <div class="form-group mb-10">
                             <label>Name<span>*</span></label>
                             <input id="fname" name="fname" class="form-control-mod" type="text" required=""> 
                             <label>Mobile<span>*</span></label>
@@ -22,22 +22,16 @@
                             <input id="tname" name="text" class="form-control-mod" type="password" required="">
                             <label>Confirm Password <span>*</span></label>
                             <input id="tname" name="text" class="form-control-mod" type="password" required="">
-                            <div class="row"> 
-                                <div class="col-md-6">
-                                    <input type="radio" name="user_type" id="client">Client
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="radio" name="user_type" id="freelancer">Freelancer
-                                </div>
+                            <div class="d-flex gap-4"> 
+                                <label for="client" class="d-flex gap-1"><input type="radio" name="user_type" id="client"> <small>Client</small></label>
+                                <label for="freelancer" class="d-flex gap-1"><input type="radio" name="user_type" id="freelancer"> <small>Freelancer</small></label>
                             </div>
                         </div>
-                        <button class="add-btn" type="submit">Register</button>
-                        <label>
-                            <input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever">
-                            <span>Remember me</span>
-                        </label>
-                        <div class="last-password pt-30">
+                        <button class="add-btn" type="submit">Sign Up</button>
+   
+                        <div class="last-password pt-30 d-flex justify-content-between">
                             <a href="#">Lost your password?</a>
+                            <span>Have an account? <a href="{{ URL('/login')}}">Login</a></span>
                         </div>
                     </div>
                 </div>
@@ -55,5 +49,5 @@
 
 @push('css')
   
-    }
+    
 @endpush

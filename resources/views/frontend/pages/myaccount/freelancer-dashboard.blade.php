@@ -24,11 +24,9 @@
         <div class="row">
             <div class="tab tab-menu col-md-3">
                 <span class="menu-header">User Information</span>
-                <button class="tablinks active" onclick="openCity(event, 'dashboard')">My Dashboard</button>
+                <button class="tablinks active" onclick="openCity(event, 'dashboard')" id="defaultOpen">My Dashboard</button>
                 <button class="tablinks" onclick="openCity(event, 'my-profile')">My Profile</button>
-                <button class="tablinks" onclick="openCity(event, 'completed-job-list')" id="defaultOpen">Completed Job List</button>
-                <button class="tablinks" onclick="openCity(event, 'bidded-job-list')">Bidded Job List</button>
-                <button class="tablinks" onclick="openCity(event, 'working-job-list')">Working Job List</button>
+                <button class="tablinks" onclick="openCity(event, 'my-job-list')">My Job List</button>
                 <button class="tablinks" onclick="openCity(event, 'payment-history')">Payment History</button>
             </div>
             <div class="tabcontent col-md-9" id="dashboard">
@@ -39,24 +37,24 @@
                                 <span>Completed Job</span>
                             </div>
                             <div class="card-body h3">
-                                Total: 653
+                                Total: 6543
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 pb-3" >
                         <div class="card">
                             <div class="card-header text-center text-uppercase h4 box">
-                                <span>Bidded Job</span>
+                                <span>Failed Job</span>
                             </div>
                             <div class="card-body h3">
-                                Total: 3254
+                                Total: 654
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 pb-3" >
                         <div class="card">
                             <div class="card-header text-center text-uppercase h4 box">
-                                <span>Working Job</span>
+                                <span>Pending Job</span>
                             </div>
                             <div class="card-body h3">
                                 Total: 35
@@ -66,20 +64,10 @@
                     <div class="col-md-6 pb-3" >
                         <div class="card">
                             <div class="card-header text-center text-uppercase h4 box">
-                                <span>Dadeline Over</span>
-                            </div>
-                            <div class="card-body h3">
-                                Total: 43
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 pb-3" >
-                        <div class="card">
-                            <div class="card-header text-center text-uppercase h4 box">
                                 <span>Payment</span>
                             </div>
                             <div class="card-body h3">
-                                Pay: 3432 
+                                Total: 12343 BDT 
                             </div>
                         </div>
                     </div>
@@ -109,309 +97,35 @@
                 </div>
             </div>
 
-            <div class="tabcontent col-9" id="completed-job-list">
-                <div class="card">
-                    <div class="card-header box">
-                        <div class="h3 text-uppercase">My Completed job list</div>
-                    </div>
-                    <div class="card-body table-responsive">
-                        <div class="table-responsive">
-                            <table id="completed-job-list-table" class="table table-striped nowrap">
-                                <thead>
-                                    <tr class="text-center">
-                                        <th>SL No</th>
-                                        <th>JOb ID</th>
-                                        <th>Client</th>
-                                        <th>Vat ID</th>
-                                        <th>Get paid</th>
-                                        <th>Last Salling Date</th>
-                                        <th>Method</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>01</td>
-                                        <td>4567, 9876</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>61</td>
-                                        <td>7654 BDT</td>
-                                        <td>2011-04-25</td>
-                                        <td>LTM</td>
-                                    </tr>
-                                    <tr>
-                                        <td>01</td>
-                                        <td>4567, 9876</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>61</td>
-                                        <td>7654 BDT</td>
-                                        <td>2011-04-25</td>
-                                        <td>LTM</td>
-                                    </tr>
-                                    <tr>
-                                        <td>01</td>
-                                        <td>4567, 9876</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>61</td>
-                                        <td>7654 BDT</td>
-                                        <td>2011-04-25</td>
-                                        <td>LTM</td>
-                                    </tr>
-                                    <tr>
-                                        <td>01</td>
-                                        <td>4567, 9876</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>61</td>
-                                        <td>7654 BDT</td>
-                                        <td>2011-04-25</td>
-                                        <td>LTM</td>
-                                    </tr>
-                                    <tr>
-                                        <td>01</td>
-                                        <td>4567, 9876</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>61</td>
-                                        <td>7654 BDT</td>
-                                        <td>2011-04-25</td>
-                                        <td>LTM</td>
-                                    </tr>
-                                    <tr>
-                                        <td>01</td>
-                                        <td>4567, 9876</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>61</td>
-                                        <td>7654 BDT</td>
-                                        <td>2011-04-25</td>
-                                        <td>LTM</td>
-                                    </tr>
-                                    <tr>
-                                        <td>01</td>
-                                        <td>4567, 9876</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>61</td>
-                                        <td>7654 BDT</td>
-                                        <td>2011-04-25</td>
-                                        <td>LTM</td>
-                                    </tr>
-                                    <tr>
-                                        <td>01</td>
-                                        <td>4567, 9876</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>61</td>
-                                        <td>7654 BDT</td>
-                                        <td>2011-04-25</td>
-                                        <td>LTM</td>
-                                    </tr>
-                                    <tr>
-                                        <td>01</td>
-                                        <td>4567, 9876</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>61</td>
-                                        <td>7654 BDT</td>
-                                        <td>2011-04-25</td>
-                                        <td>LTM</td>
-                                    </tr>
-                                    <tr>
-                                        <td>01</td>
-                                        <td>4567, 9876</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>61</td>
-                                        <td>7654 BDT</td>
-                                        <td>2011-04-25</td>
-                                        <td>LTM</td>
-                                    </tr>
-                                    <tr>
-                                        <td>01</td>
-                                        <td>4567, 9876</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>61</td>
-                                        <td>7654 BDT</td>
-                                        <td>2011-04-25</td>
-                                        <td>LTM</td>
-                                    </tr>
-                                    <tr>
-                                        <td>01</td>
-                                        <td>4567, 9876</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>61</td>
-                                        <td>7654 BDT</td>
-                                        <td>2011-04-25</td>
-                                        <td>LTM</td>
-                                    </tr>
-                                    <tr>
-                                        <td>01</td>
-                                        <td>4567, 9876</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>61</td>
-                                        <td>7654 BDT</td>
-                                        <td>2011-04-25</td>
-                                        <td>LTM</td>
-                                    </tr>
-                                    <tr>
-                                        <td>01</td>
-                                        <td>4567, 9876</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>61</td>
-                                        <td>7654 BDT</td>
-                                        <td>2011-04-25</td>
-                                        <td>LTM</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div> 
-            
-            <div class="tabcontent col-9" id="bidded-job-list">
-                <div class="card">
-                    <div class="card-header box">
-                        <div class="h3 text-uppercase">My Completed job list</div>
-                    </div>
-                    <div class="card-body table-responsive">
-                        <div class="table-responsive">
-                            <table id="completed-job-list-table" class="table table-striped nowrap">
-                                <thead>
-                                    <tr class="text-center">
-                                        <th>SL No</th>
-                                        <th>JOb ID</th>
-                                        <th>Client</th>
-                                        <th>Vat ID</th>
-                                        <th>Get paid</th>
-                                        <th>Last Salling Date</th>
-                                        <th>Method</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>01</td>
-                                        <td>4567, 9876</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>61</td>
-                                        <td>7654 BDT</td>
-                                        <td>2011-04-25</td>
-                                        <td>LTM</td>
-                                    </tr>
-                                    <tr>
-                                        <td>01</td>
-                                        <td>4567, 9876</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>61</td>
-                                        <td>7654 BDT</td>
-                                        <td>2011-04-25</td>
-                                        <td>LTM</td>
-                                    </tr>
-                                    <tr>
-                                        <td>01</td>
-                                        <td>4567, 9876</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>61</td>
-                                        <td>7654 BDT</td>
-                                        <td>2011-04-25</td>
-                                        <td>LTM</td>
-                                    </tr>
-                                    <tr>
-                                        <td>01</td>
-                                        <td>4567, 9876</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>61</td>
-                                        <td>7654 BDT</td>
-                                        <td>2011-04-25</td>
-                                        <td>LTM</td>
-                                    </tr>
-                                    <tr>
-                                        <td>01</td>
-                                        <td>4567, 9876</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>61</td>
-                                        <td>7654 BDT</td>
-                                        <td>2011-04-25</td>
-                                        <td>LTM</td>
-                                    </tr>
-                                    <tr>
-                                        <td>01</td>
-                                        <td>4567, 9876</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>61</td>
-                                        <td>7654 BDT</td>
-                                        <td>2011-04-25</td>
-                                        <td>LTM</td>
-                                    </tr>
-                                    <tr>
-                                        <td>01</td>
-                                        <td>4567, 9876</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>61</td>
-                                        <td>7654 BDT</td>
-                                        <td>2011-04-25</td>
-                                        <td>LTM</td>
-                                    </tr>
-                                    <tr>
-                                        <td>01</td>
-                                        <td>4567, 9876</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>61</td>
-                                        <td>7654 BDT</td>
-                                        <td>2011-04-25</td>
-                                        <td>LTM</td>
-                                    </tr>
-                                    <tr>
-                                        <td>01</td>
-                                        <td>4567, 9876</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>61</td>
-                                        <td>7654 BDT</td>
-                                        <td>2011-04-25</td>
-                                        <td>LTM</td>
-                                    </tr>
-                                    <tr>
-                                        <td>01</td>
-                                        <td>4567, 9876</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>61</td>
-                                        <td>7654 BDT</td>
-                                        <td>2011-04-25</td>
-                                        <td>LTM</td>
-                                    </tr>
-                                    <tr>
-                                        <td>01</td>
-                                        <td>4567, 9876</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>61</td>
-                                        <td>7654 BDT</td>
-                                        <td>2011-04-25</td>
-                                        <td>LTM</td>
-                                    </tr>
-                                    <tr>
-                                        <td>01</td>
-                                        <td>4567, 9876</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>61</td>
-                                        <td>7654 BDT</td>
-                                        <td>2011-04-25</td>
-                                        <td>LTM</td>
-                                    </tr>
-                                    <tr>
-                                        <td>01</td>
-                                        <td>4567, 9876</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>61</td>
-                                        <td>7654 BDT</td>
-                                        <td>2011-04-25</td>
-                                        <td>LTM</td>
-                                    </tr>
-                                    <tr>
-                                        <td>01</td>
-                                        <td>4567, 9876</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>61</td>
-                                        <td>7654 BDT</td>
-                                        <td>2011-04-25</td>
-                                        <td>LTM</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+            <div class="tabcontent col-9" id="my-job-list">
+                <div class="table-responsive">
+                    <table id="my-job-list-table" class="table table-striped nowrap">
+                        <thead>
+                            <tr class="text-center">
+                                <th>Client</th>
+                                <th>JOb ID</th>
+                                <th>Vat ID</th>
+                                <th>Get Paid(60%)</th>
+                                <th>Last Date</th>
+                                <th>Method</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>System Architect</td>
+                                <td>Tiger Nixon</td>
+                                <td>Edinburgh</td>
+                                <td>610 BDT</td>
+                                <td>2011-04-25</td>
+                                <td>LTM</td>
+                                <td>
+                                    <a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">View Jobs & <br> Requirements</a>
+                                    <a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Start Job</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div> 
             
@@ -421,175 +135,24 @@
                         <thead>
                             <tr class="text-center">
                                 <th>SL No</th>
-                                <th>Tender</th>
-                                <th>User</th>
-                                <th>pament</th>
-                                <th>payable</th>
-                                <th>Date</th>
+                                <th>Client</th>
+                                <th>Job ID</th>
+                                <th>Transaction ID</th>
+                                <th>Transaction Date</th>
+                                <th>Payment By</th>
+                                <th>Payment Amount</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>01</td>
                                 <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>20,000BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>20,000BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>20,000BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>20,000BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>20,000BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>20,000BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>20,000BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>20,000BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>20,000BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>20,000BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>20,000BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>20,000BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>20,000BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>20,000BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>20,000BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>20,000BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>20,000BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>20,000BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>20,000BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>20,000BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            
+                                <td>0000001</td>
+                                <td>03232Ceb32323</td>
+                                <td>10/12/2022</td> 
+                                <td>Admin</td> 
+                                <td>450 BDT</td> 
+                            </tr>                       
                         </tbody>
                     </table>
                 </div>
@@ -838,7 +401,7 @@
 <script>
     (function($){
         $(document).ready(function(){
-            $("#completed-job-list-table, #payment-history-table, #freelancers-table").DataTable();
+            $("#my-job-list-table, #payment-history-table, #freelancers-table").DataTable();
             
             $(document).on('click', '.btn-freelancers', tenderDetails);
         });

@@ -57,7 +57,7 @@
                                             <a href="{{URL('/')}}">Home</a>
                                         </li>
                                         <li class="rs-mega-menu menu-item-has-children ">
-                                            <a href="{{URL('/all-tender')}}">Tender</a>
+                                            <a href="{{URL('/all-tender')}}">All Tender</a>
                                         </li>
                                         {{-- <li class="menu-item-has-children">
                                             <a href="#">Tender</a>
@@ -119,12 +119,7 @@
                     <a href="{{URL('/')}}">Home</a>
                 </li>
                 <li class="menu-item-has-children">
-                    <a href="#">Tender</a>
-                    <ul class="sub-menu">
-                        <li><a href="{{ URL('/offer-tender')}}">Offer Tender</a></li>
-                        <li><a href="#">My Tender</a></li>
-                        <li><a href="{{ URL('/all-tender')}}">All Tender</a></li>
-                    </ul>
+                    <a href="{{ URL('/all-tender')}}">All Tender</a>
                 </li>
                 <li class="menu-item-has-children">
                     <a href="#">Other Services</a>

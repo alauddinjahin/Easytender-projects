@@ -34,6 +34,18 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/rs-spacing.css')}}">
     <!-- style css -->
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/style.css')}}">
+
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="{{ asset('assets/common_assets/libs/daterangepicker/daterangepicker.css') }}">
+    <!-- Datepicker -->
+    <link rel="stylesheet" href="{{ asset('assets/common_assets/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css') }}">
+    
+    <!-- summernote -->
+    <link rel="stylesheet" href="{{ asset('assets/common_assets/libs/summernote/summernote-bs4.min.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('assets/common_assets/libs/select2/css/select2.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/common_assets/libs/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
+
     <!-- This stylesheet dynamically changed from style.less -->
     <!-- responsive css -->
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/responsive.css')}}">
@@ -103,6 +115,20 @@
     <script src="{{ asset('frontend/inc/custom-slider/js/jquery.nivo.slider.js')}}"></script>
     <!-- contact form js -->
     <script src="{{ asset('frontend/js/contact.form.js')}}"></script>
+
+    <!-- daterangepicker -->
+    <script src="{{ asset('assets/common_assets/libs/moment/moment.min.js') }}"></script>
+    <script src="{{ asset('assets/common_assets/libs/daterangepicker/daterangepicker.js') }}"></script>
+
+    <!-- Summernote -->
+    <script src="{{ asset('assets/common_assets/libs/summernote/summernote-bs4.min.js') }}"></script>
+    
+    <script src="{{ asset('assets/common_assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js') }}"></script>
+    <script src="{{ asset('assets/common_assets/libs/select2/js/select2.min.js') }}"></script>
+
+    <script src="{{ asset('assets/backend/libs/notifications/sweetalert.min.js') }}"></script>
+    <script src="{{ asset('assets/backend/js/config.js') }}"></script>
+
     <!-- main js -->
     <script src="{{ asset('frontend/js/main.js')}}"></script>
 
