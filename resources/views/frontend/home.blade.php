@@ -17,7 +17,7 @@
                         </div>
                     </div>
                     <div class="btn-area">
-                        <a class="readon2" href="#">All Tender<div class="btn-arrow"></div></a>
+                        <a class="readon2" href="{{ URL('/all-tender')}}">All Tender<div class="btn-arrow"></div></a>
                     </div>
                 </div>
                 <div class="col-md-5 col-lg-7">

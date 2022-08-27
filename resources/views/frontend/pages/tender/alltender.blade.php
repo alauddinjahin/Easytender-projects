@@ -22,8 +22,8 @@
     <div class="container">
         <div class="row mt-5 mb-5">
             <div id="btnContainer">
-                <button class="btn float-end" id="listView" title="Grid view"><i class="fa fa-bars"></i></button> 
-                <button class="btn float-end active" id="gridView" title="List view"><i class="fa fa-th-large"></i></button>
+                <button class="btn float-end active" id="listView" title="List view"><i class="fa fa-bars"></i></button> 
+                <button class="btn float-end " id="gridView" title="Grid view"><i class="fa fa-th-large"></i></button>
             </div>
             <div class="col-md-4  m-0 p-0">
                 <div class="all-vat-card px-3 py-4">
@@ -333,9 +333,10 @@
     <script>
        (function($){
             $(document).ready(function(){
+                $('.all-vat-card').hide(); 
+                $('.table-responsive').show();
                 $(document).on('click', '#gridView', gridView);
                 $(document).on('click', '#listView', listView);
-                $('.table-responsive').hide();
             });
         })(jQuery)
 
