@@ -262,6 +262,159 @@
                 </div>
             </div> 
             
+            <div class="tabcontent col-9" id="bidded-job-list">
+                <div class="card">
+                    <div class="card-header box">
+                        <div class="h3 text-uppercase">My Completed job list</div>
+                    </div>
+                    <div class="card-body table-responsive">
+                        <div class="table-responsive">
+                            <table id="completed-job-list-table" class="table table-striped nowrap">
+                                <thead>
+                                    <tr class="text-center">
+                                        <th>SL No</th>
+                                        <th>JOb ID</th>
+                                        <th>Client</th>
+                                        <th>Vat ID</th>
+                                        <th>Get paid</th>
+                                        <th>Last Salling Date</th>
+                                        <th>Method</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>01</td>
+                                        <td>4567, 9876</td>
+                                        <td>Tiger Nixon</td>
+                                        <td>61</td>
+                                        <td>7654 BDT</td>
+                                        <td>2011-04-25</td>
+                                        <td>LTM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>01</td>
+                                        <td>4567, 9876</td>
+                                        <td>Tiger Nixon</td>
+                                        <td>61</td>
+                                        <td>7654 BDT</td>
+                                        <td>2011-04-25</td>
+                                        <td>LTM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>01</td>
+                                        <td>4567, 9876</td>
+                                        <td>Tiger Nixon</td>
+                                        <td>61</td>
+                                        <td>7654 BDT</td>
+                                        <td>2011-04-25</td>
+                                        <td>LTM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>01</td>
+                                        <td>4567, 9876</td>
+                                        <td>Tiger Nixon</td>
+                                        <td>61</td>
+                                        <td>7654 BDT</td>
+                                        <td>2011-04-25</td>
+                                        <td>LTM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>01</td>
+                                        <td>4567, 9876</td>
+                                        <td>Tiger Nixon</td>
+                                        <td>61</td>
+                                        <td>7654 BDT</td>
+                                        <td>2011-04-25</td>
+                                        <td>LTM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>01</td>
+                                        <td>4567, 9876</td>
+                                        <td>Tiger Nixon</td>
+                                        <td>61</td>
+                                        <td>7654 BDT</td>
+                                        <td>2011-04-25</td>
+                                        <td>LTM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>01</td>
+                                        <td>4567, 9876</td>
+                                        <td>Tiger Nixon</td>
+                                        <td>61</td>
+                                        <td>7654 BDT</td>
+                                        <td>2011-04-25</td>
+                                        <td>LTM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>01</td>
+                                        <td>4567, 9876</td>
+                                        <td>Tiger Nixon</td>
+                                        <td>61</td>
+                                        <td>7654 BDT</td>
+                                        <td>2011-04-25</td>
+                                        <td>LTM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>01</td>
+                                        <td>4567, 9876</td>
+                                        <td>Tiger Nixon</td>
+                                        <td>61</td>
+                                        <td>7654 BDT</td>
+                                        <td>2011-04-25</td>
+                                        <td>LTM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>01</td>
+                                        <td>4567, 9876</td>
+                                        <td>Tiger Nixon</td>
+                                        <td>61</td>
+                                        <td>7654 BDT</td>
+                                        <td>2011-04-25</td>
+                                        <td>LTM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>01</td>
+                                        <td>4567, 9876</td>
+                                        <td>Tiger Nixon</td>
+                                        <td>61</td>
+                                        <td>7654 BDT</td>
+                                        <td>2011-04-25</td>
+                                        <td>LTM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>01</td>
+                                        <td>4567, 9876</td>
+                                        <td>Tiger Nixon</td>
+                                        <td>61</td>
+                                        <td>7654 BDT</td>
+                                        <td>2011-04-25</td>
+                                        <td>LTM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>01</td>
+                                        <td>4567, 9876</td>
+                                        <td>Tiger Nixon</td>
+                                        <td>61</td>
+                                        <td>7654 BDT</td>
+                                        <td>2011-04-25</td>
+                                        <td>LTM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>01</td>
+                                        <td>4567, 9876</td>
+                                        <td>Tiger Nixon</td>
+                                        <td>61</td>
+                                        <td>7654 BDT</td>
+                                        <td>2011-04-25</td>
+                                        <td>LTM</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            
             <div class="tabcontent col-9" id="payment-history">
                 <div class="table-responsive">
                     <table id="payment-history-table" class="table table-striped nowrap">
