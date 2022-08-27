@@ -251,7 +251,7 @@
                                     <span class="badge bg-success">Completed</span>
                                 </td>
                                 <td>
-                                    <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
+                                    <a class="btn btn-primary btn-edit d-none" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
                                     <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
                                 </td>
                             </tr>
@@ -296,7 +296,7 @@
                                     <span class="badge bg-success">Completed</span>
                                 </td>
                                 <td>
-                                    <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
+                                    <a class="btn btn-primary btn-edit d-none" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
                                     <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
                                 </td>
                             </tr>
