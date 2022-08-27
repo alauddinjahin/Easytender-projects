@@ -26,7 +26,9 @@
                 <span class="menu-header">User Information</span>
                 <button class="tablinks active" onclick="openCity(event, 'dashboard')" id="defaultOpen">My Dashboard</button>
                 <button class="tablinks" onclick="openCity(event, 'my-profile')">My Profile</button>
-                <button class="tablinks" onclick="openCity(event, 'my-job-list')">My Job List</button>
+                <button class="tablinks" onclick="openCity(event, 'completed-job-list')">Completed Job List</button>
+                <button class="tablinks" onclick="openCity(event, 'bidded-job-list')">Bidded Job List</button>
+                <button class="tablinks" onclick="openCity(event, 'working-job-list')">Working Job List</button>
                 <button class="tablinks" onclick="openCity(event, 'payment-history')">Payment History</button>
             </div>
             <div class="tabcontent col-md-9" id="dashboard">
@@ -99,9 +101,9 @@
                 </div>
             </div>
 
-            <div class="tabcontent col-9" id="my-job-list">
+            <div class="tabcontent col-9" id="completed-job-list">
                 <div class="table-responsive">
-                    <table id="my-job-list-table" class="table table-striped nowrap">
+                    <table id="completed-job-list-table" class="table table-striped nowrap">
                         <thead>
                             <tr class="text-center">
                                 <th>JOb ID</th>
@@ -677,7 +679,7 @@
 <script>
     (function($){
         $(document).ready(function(){
-            $("#my-job-list-table, #payment-history-table, #freelancers-table").DataTable();
+            $("#completed-job-list-table, #payment-history-table, #freelancers-table").DataTable();
             
             $(document).on('click', '.btn-freelancers', tenderDetails);
         });
