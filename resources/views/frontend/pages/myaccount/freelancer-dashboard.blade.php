@@ -54,7 +54,7 @@
                     <div class="col-md-6 pb-3" >
                         <div class="card">
                             <div class="card-header text-center text-uppercase h4 box">
-                                <span>Pending Job</span>
+                                <span>Working Job</span>
                             </div>
                             <div class="card-body h3">
                                 Total: 35
@@ -108,6 +108,7 @@
                                 <th>Get Paid(60%)</th>
                                 <th>Last Date</th>
                                 <th>Method</th>
+                                <th class="text-center">Status</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -120,8 +121,66 @@
                                 <td>2011-04-25</td>
                                 <td>LTM</td>
                                 <td>
-                                    <a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">View Jobs & <br> Requirements</a>
-                                    <a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Start Job</a>
+                                    <span class="badge bg-success">Start Job</span>
+                                </td>
+                                <td>
+                                    <a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#jobDetailsModal" role="button">Job Details</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>System Architect</td>
+                                <td>Tiger Nixon</td>
+                                <td>Edinburgh</td>
+                                <td>610 BDT</td>
+                                <td>2011-04-25</td>
+                                <td>LTM</td>
+                                <td>
+                                    <span class="badge bg-primary">Processing</span>
+                                </td>
+                                <td>
+                                    <a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#jobDetailsModal" role="button">Job Details</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>System Architect</td>
+                                <td>Tiger Nixon</td>
+                                <td>Edinburgh</td>
+                                <td>610 BDT</td>
+                                <td>2011-04-25</td>
+                                <td>LTM</td>
+                                <td>
+                                    <span class="badge bg-info">Completed</span>
+                                </td>
+                                <td>
+                                    <a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#jobDetailsModal" role="button">Job Details</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>System Architect</td>
+                                <td>Tiger Nixon</td>
+                                <td>Edinburgh</td>
+                                <td>610 BDT</td>
+                                <td>2011-04-25</td>
+                                <td>LTM</td>
+                                <td>
+                                    <span class="badge bg-danger">Failed</span>
+                                </td>
+                                <td>
+                                    <a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#jobDetailsModal" role="button">Job Details</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>System Architect</td>
+                                <td>Tiger Nixon</td>
+                                <td>Edinburgh</td>
+                                <td>610 BDT</td>
+                                <td>2011-04-25</td>
+                                <td>LTM</td>
+                                <td>
+                                    <span class="badge bg-warning">Dateline over</span>
+                                </td>
+                                <td>
+                                    <a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#jobDetailsModal" role="button">Job Details</a>
                                 </td>
                             </tr>
                         </tbody>
@@ -163,162 +222,38 @@
 
 
   {{-- Modal start --}}
-  <div class="modal fade" id="freelancerModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-    <div class="modal-dialog modal-xl modal-dialog-centered">
+  <div class="modal fade" id="jobDetailsModal" aria-hidden="true" aria-labelledby="jobDetailsModalToggleLabel" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalToggleLabel">Freelancers List</h5>
+          <h5 class="modal-title" id="exampleModalToggleLabel">Job Details</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
             <div class="table-responsive">
-                <table id="freelancers-table" class="table table-striped nowrap">
-                    <thead>
-                        <tr class="text-center">
-                            <th>JOb ID</th>
-                            <th>User ID</th>
-                            <th>Vat ID</th>
-                            <th>Charge</th>
-                            <th>Last Salling Date</th>
+                <table id="job details-table" class="table table-bordered">
+                        <tr>
+                            <th>Vat Id</th>
+                            <td>123,323</td>
+                        </tr>
+                        <tr>
                             <th>Method</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td>2011-04-25</td>
-                            <td>LTM</td>
-                            <td> <button class="btn btn-danger" data-bs-target="#approvalModal" data-bs-toggle="modal" data-bs-dismiss="modal">Approval</button></td>
+                            <td>MLM</td>
                         </tr>
                         <tr>
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td>2011-04-25</td>
-                            <td>LTM</td>
-                            <td> <button class="btn btn-danger" data-bs-target="#approvalModal" data-bs-toggle="modal" data-bs-dismiss="modal">Approval</button></td>
+                            <th>Dadeline</th>
+                            <td>22 July 2022</td>
                         </tr>
                         <tr>
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td>2011-04-25</td>
-                            <td>LTM</td>
-                            <td> <button class="btn btn-danger" data-bs-target="#approvalModal" data-bs-toggle="modal" data-bs-dismiss="modal">Approval</button></td>
+                            <th>Client phone</th>
+                            <td>+1(098) 98 76 78</td>
                         </tr>
                         <tr>
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td>2011-04-25</td>
-                            <td>LTM</td>
-                            <td> <button class="btn btn-danger" data-bs-target="#approvalModal" data-bs-toggle="modal" data-bs-dismiss="modal">Approval</button></td>
+                            <th>Files</th>
+                            <td>dummy.xlx, hello.jpg , working_sheet.doc</td>
                         </tr>
-                        <tr>
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td>2011-04-25</td>
-                            <td>LTM</td>
-                            <td> <button class="btn btn-danger" data-bs-target="#approvalModal" data-bs-toggle="modal" data-bs-dismiss="modal">Approval</button></td>
-                        </tr>
-                        <tr>
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td>2011-04-25</td>
-                            <td>LTM</td>
-                            <td> <button class="btn btn-danger" data-bs-target="#approvalModal" data-bs-toggle="modal" data-bs-dismiss="modal">Approval</button></td>
-                        </tr>
-                        <tr>
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td>2011-04-25</td>
-                            <td>LTM</td>
-                            <td> <button class="btn btn-danger" data-bs-target="#approvalModal" data-bs-toggle="modal" data-bs-dismiss="modal">Approval</button></td>
-                        </tr>
-                        <tr>
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td>2011-04-25</td>
-                            <td>LTM</td>
-                            <td> <button class="btn btn-danger" data-bs-target="#approvalModal" data-bs-toggle="modal" data-bs-dismiss="modal">Approval</button></td>
-                        </tr>
-                        <tr>
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td>2011-04-25</td>
-                            <td>LTM</td>
-                            <td> <button class="btn btn-danger" data-bs-target="#approvalModal" data-bs-toggle="modal" data-bs-dismiss="modal">Approval</button></td>
-                        </tr>
-                        <tr>
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td>2011-04-25</td>
-                            <td>LTM</td>
-                            <td> <button class="btn btn-danger" data-bs-target="#approvalModal" data-bs-toggle="modal" data-bs-dismiss="modal">Approval</button></td>
-                        </tr>
-                        <tr>
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td>2011-04-25</td>
-                            <td>LTM</td>
-                            <td> <button class="btn btn-danger" data-bs-target="#approvalModal" data-bs-toggle="modal" data-bs-dismiss="modal">Approval</button></td>
-                        </tr>
-                    </tbody>
                 </table>
             </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade" id="approvalModal" aria-hidden="true" aria-labelledby="approvalModal" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="approvalModal">Freelancer Approval</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form action="#" method="post">
-            <div class="row mb-3">
-                <label for="phone" class="col-md-3 col-form-label">Phone</label>
-                <div class="col-md-9">
-                  <input type="email" class="form-control" id="phone">
-                </div>
-            </div>
-            <div class="row mb-3">
-                <label for="file" class="col-md-3 col-form-label">File Upload</label>
-                <div class="col-md-9">
-                  <input type="file" multiple class="form-control" id="file">
-                </div>
-            </div>
-            <div class="row mb-3">
-                <div class="col-md-12">
-                    <button type="submit" class="btn btn-danger float-end">Submit</button>
-                </div>
-            </div>
-            
-          </form>
         </div>
       </div>
     </div>

@@ -55,7 +55,7 @@
                     <div class="col-md-6 pb-3" >
                         <div class="card">
                             <div class="card-header text-center text-uppercase h4 box">
-                                <span>Pending Job</span>
+                                <span>Unpublished Job</span>
                             </div>
                             <div class="card-body h3">
                                 Total: 35 Job
