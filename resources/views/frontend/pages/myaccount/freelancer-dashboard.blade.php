@@ -34,7 +34,7 @@
                     <div class="col-md-6 pb-3" >
                         <div class="card">
                             <div class="card-header text-center text-uppercase h4 box">
-                                <span>Offered Job</span>
+                                <span>Completed Job</span>
                             </div>
                             <div class="card-body h3">
                                 Total: 6543
@@ -44,7 +44,7 @@
                     <div class="col-md-6 pb-3" >
                         <div class="card">
                             <div class="card-header text-center text-uppercase h4 box">
-                                <span>Completed Job</span>
+                                <span>Failed Job</span>
                             </div>
                             <div class="card-body h3">
                                 Total: 654
@@ -67,9 +67,7 @@
                                 <span>Payment</span>
                             </div>
                             <div class="card-body h3">
-                                Payable: 12343 BDT <br>
-                                Pay: 3432 @production
-                                @endproduction
+                                Total: 12343 BDT 
                             </div>
                         </div>
                     </div>
@@ -104,150 +102,27 @@
                     <table id="my-job-list-table" class="table table-striped nowrap">
                         <thead>
                             <tr class="text-center">
+                                <th>Client</th>
                                 <th>JOb ID</th>
-                                <th>User ID</th>
                                 <th>Vat ID</th>
-                                <th>Charge</th>
-                                <th>Last Salling Date</th>
+                                <th>Get Paid(60%)</th>
+                                <th>Last Date</th>
                                 <th>Method</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Tiger Nixon</td>
                                 <td>System Architect</td>
+                                <td>Tiger Nixon</td>
                                 <td>Edinburgh</td>
-                                <td>61</td>
+                                <td>610 BDT</td>
                                 <td>2011-04-25</td>
                                 <td>LTM</td>
-                                <td><a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Freelancers</a></td>
-                            </tr>
-                            <tr>
-                                <td>Tiger Nixon</td>
-                                <td>System Architect</td>
-                                <td>Edinburgh</td>
-                                <td>61</td>
-                                <td>2011-04-25</td>
-                                <td>LTM</td>
-                                <td><a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Freelancers</a></td>
-                            </tr>
-                            <tr>
-                                <td>Tiger Nixon</td>
-                                <td>System Architect</td>
-                                <td>Edinburgh</td>
-                                <td>61</td>
-                                <td>2011-04-25</td>
-                                <td>LTM</td>
-                                <td><a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Freelancers</a></td>
-                            </tr>
-                            <tr>
-                                <td>Tiger Nixon</td>
-                                <td>System Architect</td>
-                                <td>Edinburgh</td>
-                                <td>61</td>
-                                <td>2011-04-25</td>
-                                <td>LTM</td>
-                                <td><a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Freelancers</a></td>
-                            </tr>
-                            <tr>
-                                <td>Tiger Nixon</td>
-                                <td>System Architect</td>
-                                <td>Edinburgh</td>
-                                <td>61</td>
-                                <td>2011-04-25</td>
-                                <td>LTM</td>
-                                <td><a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Freelancers</a></td>
-                            </tr>
-                            <tr>
-                                <td>Tiger Nixon</td>
-                                <td>System Architect</td>
-                                <td>Edinburgh</td>
-                                <td>61</td>
-                                <td>2011-04-25</td>
-                                <td>LTM</td>
-                                <td><a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Freelancers</a></td>
-                            </tr>
-                            <tr>
-                                <td>Tiger Nixon</td>
-                                <td>System Architect</td>
-                                <td>Edinburgh</td>
-                                <td>61</td>
-                                <td>2011-04-25</td>
-                                <td>LTM</td>
-                                <td><a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Freelancers</a></td>
-                            </tr>
-                            <tr>
-                                <td>Tiger Nixon</td>
-                                <td>System Architect</td>
-                                <td>Edinburgh</td>
-                                <td>61</td>
-                                <td>2011-04-25</td>
-                                <td>LTM</td>
-                                <td><a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Freelancers</a></td>
-                            </tr>
-                            <tr>
-                                <td>Tiger Nixon</td>
-                                <td>System Architect</td>
-                                <td>Edinburgh</td>
-                                <td>61</td>
-                                <td>2011-04-25</td>
-                                <td>LTM</td>
-                                <td><a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Freelancers</a></td>
-                            </tr>
-                            <tr>
-                                <td>Tiger Nixon</td>
-                                <td>System Architect</td>
-                                <td>Edinburgh</td>
-                                <td>61</td>
-                                <td>2011-04-25</td>
-                                <td>LTM</td>
-                                <td><a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Freelancers</a></td>
-                            </tr>
-                            <tr>
-                                <td>Tiger Nixon</td>
-                                <td>System Architect</td>
-                                <td>Edinburgh</td>
-                                <td>61</td>
-                                <td>2011-04-25</td>
-                                <td>LTM</td>
-                                <td><a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Freelancers</a></td>
-                            </tr>
-                            <tr>
-                                <td>Tiger Nixon</td>
-                                <td>System Architect</td>
-                                <td>Edinburgh</td>
-                                <td>61</td>
-                                <td>2011-04-25</td>
-                                <td>LTM</td>
-                                <td><a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Freelancers</a></td>
-                            </tr>
-                            <tr>
-                                <td>Tiger Nixon</td>
-                                <td>System Architect</td>
-                                <td>Edinburgh</td>
-                                <td>61</td>
-                                <td>2011-04-25</td>
-                                <td>LTM</td>
-                                <td><a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Freelancers</a></td>
-                            </tr>
-                            <tr>
-                                <td>Tiger Nixon</td>
-                                <td>System Architect</td>
-                                <td>Edinburgh</td>
-                                <td>61</td>
-                                <td>2011-04-25</td>
-                                <td>LTM</td>
-                                <td><a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Freelancers</a></td>
-                            </tr>
-                            <tr>
-                                <td>Tiger Nixon</td>
-                                <td>System Architect</td>
-                                <td>Edinburgh</td>
-                                <td>61</td>
-                                <td>2011-04-25</td>
-                                <td>LTM</td>
-                                <td><a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Freelancers</a></td>
+                                <td>
+                                    <a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">View Jobs & <br> Requirements</a>
+                                    <a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Start Job</a>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -260,175 +135,24 @@
                         <thead>
                             <tr class="text-center">
                                 <th>SL No</th>
-                                <th>Tender</th>
-                                <th>User</th>
-                                <th>pament</th>
-                                <th>payable</th>
-                                <th>Date</th>
+                                <th>Client</th>
+                                <th>Job ID</th>
+                                <th>Transaction ID</th>
+                                <th>Transaction Date</th>
+                                <th>Payment By</th>
+                                <th>Payment Amount</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>01</td>
                                 <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>20,000BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>20,000BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>20,000BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>20,000BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>20,000BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>20,000BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>20,000BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>20,000BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>20,000BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>20,000BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>20,000BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>20,000BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>20,000BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>20,000BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>20,000BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>20,000BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>20,000BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>20,000BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>20,000BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>20,000BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            
+                                <td>0000001</td>
+                                <td>03232Ceb32323</td>
+                                <td>10/12/2022</td> 
+                                <td>Admin</td> 
+                                <td>450 BDT</td> 
+                            </tr>                       
                         </tbody>
                     </table>
                 </div>

@@ -38,7 +38,7 @@
                                 <span>Offered Job</span>
                             </div>
                             <div class="card-body h3">
-                                Total: 6543
+                                Total: 6543 Job
                             </div>
                         </div>
                     </div>
@@ -48,7 +48,7 @@
                                 <span>Completed Job</span>
                             </div>
                             <div class="card-body h3">
-                                Total: 654
+                                Total: 654 Job
                             </div>
                         </div>
                     </div>
@@ -58,17 +58,17 @@
                                 <span>Pending Job</span>
                             </div>
                             <div class="card-body h3">
-                                Total: 35
+                                Total: 35 Job
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 pb-3" >
                         <div class="card">
                             <div class="card-header text-center text-uppercase h4 box">
-                                <span>Dadeline over</span>
+                                <span>Deadline over</span>
                             </div>
                             <div class="card-body h3">
-                                Total: 12job Offered
+                                Total: 12 Job
 
                             </div>
                         </div>
@@ -79,7 +79,7 @@
                                 <span>Payment</span>
                             </div>
                             <div class="card-body h3">
-                                Pay: 3432 
+                                Pay: 3432 BDT
                             </div>
                         </div>
                     </div>
@@ -118,7 +118,9 @@
                                 <label for="vat-id" class="col-form-label">Vat Id</label>
                             </div>
                             <div class="col-md-9">
-                                <input type="text" name="vat_id" class="form-control" id="vat-id" placeholder="Type Your vat-id" multiple>
+                                <select name="vat_id" id="vat_id" multiple data-placeholder="Type Your vat-id"></select>
+
+                                <!-- <input type="text" name="vat_id" class="form-control" id="vat-id" placeholder="Type Your vat-id" multiple> -->
                             </div>
                         </div> 
                         <div class="form-group row mb-3">
@@ -186,7 +188,7 @@
                             <tr>
                                 <td>02</td>
                                 <td>Tiger Nixon</td>
-                                <td>1212, 76, 564</td>
+                                <td>1212</td>
                                 <td>61</td>
                                 <td>2011-04-25</td>
                                 <td>LTM</td>
@@ -338,150 +340,24 @@
                         <thead>
                             <tr class="text-center">
                                 <th>SL No</th>
-                                <th>Tender</th>
-                                <th>User</th>
-                                <th>pament</th>
-                                <th>Date</th>
+                                <th>Transaction ID</th>
+                                <th>Job ID</th>
+                                <th>Payment Amount</th>
+                                <th>Payment Date</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>01</td>
+                                <td>032323232</td>
                                 <td>System Architect</td>
-                                <td>Mr Frelancer</td>
                                 <td>4500 BDT</td>
                                 <td>24 Aug 2022</td>
                             </tr>
                             <tr>
                                 <td>01</td>
+                                <td>032323232</td>
                                 <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
-                                <td>4500 BDT</td>
-                                <td>24 Aug 2022</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>System Architect</td>
-                                <td>Mr Frelancer</td>
                                 <td>4500 BDT</td>
                                 <td>24 Aug 2022</td>
                             </tr>
@@ -520,7 +396,7 @@
                     <tbody>
                         <tr>
                             <td>Tiger Nixon</td>
-                            <td>System Architect</td>
+                            <td><a href="" title="click to view freelancer profile">System Architect</a></td>
                             <td>Edinburgh</td>
                             <td>61</td>
                             <td>2011-04-25</td>
@@ -641,7 +517,7 @@
                 </div>
             </div>
             <div class="row mb-3">
-                <label for="file" class="col-md-3 col-form-label">File Upload</label>
+                <label class="col-md-3 col-form-label">File Upload</label>
                 <div class="col-md-9">
                     <div class="row" id="file-upload">
                         <div class="col-11 mb-2">
@@ -734,7 +610,11 @@
                             <label for="vat-id" class="col-form-label">Vat Id</label>
                         </div>
                         <div class="col-md-9">
-                            <input type="text" name="vat_id" class="form-control" tags="true" id="vat-id" placeholder="Type Your vat-id">
+                            <select name="vat_id" id="edit-vat_id" data-placeholder="Type Your vat-id" multiple>
+                                <option selected value="0000001">0000001</option>
+                                <option selected value="0000002">0000002</option>
+                            </select>
+                            <!-- <input type="text" name="vat_id" class="form-control" tags="true" id="vat-id" placeholder="Type Your vat-id"> -->
                         </div>
                     </div> 
                     <div class="form-group row mb-3">
@@ -813,10 +693,26 @@
             
             // $(document).on('click', '.btn-bids', tenderDetails);
             $(document).on('click', '#btn-add-file-upload', addFileUploadMore);
+            $(document).on('click', '.btn-remove-file-upload', removeFileUploadMore);
             $(document).on('keyup', '#last-selling-date, #charge', updateTotalCharge);
             $(document).on('keyup', '#charge-edit', updateTotalChargeintoModal);
+
+            init();
         });
     })(jQuery)
+    
+    function init(){
+        $('#vat_id').select2({
+            theme           : 'bootstrap4',
+            tags: true
+        }).trigger("change")
+
+        $('#edit-vat_id').select2({
+            theme           : 'bootstrap4',
+            dropdownParent: $('#tenderEditrModalToggle'),
+        });
+     
+    }
 
     function openCity(evt, cityName) {
         var i, tabcontent, tablinks;
@@ -838,15 +734,26 @@
     document.getElementById("defaultOpen").click();
 
     function addFileUploadMore() {
+        let id = new Date().getTime();
         const inputText = `
                 <div class="col-11 mb-2">
-                    <input type="file" class="form-control" id="file">
+                    <input type="file" class="form-control " id="file_${id}">
+                </div>
+                <div class="col-1">
+                    <button class="btn btn-danger float-end btn-remove-file-upload" data-fileid="file_${id}" type="button" title="Remove file"><i class="fa fa-times"></i></button>
                 </div>
         `;
         $("#file-upload").append(inputText);
         console.log('add new file');
     }
-
+    
+    function removeFileUploadMore() {
+        let id = $(this).attr('data-fileid');
+        $(`#${id}`).remove();
+        $(this).remove();
+        
+    }
+    
     function updateTotalCharge() {
         const charge = $("#charge").val();
         const total = charge * 5;

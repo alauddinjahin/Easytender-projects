@@ -28,7 +28,7 @@
             <div class="col-md-4  m-0 p-0">
                 <div class="all-vat-card px-3 py-4">
                     <table class="all-vat-card-wrap">
-                        <tr class="text-center">
+                        <tr >
                             <th>JOB ID</th>
                             <td>&nbsp;:&nbsp;</td>
                             <td><span>121212</span></td>
