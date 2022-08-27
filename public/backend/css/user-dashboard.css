@@ -78,8 +78,8 @@
   background-color: #fff;
 }
 
-.fa{
-  color: #e74960;
+.fa-danger{
+  color: #e74960 !important;
 }
 .profile-content{
   min-height: 400px;

@@ -24,10 +24,11 @@
         <div class="row">
             <div class="tab tab-menu col-md-3">
                 <span class="menu-header">User Information</span>
-                <button class="tablinks active" onclick="openCity(event, 'dashboard')" id="defaultOpen">My Dashboard</button>
+                <button class="tablinks active" onclick="openCity(event, 'dashboard')" >My Dashboard</button>
                 <button class="tablinks" onclick="openCity(event, 'my-profile')">My Profile</button>
-                <button class="tablinks" onclick="openCity(event, 'my-job-list')">My Job List</button>
+                <button class="tablinks" onclick="openCity(event, 'Offered-list')" id="defaultOpen">My Offered Job List</button>
                 <button class="tablinks" onclick="openCity(event, 'payment-history')">Payment History</button>
+                <button class="tablinks" onclick="openCity(event, 'Offer new Job')">Payment History</button>
             </div>
             <div class="tabcontent col-md-9" id="dashboard">
                 <div class="row px-3">
@@ -67,7 +68,8 @@
                                 <span>Dadeline over</span>
                             </div>
                             <div class="card-body h3">
-                                Total: 121 
+                                Total: 12job Offered
+
                             </div>
                         </div>
                     </div>
@@ -88,9 +90,9 @@
                 <div class="row profile-content py-2">
                     <div class="col-md-3 profile-image" >
                         <img src="{{asset('/backend/images/users/demo_user.webp')}}" class="img-thumbnail" alt="My Photo" >
-                        <span><i class="fa fa-envelope"> </i> example@gmail.com</span><br>
-                        <span><i class="fa fa-phone"> </i> 01910922069</span><br>
-                        <span><i class="fa fa-map-marker"> </i> Mirpur, Dhaka</span>
+                        <span><i class="fa fa-envelope fa-danger"> </i> example@gmail.com</span><br>
+                        <span><i class="fa fa-phone fa-danger"> </i> 01910922069</span><br>
+                        <span><i class="fa fa-map-marker fa-danger"> </i> Mirpur, Dhaka</span>
                     </div>
                     <div class="col-md-9">
                         <div class="row">
@@ -98,7 +100,7 @@
                                 <span class="text-uppercase display-6">Mr Anonimous User</span>
                             </div>
                             <div class="col-2">
-                                <button class="btn btn-profile-edit" data-bs-toggle="modal" data-bs-target="#profile-edit-modal"><i class="fa fa-pencil"></i> </button>
+                                <button class="btn btn-profile-edit" data-bs-toggle="modal" data-bs-target="#profile-edit-modal"><i class="fa fa-pencil fa-danger"></i> </button>
                             </div>
                         </div>
                         <div class="line"></div>
@@ -107,13 +109,13 @@
                 </div>
             </div>
 
-            <div class="tabcontent col-9" id="my-job-list">
+            <div class="tabcontent col-9" id="Offered-list">
                 <div class="table-responsive">
-                    <table id="my-job-list-table" class="table table-striped nowrap">
+                    <table id="Offered-list-table" class="table table-striped nowrap">
                         <thead>
                             <tr class="text-center">
+                                <th>SL</th>
                                 <th>JOb ID</th>
-                                <th>User ID</th>
                                 <th>Vat ID</th>
                                 <th>Charge</th>
                                 <th>Last Salling Date</th>
@@ -123,139 +125,148 @@
                         </thead>
                         <tbody>
                             <tr>
+                                <td>02</td>
                                 <td>Tiger Nixon</td>
-                                <td>System Architect</td>
                                 <td>Edinburgh</td>
                                 <td>61</td>
                                 <td>2011-04-25</td>
                                 <td>LTM</td>
-                                <td><a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Freelancers</a></td>
+                                <td>
+                                    <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
+                                    <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
+                                </td>
                             </tr>
                             <tr>
+                                <td>03</td>
                                 <td>Tiger Nixon</td>
-                                <td>System Architect</td>
                                 <td>Edinburgh</td>
                                 <td>61</td>
                                 <td>2011-04-25</td>
                                 <td>LTM</td>
-                                <td><a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Freelancers</a></td>
+                                <td>
+                                    <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
+                                    <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
+                                </td>
                             </tr>
                             <tr>
+                                <td>04</td>
                                 <td>Tiger Nixon</td>
-                                <td>System Architect</td>
                                 <td>Edinburgh</td>
                                 <td>61</td>
                                 <td>2011-04-25</td>
                                 <td>LTM</td>
-                                <td><a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Freelancers</a></td>
+                                <td>
+                                    <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
+                                    <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
+                                </td>
                             </tr>
                             <tr>
+                                <td>05</td>
                                 <td>Tiger Nixon</td>
-                                <td>System Architect</td>
                                 <td>Edinburgh</td>
                                 <td>61</td>
                                 <td>2011-04-25</td>
                                 <td>LTM</td>
-                                <td><a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Freelancers</a></td>
+                                <td>
+                                    <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
+                                    <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
+                                </td>
                             </tr>
                             <tr>
+                                <td>01</td>
                                 <td>Tiger Nixon</td>
-                                <td>System Architect</td>
                                 <td>Edinburgh</td>
                                 <td>61</td>
                                 <td>2011-04-25</td>
                                 <td>LTM</td>
-                                <td><a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Freelancers</a></td>
+                                <td>
+                                    <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
+                                    <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
+                                </td>
                             </tr>
                             <tr>
+                                <td>01</td>
                                 <td>Tiger Nixon</td>
-                                <td>System Architect</td>
                                 <td>Edinburgh</td>
                                 <td>61</td>
                                 <td>2011-04-25</td>
                                 <td>LTM</td>
-                                <td><a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Freelancers</a></td>
+                                <td>
+                                    <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
+                                    <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
+                                </td>
                             </tr>
                             <tr>
+                                <td>01</td>
                                 <td>Tiger Nixon</td>
-                                <td>System Architect</td>
                                 <td>Edinburgh</td>
                                 <td>61</td>
                                 <td>2011-04-25</td>
                                 <td>LTM</td>
-                                <td><a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Freelancers</a></td>
+                                <td>
+                                    <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
+                                    <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
+                                </td>
                             </tr>
                             <tr>
+                                <td>01</td>
                                 <td>Tiger Nixon</td>
-                                <td>System Architect</td>
                                 <td>Edinburgh</td>
                                 <td>61</td>
                                 <td>2011-04-25</td>
                                 <td>LTM</td>
-                                <td><a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Freelancers</a></td>
+                                <td>
+                                    <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
+                                    <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
+                                </td>
                             </tr>
                             <tr>
+                                <td>01</td>
                                 <td>Tiger Nixon</td>
-                                <td>System Architect</td>
                                 <td>Edinburgh</td>
                                 <td>61</td>
                                 <td>2011-04-25</td>
                                 <td>LTM</td>
-                                <td><a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Freelancers</a></td>
+                                <td>
+                                    <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
+                                    <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
+                                </td>
                             </tr>
                             <tr>
+                                <td>01</td>
                                 <td>Tiger Nixon</td>
-                                <td>System Architect</td>
                                 <td>Edinburgh</td>
                                 <td>61</td>
                                 <td>2011-04-25</td>
                                 <td>LTM</td>
-                                <td><a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Freelancers</a></td>
+                                <td>
+                                    <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
+                                    <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
+                                </td>
                             </tr>
                             <tr>
+                                <td>01</td>
                                 <td>Tiger Nixon</td>
-                                <td>System Architect</td>
                                 <td>Edinburgh</td>
                                 <td>61</td>
                                 <td>2011-04-25</td>
                                 <td>LTM</td>
-                                <td><a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Freelancers</a></td>
+                                <td>
+                                    <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
+                                    <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
+                                </td>
                             </tr>
                             <tr>
+                                <td>01</td>
                                 <td>Tiger Nixon</td>
-                                <td>System Architect</td>
                                 <td>Edinburgh</td>
                                 <td>61</td>
                                 <td>2011-04-25</td>
                                 <td>LTM</td>
-                                <td><a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Freelancers</a></td>
-                            </tr>
-                            <tr>
-                                <td>Tiger Nixon</td>
-                                <td>System Architect</td>
-                                <td>Edinburgh</td>
-                                <td>61</td>
-                                <td>2011-04-25</td>
-                                <td>LTM</td>
-                                <td><a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Freelancers</a></td>
-                            </tr>
-                            <tr>
-                                <td>Tiger Nixon</td>
-                                <td>System Architect</td>
-                                <td>Edinburgh</td>
-                                <td>61</td>
-                                <td>2011-04-25</td>
-                                <td>LTM</td>
-                                <td><a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Freelancers</a></td>
-                            </tr>
-                            <tr>
-                                <td>Tiger Nixon</td>
-                                <td>System Architect</td>
-                                <td>Edinburgh</td>
-                                <td>61</td>
-                                <td>2011-04-25</td>
-                                <td>LTM</td>
-                                <td><a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Freelancers</a></td>
+                                <td>
+                                    <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
+                                    <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -444,14 +455,14 @@
            
         </div>
     </div>
-
+</div>
 
   {{-- Modal start --}}
-  <div class="modal fade" id="freelancerModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal fade" id="freelancerModalToggle" data-bs-backdrop="static" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
     <div class="modal-dialog modal-xl modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalToggleLabel">Freelancers List</h5>
+          <h5 class="modal-title" id="exampleModalToggleLabel">Bid User List</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -575,11 +586,12 @@
       </div>
     </div>
   </div>
+
   <div class="modal fade" id="approvalModal" aria-hidden="true" aria-labelledby="approvalModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="approvalModal">Freelancer Approval</h5>
+          <h5 class="modal-title" id="approvalModal">Bid Approval</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -593,7 +605,14 @@
             <div class="row mb-3">
                 <label for="file" class="col-md-3 col-form-label">File Upload</label>
                 <div class="col-md-9">
-                  <input type="file" multiple class="form-control" id="file">
+                    <div class="row" id="file-upload">
+                        <div class="col-11 mb-2">
+                            <input type="file" class="form-control" id="file">
+                        </div>
+                        <div class="col-1">
+                            <button class="btn btn-success float-end" id="btn-add-file-upload" type="button" title="Add more file"><i class="fa fa-plus"></i></button>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row mb-3">
@@ -607,6 +626,121 @@
       </div>
     </div>
   </div>
+
+  {{-- Pfofile modal  --}}
+ 
+  <div class="modal fade" id="profile-edit-modal" data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-uppercase" id="profile-edit-modal-label">Profile Update</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+             <div class="modal-body">
+                <form action="" method="post">
+                    @csrf
+                    <div class="form-group row mb-3">
+                        <div class="col-md-3">
+                            <label for="name" class="col-form-label">Your Name:</label>
+                        </div>
+                        <div class="col-md-9">
+                            <input type="text" name="name" class="form-control " id="name" placeholder="Type Your Name">
+                        </div>
+                    </div> 
+                    <div class="form-group row mb-3">
+                        <div class="col-md-3">
+                            <label for="email" class="col-form-label">Your Email:</label>
+                        </div>
+                        <div class="col-md-9">
+                            <input type="text" name="email" class="form-control " id="email" placeholder="test@example" readonly>
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                        <div class="col-md-3">
+                            <label for="phone" class="col-form-label">Your Phone:</label>
+                        </div>
+                        <div class="col-md-9">
+                            <input type="text" name="phone" class="form-control " id="phone" placeholder="Type Your Phone Number">
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                        <div class="col-md-3">
+                            <label for="address" class="col-form-label">Your Address:</label>
+                        </div>
+                        <div class="col-md-9">
+                            <input type="text" name="address" class="form-control " id="address" placeholder="Type Your Address">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-custom">Update</button>
+            </div>
+        </div>
+    </div>
+  </div> 
+  {{-- tender Edit modal  --}}
+ 
+  <div class="modal fade" id="tenderEditrModalToggle" data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-uppercase" id="tenderEditrModalToggle-label">Tender Update</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+             <div class="modal-body">
+                <form action="" method="post">
+                    @csrf
+                    <div class="form-group row mb-3">
+                        <div class="col-md-3">
+                            <label for="vat-id" class="col-form-label">Vat Id</label>
+                        </div>
+                        <div class="col-md-9">
+                            <input type="text" name="vat_id" class="form-control" tags="true" id="vat-id" placeholder="Type Your vat-id">
+                        </div>
+                    </div> 
+                    <div class="form-group row mb-3">
+                        <div class="col-md-3">
+                            <label for="method-selection" class="col-form-label">Select Method:</label>
+                        </div>
+                        <div class="col-md-9">
+                            <select name="method_selection" id="method-selection" class="form-control">
+                                <option value="">MLT</option>
+                                <option value="">MLM</option>
+                                <option value="">MLT</option>
+                                <option value="">MLT</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                        <div class="col-md-3">
+                            <label for="last-selling-date" class="col-form-label">Last Selling Date</label>
+                        </div>
+                        <div class="col-md-9">
+                            <input type="date" name="last_selling_date" class="form-control " id="last-selling-date" >
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                        <div class="col-md-3">
+                            <label for="charge" class="col-form-label">Service Charge:</label>
+                        </div>
+                        <div class="col-md-9">
+                            <input type="text" name="charge" class="form-control " id="charge" placeholder="Type Service charge">
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                        <div class="col-md-12">
+                            <button type="button" class="btn btn-custom float-end">Update</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            
+        </div>
+    </div>
+  </div>
+
   {{-- Modal end --}}
     
 @endsection
@@ -629,9 +763,10 @@
 <script>
     (function($){
         $(document).ready(function(){
-            $("#my-job-list-table, #payment-history-table, #freelancers-table").DataTable();
+            $("#Offered-list-table, #payment-history-table, #freelancers-table").DataTable();
             
-            $(document).on('click', '.btn-freelancers', tenderDetails);
+            // $(document).on('click', '.btn-bids', tenderDetails);
+            $(document).on('click', '#btn-add-file-upload', addFileUploadMore);
         });
     })(jQuery)
 
@@ -654,8 +789,14 @@
     // Get the element with id="defaultOpen" and click on it
     document.getElementById("defaultOpen").click();
 
-    function tenderDetails() {
-        // $("#freelancers-modal").modal('show');
+    function addFileUploadMore() {
+        const inputText = `
+                <div class="col-11 mb-2">
+                    <input type="file" class="form-control" id="file">
+                </div>
+        `;
+        $("#file-upload").append(inputText);
+        console.log('add new file');
     }
 
 </script>
