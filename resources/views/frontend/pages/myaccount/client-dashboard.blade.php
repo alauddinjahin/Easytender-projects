@@ -664,6 +664,17 @@
                         </div>
                     </div>
                     <div class="form-group row mb-3">
+                        <div class="col-md-3">
+                            <label class="col-form-label">Publish status:</label>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="d-flex gap-4"> 
+                                <label for="publish" class="d-flex gap-1"><input type="radio" name="publish_status" id="publish"> <small>Publish</small></label>
+                                <label for="unpublish" class="d-flex gap-1"><input type="radio" name="publish_status" id="unpublish" checked> <small>Unpublish</small></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
                         <div class="col-md-12">
                             <button type="button" class="btn btn-custom float-end">Update</button>
                         </div>
@@ -704,6 +715,7 @@
             $(document).on('click', '.btn-remove-file-upload', removeFileUploadMore);
             $(document).on('change', '#vat_id', updateTotalCharge);
             $(document).on('keyup', '#charge', updateTotalCharge);
+            $(document).on('change', '#edit-vat_id', updateTotalChargeintoModal);
             $(document).on('keyup', '#charge-edit', updateTotalChargeintoModal);
 
             init();
@@ -768,9 +780,7 @@
     }
     
     function updateTotalChargeintoModal() {
-        const charge = $("#charge-edit").val();
-        const total = charge * 5;
-        $("#total-charge-edit").val(total);
+        $("#total-charge-edit").val($("#charge-edit").val() * $("#edit-vat_id option").length);
     }
 
 </script>
