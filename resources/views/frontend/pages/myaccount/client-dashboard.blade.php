@@ -341,7 +341,6 @@
                                 <th>Tender</th>
                                 <th>User</th>
                                 <th>pament</th>
-                                <th>payable</th>
                                 <th>Date</th>
                             </tr>
                         </thead>
@@ -351,7 +350,6 @@
                                 <td>System Architect</td>
                                 <td>Mr Frelancer</td>
                                 <td>4500 BDT</td>
-                                <td>20,000BDT</td>
                                 <td>24 Aug 2022</td>
                             </tr>
                             <tr>
@@ -359,7 +357,6 @@
                                 <td>System Architect</td>
                                 <td>Mr Frelancer</td>
                                 <td>4500 BDT</td>
-                                <td>20,000BDT</td>
                                 <td>24 Aug 2022</td>
                             </tr>
                             <tr>
@@ -367,7 +364,6 @@
                                 <td>System Architect</td>
                                 <td>Mr Frelancer</td>
                                 <td>4500 BDT</td>
-                                <td>20,000BDT</td>
                                 <td>24 Aug 2022</td>
                             </tr>
                             <tr>
@@ -375,7 +371,6 @@
                                 <td>System Architect</td>
                                 <td>Mr Frelancer</td>
                                 <td>4500 BDT</td>
-                                <td>20,000BDT</td>
                                 <td>24 Aug 2022</td>
                             </tr>
                             <tr>
@@ -383,7 +378,6 @@
                                 <td>System Architect</td>
                                 <td>Mr Frelancer</td>
                                 <td>4500 BDT</td>
-                                <td>20,000BDT</td>
                                 <td>24 Aug 2022</td>
                             </tr>
                             <tr>
@@ -391,7 +385,6 @@
                                 <td>System Architect</td>
                                 <td>Mr Frelancer</td>
                                 <td>4500 BDT</td>
-                                <td>20,000BDT</td>
                                 <td>24 Aug 2022</td>
                             </tr>
                             <tr>
@@ -399,7 +392,6 @@
                                 <td>System Architect</td>
                                 <td>Mr Frelancer</td>
                                 <td>4500 BDT</td>
-                                <td>20,000BDT</td>
                                 <td>24 Aug 2022</td>
                             </tr>
                             <tr>
@@ -407,7 +399,6 @@
                                 <td>System Architect</td>
                                 <td>Mr Frelancer</td>
                                 <td>4500 BDT</td>
-                                <td>20,000BDT</td>
                                 <td>24 Aug 2022</td>
                             </tr>
                             <tr>
@@ -415,7 +406,6 @@
                                 <td>System Architect</td>
                                 <td>Mr Frelancer</td>
                                 <td>4500 BDT</td>
-                                <td>20,000BDT</td>
                                 <td>24 Aug 2022</td>
                             </tr>
                             <tr>
@@ -423,7 +413,6 @@
                                 <td>System Architect</td>
                                 <td>Mr Frelancer</td>
                                 <td>4500 BDT</td>
-                                <td>20,000BDT</td>
                                 <td>24 Aug 2022</td>
                             </tr>
                             <tr>
@@ -431,7 +420,6 @@
                                 <td>System Architect</td>
                                 <td>Mr Frelancer</td>
                                 <td>4500 BDT</td>
-                                <td>20,000BDT</td>
                                 <td>24 Aug 2022</td>
                             </tr>
                             <tr>
@@ -439,7 +427,6 @@
                                 <td>System Architect</td>
                                 <td>Mr Frelancer</td>
                                 <td>4500 BDT</td>
-                                <td>20,000BDT</td>
                                 <td>24 Aug 2022</td>
                             </tr>
                             <tr>
@@ -447,7 +434,6 @@
                                 <td>System Architect</td>
                                 <td>Mr Frelancer</td>
                                 <td>4500 BDT</td>
-                                <td>20,000BDT</td>
                                 <td>24 Aug 2022</td>
                             </tr>
                             <tr>
@@ -455,7 +441,6 @@
                                 <td>System Architect</td>
                                 <td>Mr Frelancer</td>
                                 <td>4500 BDT</td>
-                                <td>20,000BDT</td>
                                 <td>24 Aug 2022</td>
                             </tr>
                             <tr>
@@ -463,7 +448,6 @@
                                 <td>System Architect</td>
                                 <td>Mr Frelancer</td>
                                 <td>4500 BDT</td>
-                                <td>20,000BDT</td>
                                 <td>24 Aug 2022</td>
                             </tr>
                             <tr>
@@ -471,7 +455,6 @@
                                 <td>System Architect</td>
                                 <td>Mr Frelancer</td>
                                 <td>4500 BDT</td>
-                                <td>20,000BDT</td>
                                 <td>24 Aug 2022</td>
                             </tr>
                             <tr>
@@ -479,7 +462,6 @@
                                 <td>System Architect</td>
                                 <td>Mr Frelancer</td>
                                 <td>4500 BDT</td>
-                                <td>20,000BDT</td>
                                 <td>24 Aug 2022</td>
                             </tr>
                             <tr>
@@ -487,7 +469,6 @@
                                 <td>System Architect</td>
                                 <td>Mr Frelancer</td>
                                 <td>4500 BDT</td>
-                                <td>20,000BDT</td>
                                 <td>24 Aug 2022</td>
                             </tr>
                             <tr>
@@ -495,7 +476,6 @@
                                 <td>System Architect</td>
                                 <td>Mr Frelancer</td>
                                 <td>4500 BDT</td>
-                                <td>20,000BDT</td>
                                 <td>24 Aug 2022</td>
                             </tr>
                             <tr>
@@ -503,7 +483,6 @@
                                 <td>System Architect</td>
                                 <td>Mr Frelancer</td>
                                 <td>4500 BDT</td>
-                                <td>20,000BDT</td>
                                 <td>24 Aug 2022</td>
                             </tr>
                             
