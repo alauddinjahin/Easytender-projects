@@ -24,11 +24,11 @@
         <div class="row">
             <div class="tab tab-menu col-md-3">
                 <span class="menu-header">User Information</span>
-                <button class="tablinks active" onclick="openCity(event, 'dashboard')" >My Dashboard</button>
+                <button class="tablinks active" onclick="openCity(event, 'dashboard')" id="defaultOpen">My Dashboard</button>
                 <button class="tablinks" onclick="openCity(event, 'my-profile')">My Profile</button>
-                <button class="tablinks" onclick="openCity(event, 'Offered-list')" id="defaultOpen">My Offered Job List</button>
+                <button class="tablinks" onclick="openCity(event, 'offer-new-Job')">Create New Offer</button>
+                <button class="tablinks" onclick="openCity(event, 'Offered-list')">My Offered Job List</button>
                 <button class="tablinks" onclick="openCity(event, 'payment-history')">Payment History</button>
-                <button class="tablinks" onclick="openCity(event, 'Offer new Job')">Payment History</button>
             </div>
             <div class="tabcontent col-md-9" id="dashboard">
                 <div class="row px-3">
@@ -109,6 +109,65 @@
                 </div>
             </div>
 
+            <div class="tabcontent col-9" id="offer-new-Job">
+                <div class="row profile-content p-4">  
+                    <form action="" method="post">
+                        @csrf
+                        <div class="form-group row mb-3">
+                            <div class="col-md-3">
+                                <label for="vat-id" class="col-form-label">Vat Id</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" name="vat_id" class="form-control" id="vat-id" placeholder="Type Your vat-id" multiple>
+                            </div>
+                        </div> 
+                        <div class="form-group row mb-3">
+                            <div class="col-md-3">
+                                <label for="method-selection" class="col-form-label">Select Method:</label>
+                            </div>
+                            <div class="col-md-9">
+                                <select name="method_selection" id="method-selection" class="form-control">
+                                    <option value="">MLT</option>
+                                    <option value="">MLM</option>
+                                    <option value="">MLT</option>
+                                    <option value="">MLT</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row mb-3">
+                            <div class="col-md-3">
+                                <label for="last-selling-date" class="col-form-label">Last Selling Date</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="date" name="last_selling_date" class="form-control " id="last-selling-date" >
+                            </div>
+                        </div>
+                        <div class="form-group row mb-3">
+                            <div class="col-md-3">
+                                <label for="charge" class="col-form-label">Service Charge:</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" name="charge" class="form-control " id="charge" placeholder="Type Service charge">
+                            </div>
+                        </div>
+                        <div class="form-group row mb-3">
+                            <div class="col-md-3">
+                                <label class="col-form-label">Total Charge:</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="number" name="total_charge" class="form-control " id="total-charge" placeholder="0.00" readonly>
+                            </div>
+                        </div>
+                        <div class="form-group row mb-3">
+                            <div class="col-md-12">
+                                <button type="button" class="btn btn-custom float-end">Create Offer</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div> 
+
             <div class="tabcontent col-9" id="Offered-list">
                 <div class="table-responsive">
                     <table id="Offered-list-table" class="table table-striped nowrap">
@@ -127,7 +186,7 @@
                             <tr>
                                 <td>02</td>
                                 <td>Tiger Nixon</td>
-                                <td>Edinburgh</td>
+                                <td>1212, 76, 564</td>
                                 <td>61</td>
                                 <td>2011-04-25</td>
                                 <td>LTM</td>
@@ -139,7 +198,7 @@
                             <tr>
                                 <td>03</td>
                                 <td>Tiger Nixon</td>
-                                <td>Edinburgh</td>
+                                <td>1212, 76, 564</td>
                                 <td>61</td>
                                 <td>2011-04-25</td>
                                 <td>LTM</td>
@@ -151,7 +210,7 @@
                             <tr>
                                 <td>04</td>
                                 <td>Tiger Nixon</td>
-                                <td>Edinburgh</td>
+                                <td>1212, 76, 564</td>
                                 <td>61</td>
                                 <td>2011-04-25</td>
                                 <td>LTM</td>
@@ -163,7 +222,7 @@
                             <tr>
                                 <td>05</td>
                                 <td>Tiger Nixon</td>
-                                <td>Edinburgh</td>
+                                <td>1212, 76, 564</td>
                                 <td>61</td>
                                 <td>2011-04-25</td>
                                 <td>LTM</td>
@@ -175,7 +234,7 @@
                             <tr>
                                 <td>01</td>
                                 <td>Tiger Nixon</td>
-                                <td>Edinburgh</td>
+                                <td>1212, 76, 564</td>
                                 <td>61</td>
                                 <td>2011-04-25</td>
                                 <td>LTM</td>
@@ -187,7 +246,7 @@
                             <tr>
                                 <td>01</td>
                                 <td>Tiger Nixon</td>
-                                <td>Edinburgh</td>
+                                <td>1212, 76, 564</td>
                                 <td>61</td>
                                 <td>2011-04-25</td>
                                 <td>LTM</td>
@@ -199,7 +258,7 @@
                             <tr>
                                 <td>01</td>
                                 <td>Tiger Nixon</td>
-                                <td>Edinburgh</td>
+                                <td>1212, 76, 564</td>
                                 <td>61</td>
                                 <td>2011-04-25</td>
                                 <td>LTM</td>
@@ -211,7 +270,7 @@
                             <tr>
                                 <td>01</td>
                                 <td>Tiger Nixon</td>
-                                <td>Edinburgh</td>
+                                <td>1212, 76, 564</td>
                                 <td>61</td>
                                 <td>2011-04-25</td>
                                 <td>LTM</td>
@@ -223,7 +282,7 @@
                             <tr>
                                 <td>01</td>
                                 <td>Tiger Nixon</td>
-                                <td>Edinburgh</td>
+                                <td>1212, 76, 564</td>
                                 <td>61</td>
                                 <td>2011-04-25</td>
                                 <td>LTM</td>
@@ -235,7 +294,7 @@
                             <tr>
                                 <td>01</td>
                                 <td>Tiger Nixon</td>
-                                <td>Edinburgh</td>
+                                <td>1212, 76, 564</td>
                                 <td>61</td>
                                 <td>2011-04-25</td>
                                 <td>LTM</td>
@@ -247,7 +306,7 @@
                             <tr>
                                 <td>01</td>
                                 <td>Tiger Nixon</td>
-                                <td>Edinburgh</td>
+                                <td>1212, 76, 564</td>
                                 <td>61</td>
                                 <td>2011-04-25</td>
                                 <td>LTM</td>
@@ -259,7 +318,7 @@
                             <tr>
                                 <td>01</td>
                                 <td>Tiger Nixon</td>
-                                <td>Edinburgh</td>
+                                <td>1212, 76, 564</td>
                                 <td>61</td>
                                 <td>2011-04-25</td>
                                 <td>LTM</td>
@@ -725,7 +784,15 @@
                             <label for="charge" class="col-form-label">Service Charge:</label>
                         </div>
                         <div class="col-md-9">
-                            <input type="text" name="charge" class="form-control " id="charge" placeholder="Type Service charge">
+                            <input type="number" name="charge" class="form-control " id="charge-edit" placeholder="Type Service charge">
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                        <div class="col-md-3">
+                            <label class="col-form-label">Total Charge:</label>
+                        </div>
+                        <div class="col-md-9">
+                            <input type="number" name="total_charge" class="form-control " id="total-charge-edit" placeholder="0.00" readonly>
                         </div>
                     </div>
                     <div class="form-group row mb-3">
@@ -767,6 +834,8 @@
             
             // $(document).on('click', '.btn-bids', tenderDetails);
             $(document).on('click', '#btn-add-file-upload', addFileUploadMore);
+            $(document).on('keyup', '#last-selling-date, #charge', updateTotalCharge);
+            $(document).on('keyup', '#charge-edit', updateTotalChargeintoModal);
         });
     })(jQuery)
 
@@ -797,6 +866,18 @@
         `;
         $("#file-upload").append(inputText);
         console.log('add new file');
+    }
+
+    function updateTotalCharge() {
+        const charge = $("#charge").val();
+        const total = charge * 5;
+        $("#total-charge").val(total);
+    }
+    
+    function updateTotalChargeintoModal() {
+        const charge = $("#charge-edit").val();
+        const total = charge * 5;
+        $("#total-charge-edit").val(total);
     }
 
 </script>
