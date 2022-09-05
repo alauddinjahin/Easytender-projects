@@ -21,4 +21,12 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+Route::get('/client-dashboard',function(){
+    return view('frontend.pages.myaccount.client-dashboard');
+});
+
+Route::get('/freelancer-dashboard',function(){
+    return view('frontend.pages.myaccount.freelancer-dashboard');
+});
+
 require __DIR__.'/auth.php';
