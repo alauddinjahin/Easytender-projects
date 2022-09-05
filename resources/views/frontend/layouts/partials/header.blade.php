@@ -77,7 +77,7 @@
                                         </li>
                                         
                                         <li class="menu-item-has-children">
-                                            <a href="{{ URL('/login') }}">Login / Registration</a>
+                                            <a href="{{ route('login') }}">Login / Registration</a>
                                         </li>
                                     </ul> <!-- //.nav-menu -->
                                 </nav>

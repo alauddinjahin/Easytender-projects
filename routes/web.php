@@ -2,59 +2,23 @@
 
 use Illuminate\Support\Facades\Route;
 
-// Frontend Route list
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
 
 Route::get('/', function () {
     return view('frontend.home');
 });
 
-Route::get('/about-us', function(){
-    return view('frontend.pages.aboutus');
-});
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
 
-Route::get('/contact-us', function(){
-    return view('frontend.pages.contactus');
-});
-
-Route::get('/login', function(){
-    return view('frontend.pages.login');
-});
-
-Route::get('/register', function(){
-    return view('frontend.pages.registration');
-});
-
-Route::get('/all-tender', function(){
-    return view('frontend.pages.tender.alltender');
-});
-
-Route::get('/offer-tender', function(){
-    return view('frontend.pages.tender.offertender');
-});
-
-// Route::get('/myaccount', function(){
-//     return view('frontend.pages.myaccount.userdashboard');
-// });
-
-Route::get('/myaccount/client', function(){
-    return view('frontend.pages.myaccount.client-dashboard');
-});
-
-Route::get('/myaccount/freelancer', function(){
-    return view('frontend.pages.myaccount.freelancer-dashboard');
-});
-
-Route::get('/my-offer', function(){
-    return view('frontend.pages.tender.myoffer');
-});
-
-
-// Admin Route list 
-Route::group(['prefix'=>'admin','as'=>'admin.'], function(){
-    Route::get('/', function(){
-        return view('backend.admindashboard');
-    });
-});
-
-
-
+require __DIR__.'/auth.php';

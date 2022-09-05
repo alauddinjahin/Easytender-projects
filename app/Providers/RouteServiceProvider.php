@@ -17,7 +17,14 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    public const HOME = '/home';
+    public const HOME = '/dashboard';
+
+    //write code for redirect
+    
+    // public static function redirectToClient()
+    // {
+    //     return view('frontend.pages.myaccount.client-dashboard');
+    // }
 
     /**
      * Define your route model bindings, pattern filters, and other route configuration.

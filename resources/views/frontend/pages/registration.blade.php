@@ -30,8 +30,8 @@
                         <button class="add-btn" type="submit">Sign Up</button>
    
                         <div class="last-password pt-30 d-flex justify-content-between">
-                            <a href="#">Lost your password?</a>
-                            <span>Have an account? <a href="{{ URL('/login')}}">Login</a></span>
+                            <a href="{{ route('password.request') }}">Lost your password?</a>
+                            <span>Have an account? <a href="{{ route('login') }}">Login</a></span>
                         </div>
                     </div>
                 </div>
