@@ -19,8 +19,8 @@
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
                             <div class="form-group mb-30">
-                                <label for="email">Phone<span>*</span></label>
-                                <input id="email" name="email" class="form-control-mod" type="text" required="" autofocus> 
+                                <label for="phone">Phone<span>*</span></label>
+                                <input id="phone" name="phone" class="form-control-mod" type="text" required="" autofocus> 
                                 <label for="password">Password <span>*</span></label>
                                 <input  id="password" name="password" class="form-control-mod" type="password" required="" autocomplete="current-password">
                             </div>
