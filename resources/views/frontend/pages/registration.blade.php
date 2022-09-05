@@ -11,24 +11,26 @@
                 <div class="col-lg-6 md-mb-50 p-4">
                     <div class="rs-login">
                         <h2 class="title pb-30 md-pb-15">Regitration</h2>
-                        <div class="form-group mb-10">
-                            <label>Name<span>*</span></label>
-                            <input id="fname" name="fname" class="form-control-mod" type="text" required=""> 
-                            <label>Mobile<span>*</span></label>
-                            <input id="fname" name="fname" class="form-control-mod" type="number" required=""> 
-                            <label>District<span>*</span></label>
-                            <input id="fname" name="fname" class="form-control-mod" type="text" required=""> 
-                            <label>Password <span>*</span></label>
-                            <input id="tname" name="text" class="form-control-mod" type="password" required="">
-                            <label>Confirm Password <span>*</span></label>
-                            <input id="tname" name="text" class="form-control-mod" type="password" required="">
-                            <div class="d-flex gap-4"> 
-                                <label for="client" class="d-flex gap-1"><input type="radio" name="user_type" id="client"> <small>Client</small></label>
-                                <label for="freelancer" class="d-flex gap-1"><input type="radio" name="user_type" id="freelancer"> <small>Freelancer</small></label>
+                        <form method="POST" action="{{ route('register') }}">
+                            @csrf
+                            <div class="form-group mb-10">
+                                <label for="name">Name<span>*</span></label>
+                                <input id="name" name="name" class="form-control-mod" type="text" required=""> 
+                                <label for="phone">Mobile<span>*</span></label>
+                                <input id="phone" name="phone" class="form-control-mod" type="text" required=""> 
+                                <label for="district">District<span>*</span></label>
+                                <input id="district" name="district" class="form-control-mod" type="text" required=""> 
+                                <label for="password">Password <span>*</span></label>
+                                <input id="password" name="password" class="form-control-mod" type="password" required="">
+                                <label for="password_confirmation" >Confirm Password <span>*</span></label>
+                                <input id="password_confirmation"  name="password_confirmation" class="form-control-mod" type="password" required="">
+                                <div class="d-flex gap-4"> 
+                                    <label for="client" class="d-flex gap-1"><input type="radio" name="usertype" value="client" id="client"> <small>Client</small></label>
+                                    <label for="freelancer" class="d-flex gap-1"><input type="radio" name="usertype" value="freelancer" id="freelancer"> <small>Freelancer</small></label>
+                                </div>
                             </div>
-                        </div>
-                        <button class="add-btn" type="submit">Sign Up</button>
-   
+                            <button class="add-btn" type="submit">Sign Up</button>
+                        </form>
                         <div class="last-password pt-30 d-flex justify-content-between">
                             <a href="{{ route('password.request') }}">Lost your password?</a>
                             <span>Have an account? <a href="{{ route('login') }}">Login</a></span>
