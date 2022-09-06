@@ -13,6 +13,9 @@
                         <h2 class="title pb-30 md-pb-15">Regitration</h2>
                         <form method="POST" action="{{ route('register') }}">
                             @csrf
+                            <!-- Validation Errors -->
+                            <x-auth-validation-errors class="mb-4" :errors="$errors" style="color: red" />
+
                             <div class="form-group mb-10">
                                 <label for="name">Name<span>*</span></label>
                                 <input id="name" name="name" class="form-control-mod" type="text" required=""> 
