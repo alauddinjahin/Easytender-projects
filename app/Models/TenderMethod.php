@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class TenderMethod extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'name',
+        'short_name',
+    ];
 }

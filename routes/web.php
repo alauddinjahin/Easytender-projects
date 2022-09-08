@@ -41,6 +41,8 @@ Route::group(['prefix'=>'admin', 'middleware' => ['auth','is_admin']], function 
     });
 
     Route::get('/tender-methods',[TenderMethodController::class, 'index'])->name('admin.tender.methods');
+    Route::get('/tender-method-create',[TenderMethodController::class, 'create'])->name('tender_method_create');
+    Route::post('/method-create',[TenderMethodController::class, 'store'])->name('method.create');
 });
 
 Route::group(['prefix'=>'client', 'middleware' => ['auth','is_client']], function () {

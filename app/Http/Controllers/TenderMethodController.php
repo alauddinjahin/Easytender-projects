@@ -25,7 +25,7 @@ class TenderMethodController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.pages.tender-method.create');
     }
 
     /**
@@ -36,7 +36,13 @@ class TenderMethodController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $tender = TenderMethod::create([
+            'name'=> $request->name,
+            'short_name'=> $request->short_name
+        ]);
+        if ($tender) {
+            return redirect()->route('admin.tender.methods');
+        }
     }
 
     /**
