@@ -8,6 +8,7 @@ class DashboardController extends Controller
 {
     public function index()
     {
+        // dd(auth()->user()->usertype);
         if(auth()->user()->usertype === 'admin'){
             return redirect('/admin');
         }elseif(auth()->user()->usertype==='client'){

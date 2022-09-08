@@ -17,7 +17,7 @@ class FrellencerMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        if(Auth::check() && auth()->user()->usertype === "freelencer"){
+        if(Auth::check() && auth()->user()->usertype === "freelancer"){
             return $next($request);
         }
         return redirect()->back()->with('error', 'You are unauthorized!!!');
