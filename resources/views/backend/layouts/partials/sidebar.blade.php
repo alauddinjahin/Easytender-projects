@@ -3,20 +3,23 @@
     <div class="navbar-brand-box">
         <!-- Dark Logo-->
         <a href="{{ URL('/admin') }}" class="logo logo-dark">
-            <span class="logo-sm">
+            <span class="h2 text-uppercase text-white font-wedth-bold">Easy Vat</span>
+            {{-- <span class="logo-sm">
                 <img src="{{ asset('backend/images/logo-sm.png')}}" alt="" height="22">
             </span>
             <span class="logo-lg">
                 <img src="{{ asset('backend/images/logo-dark.png')}}" alt="" height="17">
-            </span>
+            </span> --}}
         </a>
         <!-- Light Logo-->
         <a href="{{ URL('/admin') }}" class="logo logo-light">
+            {{-- <span class="h2 text-uppercase text-white font-wedth-bold">Easy Vat</span> --}}
             <span class="logo-sm">
-                <img src="{{ asset('backend/images/logo-sm.png')}}" alt="" height="22">
+                <img src="{{ asset('backend/images/sm-logo.png')}}" alt="" height="22">
             </span>
             <span class="logo-lg">
-                <img src="{{ asset('backend/images/logo-light.png')}}" alt="" height="17">
+                {{-- <img src="{{ asset('backend/images/logo-light.png')}}" alt="" height="17"> --}}
+                <span class="h2 text-uppercase text-white font-wedth-bold">Easy Vat</span>
             </span>
         </a>
         <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover"
@@ -24,22 +27,27 @@
             <i class="ri-record-circle-line"></i>
         </button>
     </div>
-
+<div class="" style="border-bottom: 2px solid #9f9f9f; width:100%"></div>
     <div id="scrollbar">
         <div class="container-fluid">
 
             <div id="two-column-menu">
             </div>
             <ul class="navbar-nav" id="navbar-nav">
-                <li class="menu-title"><span data-key="t-menu">Menu</span></li>
+                {{-- <li class="menu-title"><span data-key="t-menu">Menu</span></li> --}}
                 <li>
                     <a class="nav-link menu-link" href="{{ URL('/admin') }}">
                         <i class="ri-dashboard-2-line"></i> <span data-key="t-dashboards">Dashboards</span>
                     </a>
                 </li>
+                <li>
+                    <a class="nav-link menu-link" href="{{ route('admin.tender.methods') }}">
+                        <i class="ri-pages-line"></i> <span >Tender Methods</span>
+                    </a>
+                </li>
 
                 <!-- end Dashboard Menu -->
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a class="nav-link menu-link" href="#sidebarLayouts" data-bs-toggle="collapse" role="button"
                         aria-expanded="false" aria-controls="sidebarLayouts">
                         <i class="ri-layout-3-line"></i> <span data-key="t-layouts">Layouts</span>
@@ -64,8 +72,8 @@
                             </li>
                         </ul>
                     </div>
-                </li>
-
+                </li> --}}
+{{-- 
                 <li class="nav-item">
                     <a class="nav-link menu-link" href="#sidebarAuth" data-bs-toggle="collapse" role="button"
                         aria-expanded="false" aria-controls="sidebarAuth">
@@ -126,7 +134,7 @@
                             </li>
                         </ul>
                     </div>
-                </li>
+                </li> --}}
 
                 <!-- end Dashboard Menu -->
             </ul>

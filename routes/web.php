@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\TenderMethodController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -38,6 +39,8 @@ Route::group(['prefix'=>'admin', 'middleware' => ['auth','is_admin']], function 
     Route::get('/', function(){
         return view('backend.admindashboard');
     });
+
+    Route::get('/tender-methods',[TenderMethodController::class, 'index'])->name('admin.tender.methods');
 });
 
 Route::group(['prefix'=>'client', 'middleware' => ['auth','is_client']], function () {

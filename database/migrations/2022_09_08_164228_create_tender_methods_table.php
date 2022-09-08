@@ -13,14 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('profiles', function (Blueprint $table) {
+        Schema::create('tender_methods', function (Blueprint $table) {
             $table->id();
-            $table->integer('user_id');
-            // $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->string('email');
-            $table->string('photo');
-            $table->text('about');
-            $table->string('address');
+            $table->string('name');
+            $table->string('short_name');
             $table->timestamps();
         });
     }
@@ -32,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('profiles');
+        Schema::dropIfExists('tender_methods');
     }
 };
