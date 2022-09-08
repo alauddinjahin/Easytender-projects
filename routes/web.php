@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,9 +18,7 @@ Route::get('/', function () {
     return view('frontend.home');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth'])->name('dashboard');
 
 Route::get('/about-us', function(){
     return view('frontend.pages.aboutus');
@@ -43,9 +42,7 @@ Route::get('/my-offer', function(){
     return view('frontend.pages.tender.myoffer');
 });
 
-
-// Admin Route list 
-Route::group(['prefix'=>'admin','as'=>'admin.'], function(){
+Route::group(['prefix'=>'admin', 'middleware' => ['web','auth']], function () {
     Route::get('/', function(){
         return view('backend.admindashboard');
     });
