@@ -42,18 +42,22 @@ Route::get('/my-offer', function(){
     return view('frontend.pages.tender.myoffer');
 });
 
-Route::group(['prefix'=>'admin', 'middleware' => ['web','auth']], function () {
+Route::group(['prefix'=>'admin', 'middleware' => ['web','is_admin']], function () {
     Route::get('/', function(){
         return view('backend.admindashboard');
     });
 });
 
-Route::get('/client-dashboard',function(){
-    return view('frontend.pages.myaccount.client-dashboard');
+Route::group(['prefix'=>'client', 'middleware' => ['web','auth']], function () {
+    Route::get('/',function(){
+        return view('frontend.pages.myaccount.client-dashboard');
+    });
 });
 
-Route::get('/freelancer-dashboard',function(){
-    return view('frontend.pages.myaccount.freelancer-dashboard');
+Route::group(['prefix'=>'freelancer', 'middleware' => ['web','auth']], function () {
+    Route::get('/',function(){
+        return view('frontend.pages.myaccount.freelancer-dashboard');
+    });
 });
 
 require __DIR__.'/auth.php';
