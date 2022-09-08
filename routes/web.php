@@ -33,14 +33,6 @@ Route::get('/all-tender', function(){
     return view('frontend.pages.tender.alltender');
 });
 
-Route::get('/offer-tender', function(){
-    return view('frontend.pages.tender.offertender');
-});
-
-
-Route::get('/my-offer', function(){
-    return view('frontend.pages.tender.myoffer');
-});
 
 Route::group(['prefix'=>'admin', 'middleware' => ['auth','is_admin']], function () {
     Route::get('/', function(){
@@ -52,11 +44,19 @@ Route::group(['prefix'=>'client', 'middleware' => ['auth','is_client']], functio
     Route::get('/',function(){
         return view('frontend.pages.myaccount.client-dashboard');
     });
+
+    Route::get('/offer-tender', function(){
+        return view('frontend.pages.tender.offertender');
+    });
 });
 
 Route::group(['prefix'=>'freelancer', 'middleware' => ['auth','is_freelancer']], function () {
     Route::get('/',function(){
         return view('frontend.pages.myaccount.freelancer-dashboard');
+    });
+
+    Route::get('/my-offer', function(){
+        return view('frontend.pages.tender.myoffer');
     });
 });
 
