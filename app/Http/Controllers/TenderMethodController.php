@@ -36,6 +36,8 @@ class TenderMethodController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate(TenderMethod::$rules);
+
         $tender = TenderMethod::create([
             'name'=> $request->name,
             'short_name'=> $request->short_name
@@ -88,8 +90,6 @@ class TenderMethodController extends Controller
     public function destroy($id)
     {
         $delete = TenderMethod::destroy($id);
-        if ($delete) {
-            dd("data deleted successfully");
-        }
+        return redirect()->back()->with('success','Data deleted successfully!');
     }
 }

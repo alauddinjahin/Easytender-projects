@@ -13,4 +13,9 @@ class TenderMethod extends Model
         'name',
         'short_name',
     ];
+
+    public static $rules = [
+        "name"            => 'required|max:255|unique:tender_methods,name',
+        "short_name"      => 'required|max:128|unique:tender_methods,short_name',
+    ];
 }

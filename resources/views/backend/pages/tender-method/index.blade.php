@@ -9,7 +9,11 @@
             </div>
             <div class="card-body">
                 <div class="table-responsive">
-
+                    @if (session('success'))
+                        <div class="alert alert-success alert-dismissible fade show m-3" role="alert">
+                            <strong>{{session('success')}}</strong>
+                        </div>
+                    @endif
                     <table class="table table-bordered table-striped text-center">
                         <thead class="bg-light ">
                             <tr>
