@@ -85,8 +85,9 @@
                                         <li class="menu-item-has-children">
                                             @if (Route::has('login'))
                                                 @auth
-                                                    <a href="{{ url('/dashboard') }}" >Dashboard</a>
+                                                    <a href="#" >{{ auth()->user()->name }}</a>
                                                     <ul class="sub-menu">
+                                                        <li><a href="{{ url('/dashboard') }}" >Dashboard</a></li>
                                                         <li>
                                                             <form method="POST" action="{{ route('logout') }}">
                                                                 @csrf
