@@ -18,8 +18,8 @@ return new class extends Migration
             $table->foreignId('user_id');
             $table->foreign('user_id')->references('id')->on('users')->restrictOnDelete();
             $table->string('email');
-            $table->string('photo');
-            $table->text('about');
+            $table->string('photo')->nullable();
+            $table->text('about')->nullable();
             $table->string('address');
             $table->timestamps();
         });

@@ -24,8 +24,8 @@
         <div class="row">
             <div class="tab tab-menu col-md-3">
                 <span class="menu-header">User Information</span>
-                <button class="tablinks active" onclick="openCity(event, 'dashboard')" >My Dashboard</button>
-                <button class="tablinks" onclick="openCity(event, 'my-profile')" id="defaultOpen">My Profile</button>
+                <button class="tablinks active" onclick="openCity(event, 'dashboard')" id="defaultOpen">My Dashboard</button>
+                <button class="tablinks" onclick="openCity(event, 'my-profile')" >My Profile</button>
                 <button class="tablinks" onclick="openCity(event, 'offer-new-Job')">Create New Offer</button>
                 <button class="tablinks" onclick="openCity(event, 'Offered-list')">My Offered Job List</button>
                 <button class="tablinks" onclick="openCity(event, 'payment-history')">Payment History</button>
@@ -89,7 +89,11 @@
             <div class="tabcontent col-9" id="my-profile" >
                 <div class="row profile-content py-2">
                     <div class="col-md-3 profile-image" >
-                        <img src="{{asset('/backend/images/users/demo_user.webp')}}" class="img-thumbnail" alt="My Photo" >
+                        @if (isset($client_profile->photo))
+                            <img src="{{asset($client_profile->photo)}}" class="img-thumbnail" alt="My Photo" >
+                        @else
+                            <img src="/backend/images/users/demo_user.webp" class="img-thumbnail" alt="My Photo" >
+                        @endif
                         <span><i class="fa fa-envelope fa-danger"> </i> {{ $client_profile->email ?? "" }}</span><br>
                         <span><i class="fa fa-phone fa-danger"> </i> {{ auth()->user()->phone }}</span><br>
                         <span><i class="fa fa-map-marker fa-danger"> </i> {{ $client_profile->address ?? ""}}</span>
@@ -547,77 +551,66 @@
   <div class="modal fade" id="profile-edit-modal" data-bs-backdrop="static">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title text-uppercase" id="profile-edit-modal-label">Profile Update</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-             <div class="modal-body">
-                @if ($errors->any())
-                <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span>
-                    </button>
+            <form action="{{ route('profile.update') }}" method="post" enctype="multipart/form-data">
+                @csrf
+                <div class="modal-header">
+                    <h5 class="modal-title text-uppercase" id="profile-edit-modal-label">Profile Update</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                @endif
-                <form action="{{ route('profile.update') }}" method="post" enctype="multipart/form-data">
-                    @csrf
-                    <div class="form-group row mb-3">
-                        <div class="col-md-3">
-                            <label for="name" class="col-form-label">Your Name:</label>
+                <div class="modal-body">
+                        <div class="form-group row mb-3">
+                            <div class="col-md-3">
+                                <label for="name" class="col-form-label">Your Name:</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" name="name" class="form-control " id="name" value="{{ auth()->user()->name }}" readonly>
+                            </div>
+                        </div> 
+                        <div class="form-group row mb-3">
+                            <div class="col-md-3">
+                                <label for="phone" class="col-form-label">Your Phone:</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" name="phone" class="form-control " id="phone" value="{{ auth()->user()->phone }}" readonly>
+                            </div>
                         </div>
-                        <div class="col-md-9">
-                            <input type="text" name="name" class="form-control " id="name" value="{{ auth()->user()->name }}" readonly>
+                        <div class="form-group row mb-3">
+                            <div class="col-md-3">
+                                <label for="email" class="col-form-label">Your Email:</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" name="email" class="form-control " id="email" value="{{ old('email')}}" placeholder="test@example" required>
+                            </div>
                         </div>
-                    </div> 
-                    <div class="form-group row mb-3">
-                        <div class="col-md-3">
-                            <label for="phone" class="col-form-label">Your Phone:</label>
+                        <div class="form-group row mb-3">
+                            <div class="col-md-3">
+                                <label for="photo" class="col-form-label">Your photo:</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="file" name="photo" class="form-control " id="photo"  placeholder="Select Your Photo" required >
+                            </div>
                         </div>
-                        <div class="col-md-9">
-                            <input type="text" name="phone" class="form-control " id="phone" value="{{ auth()->user()->phone }}" readonly>
+                        <div class="form-group row mb-3">
+                            <div class="col-md-3">
+                                <label for="address" class="col-form-label">Your Address:</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" name="address" class="form-control " id="address" value="{{ old('address') }}" placeholder="Type Your Address" required>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group row mb-3">
-                        <div class="col-md-3">
-                            <label for="email" class="col-form-label">Your Email:</label>
+                        <div class="form-group row mb-3">
+                            <div class="col-md-3">
+                                <label for="about" class="col-form-label">About</label>
+                            </div>
+                            <div class="col-md-9">
+                                <textarea name="about" id="about" class="form-control" required></textarea>
+                            </div>
                         </div>
-                        <div class="col-md-9">
-                            <input type="text" name="email" class="form-control " id="email" value="{{ old('email')}}" placeholder="test@example" >
-                        </div>
-                    </div>
-                    <div class="form-group row mb-3">
-                        <div class="col-md-3">
-                            <label for="photo" class="col-form-label">Your photo:</label>
-                        </div>
-                        <div class="col-md-9">
-                            <input type="file" name="photo" class="form-control " id="photo"  placeholder="Select Your Photo" >
-                        </div>
-                    </div>
-                    <div class="form-group row mb-3">
-                        <div class="col-md-3">
-                            <label for="address" class="col-form-label">Your Address:</label>
-                        </div>
-                        <div class="col-md-9">
-                            <input type="text" name="address" class="form-control " id="address" value="{{ old('address') }}" placeholder="Type Your Address">
-                        </div>
-                    </div>
-                    <div class="form-group row mb-3">
-                        <div class="col-md-3">
-                            <label for="about" class="col-form-label">About</label>
-                        </div>
-                        <div class="col-md-9">
-                            <textarea name="about" id="about" class="form-control"></textarea>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="submit" class="btn btn-custom">Update</button>
-            </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-custom" >Update</button>
+                </div>
+            </form>
         </div>
     </div>
   </div> 

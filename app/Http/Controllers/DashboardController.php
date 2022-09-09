@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Profile;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -23,8 +24,7 @@ class DashboardController extends Controller
 
     public function clientDashboard()
     {
-        $id = Auth::user()->id;
-        $client_profile = Profile::find($id);
+        $client_profile = Profile::firstWhere('user_id', Auth::user()->id);
         return view('frontend.pages.myaccount.client-dashboard', compact('client_profile'));
     }
 
