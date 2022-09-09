@@ -5,7 +5,7 @@
         <div class="card">
             <div class="card-header">
                 <span class="h3 text-uppercase">create new tender methods</span>
-                <a href="{{ route('tender_method_create') }}" class="btn btn-success float-end">Add New</a>
+                <a href="{{ route('admin.tender.methods') }}" class="btn btn-info float-end">All Methods</a>
             </div>
             <div class="card-body">
                 <form action="{{ route('method.create') }}" method="POST">

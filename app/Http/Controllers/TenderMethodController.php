@@ -85,8 +85,11 @@ class TenderMethodController extends Controller
      * @param  \App\Models\TenderMethod  $tenderMethod
      * @return \Illuminate\Http\Response
      */
-    public function destroy(TenderMethod $tenderMethod)
+    public function destroy($id)
     {
-        //
+        $delete = TenderMethod::destroy($id);
+        if ($delete) {
+            dd("data deleted successfully");
+        }
     }
 }

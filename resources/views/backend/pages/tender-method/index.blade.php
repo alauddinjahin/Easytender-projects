@@ -26,8 +26,8 @@
                                     <td>{{ $item->name }}</td>
                                     <td>{{ $item->short_name }}</td>
                                     <td class="text-center">
-                                        <a href="#" class="btn btn-primary" role="button" value="{{ $item->id }}">Edit</a>
-                                        <a href="#" class="btn btn-danger" role="button" value="{{ $item->id }}>Delete</a>
+                                        <a href="#" class="btn btn-primary" role="button" >Edit</a>
+                                        <a href="{{ route('method.destroy', $item->id) }}" class="btn btn-danger" role="button">Delete</a>
                                     </td>
                                 </tr>
                             @endforeach
