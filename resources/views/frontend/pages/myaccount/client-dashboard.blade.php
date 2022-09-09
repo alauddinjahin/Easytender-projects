@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master')
 
-@section('title', 'My Account')
+@section('title', 'Client Dashboard')
 
 @section('content')
 
@@ -24,8 +24,8 @@
         <div class="row">
             <div class="tab tab-menu col-md-3">
                 <span class="menu-header">User Information</span>
-                <button class="tablinks active" onclick="openCity(event, 'dashboard')" id="defaultOpen">My Dashboard</button>
-                <button class="tablinks" onclick="openCity(event, 'my-profile')">My Profile</button>
+                <button class="tablinks active" onclick="openCity(event, 'dashboard')" >My Dashboard</button>
+                <button class="tablinks" onclick="openCity(event, 'my-profile')" id="defaultOpen">My Profile</button>
                 <button class="tablinks" onclick="openCity(event, 'offer-new-Job')">Create New Offer</button>
                 <button class="tablinks" onclick="openCity(event, 'Offered-list')">My Offered Job List</button>
                 <button class="tablinks" onclick="openCity(event, 'payment-history')">Payment History</button>
@@ -90,21 +90,21 @@
                 <div class="row profile-content py-2">
                     <div class="col-md-3 profile-image" >
                         <img src="{{asset('/backend/images/users/demo_user.webp')}}" class="img-thumbnail" alt="My Photo" >
-                        <span><i class="fa fa-envelope fa-danger"> </i> example@gmail.com</span><br>
-                        <span><i class="fa fa-phone fa-danger"> </i> 01910922069</span><br>
-                        <span><i class="fa fa-map-marker fa-danger"> </i> Mirpur, Dhaka</span>
+                        <span><i class="fa fa-envelope fa-danger"> </i> {{ $client_profile->email ?? "" }}</span><br>
+                        <span><i class="fa fa-phone fa-danger"> </i> {{ auth()->user()->phone }}</span><br>
+                        <span><i class="fa fa-map-marker fa-danger"> </i> {{ $client_profile->address ?? ""}}</span>
                     </div>
                     <div class="col-md-9">
                         <div class="row">
                             <div class="col-10">
-                                <span class="text-uppercase display-6">Mr Anonimous User</span>
+                                <span class="text-uppercase display-6">{{ auth()->user()->name }}</span>
                             </div>
                             <div class="col-2">
                                 <button class="btn btn-profile-edit" data-bs-toggle="modal" data-bs-target="#profile-edit-modal"><i class="fa fa-pencil fa-danger"></i> </button>
                             </div>
                         </div>
                         <div class="line"></div>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem temporibus suscipit inventore quidem? Libero, odit aliquid velit repudiandae optio tempore ea veniam rem, quibusdam natus quia dicta, provident impedit facere?</p>
+                        <p>{{ $client_profile->about ?? "" }}</p>
                     </div>
                 </div>
             </div>
@@ -552,30 +552,49 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
              <div class="modal-body">
-                <form action="" method="post">
+                @if ($errors->any())
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                @endif
+                <form action="{{ route('profile.update') }}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group row mb-3">
                         <div class="col-md-3">
                             <label for="name" class="col-form-label">Your Name:</label>
                         </div>
                         <div class="col-md-9">
-                            <input type="text" name="name" class="form-control " id="name" placeholder="Type Your Name">
+                            <input type="text" name="name" class="form-control " id="name" value="{{ auth()->user()->name }}" readonly>
                         </div>
                     </div> 
-                    <div class="form-group row mb-3">
-                        <div class="col-md-3">
-                            <label for="email" class="col-form-label">Your Email:</label>
-                        </div>
-                        <div class="col-md-9">
-                            <input type="text" name="email" class="form-control " id="email" placeholder="test@example" readonly>
-                        </div>
-                    </div>
                     <div class="form-group row mb-3">
                         <div class="col-md-3">
                             <label for="phone" class="col-form-label">Your Phone:</label>
                         </div>
                         <div class="col-md-9">
-                            <input type="text" name="phone" class="form-control " id="phone" placeholder="Type Your Phone Number">
+                            <input type="text" name="phone" class="form-control " id="phone" value="{{ auth()->user()->phone }}" readonly>
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                        <div class="col-md-3">
+                            <label for="email" class="col-form-label">Your Email:</label>
+                        </div>
+                        <div class="col-md-9">
+                            <input type="text" name="email" class="form-control " id="email" value="{{ old('email')}}" placeholder="test@example" >
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                        <div class="col-md-3">
+                            <label for="photo" class="col-form-label">Your photo:</label>
+                        </div>
+                        <div class="col-md-9">
+                            <input type="file" name="photo" class="form-control " id="photo"  placeholder="Select Your Photo" >
                         </div>
                     </div>
                     <div class="form-group row mb-3">
@@ -583,13 +602,21 @@
                             <label for="address" class="col-form-label">Your Address:</label>
                         </div>
                         <div class="col-md-9">
-                            <input type="text" name="address" class="form-control " id="address" placeholder="Type Your Address">
+                            <input type="text" name="address" class="form-control " id="address" value="{{ old('address') }}" placeholder="Type Your Address">
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                        <div class="col-md-3">
+                            <label for="about" class="col-form-label">About</label>
+                        </div>
+                        <div class="col-md-9">
+                            <textarea name="about" id="about" class="form-control"></textarea>
                         </div>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-custom">Update</button>
+                <button type="submit" class="btn btn-custom">Update</button>
             </div>
         </div>
     </div>

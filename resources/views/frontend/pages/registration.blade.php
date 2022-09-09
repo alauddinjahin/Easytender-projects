@@ -18,11 +18,11 @@
 
                             <div class="form-group mb-10">
                                 <label for="name">Name<span>*</span></label>
-                                <input id="name" name="name" class="form-control-mod" type="text" required=""> 
+                                <input id="name" name="name" class="form-control-mod" type="text" value="{{ old('name') }}" required=""> 
                                 <label for="phone">Mobile<span>*</span></label>
-                                <input id="phone" name="phone" class="form-control-mod" type="text" required=""> 
+                                <input id="phone" name="phone" class="form-control-mod" type="text" value="{{ old('phone') }}" required=""> 
                                 <label for="district">District<span>*</span></label>
-                                <input id="district" name="district" class="form-control-mod" type="text" required=""> 
+                                <input id="district" name="district" class="form-control-mod" type="text" value="{{ old('district') }}" required=""> 
                                 <label for="password">Password <span>*</span></label>
                                 <input id="password" name="password" class="form-control-mod" type="password" required="">
                                 <label for="password_confirmation" >Confirm Password <span>*</span></label>

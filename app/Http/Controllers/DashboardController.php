@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Profile;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class DashboardController extends Controller
 {
@@ -18,4 +20,12 @@ class DashboardController extends Controller
             return redirect()->back()->with('error', 'somthing is wrong');
         }
     }
+
+    public function clientDashboard()
+    {
+        $id = Auth::user()->id;
+        $client_profile = Profile::find($id);
+        return view('frontend.pages.myaccount.client-dashboard', compact('client_profile'));
+    }
+
 }

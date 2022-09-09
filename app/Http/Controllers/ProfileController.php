@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class ProfileController extends Controller
 {
+
+    public function profileUpdate(Request $request)
+    {
+        dd($request->all());
+    }
     /**
      * Display a listing of the resource.
      *
