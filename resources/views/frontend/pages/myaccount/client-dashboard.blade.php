@@ -551,7 +551,7 @@
   <div class="modal fade" id="profile-edit-modal" data-bs-backdrop="static">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-            <form action="{{ route('profile.update') }}" method="post" enctype="multipart/form-data">
+            <form action="{{ route('client.profile.update') }}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="modal-header">
                     <h5 class="modal-title text-uppercase" id="profile-edit-modal-label">Profile Update</h5>

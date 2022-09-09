@@ -28,4 +28,10 @@ class DashboardController extends Controller
         return view('frontend.pages.myaccount.client-dashboard', compact('client_profile'));
     }
 
+    public function freelancerDashboard()
+    {
+        $freelancer_profile = Profile::firstWhere('user_id', Auth::user()->id);
+        return view('frontend.pages.myaccount.freelancer-dashboard',compact('freelancer_profile'));
+    }
+
 }

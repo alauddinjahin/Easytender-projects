@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master')
 
-@section('title', 'My Account')
+@section('title', 'MFreelancer Dashboard')
 
 @section('content')
 
@@ -77,22 +77,26 @@
             <div class="tabcontent col-9" id="my-profile" >
                 <div class="row profile-content py-2">
                     <div class="col-md-3 profile-image" >
-                        <img src="{{asset('/backend/images/users/demo_user.webp')}}" class="img-thumbnail" alt="My Photo" >
-                        <span><i class="fa fa-envelope fa-danger"> </i> example@gmail.com</span><br>
-                        <span><i class="fa fa-phone fa-danger"> </i> 01910922069</span><br>
-                        <span><i class="fa fa-map-marker fa-danger"> </i> Mirpur, Dhaka</span>
+                        @if (isset($freelancer_profile->photo))
+                            <img src="{{asset($freelancer_profile->photo)}}" class="img-thumbnail" alt="My Photo" >
+                        @else
+                            <img src="/backend/images/users/demo_user.webp" class="img-thumbnail" alt="My Photo" >
+                        @endif
+                        <span><i class="fa fa-envelope fa-danger"> </i> {{ $freelancer_profile->email ?? "" }}</span><br>
+                        <span><i class="fa fa-phone fa-danger"> </i> {{ auth()->user()->phone }}</span><br>
+                        <span><i class="fa fa-map-marker fa-danger"> </i> {{ $freelancer_profile->address ?? ""}}</span>
                     </div>
                     <div class="col-md-9">
                         <div class="row">
                             <div class="col-10">
-                                <span class="text-uppercase display-6">Mr Anonimous User</span>
+                                <span class="text-uppercase display-6">{{ auth()->user()->name }}</span>
                             </div>
                             <div class="col-2">
                                 <button class="btn btn-profile-edit" data-bs-toggle="modal" data-bs-target="#profile-edit-modal"><i class="fa fa-pencil fa-danger"></i> </button>
                             </div>
                         </div>
                         <div class="line"></div>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem temporibus suscipit inventore quidem? Libero, odit aliquid velit repudiandae optio tempore ea veniam rem, quibusdam natus quia dicta, provident impedit facere?</p>
+                        <p>{{ $freelancer_profile->about ?? "" }}</p>
                     </div>
                 </div>
             </div>
@@ -247,59 +251,72 @@
 
   {{-- Profile Modal  --}}
 
-  <!-- Modal -->
   <div class="modal fade" id="profile-edit-modal" data-bs-backdrop="static">
-    
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title text-uppercase" id="profile-edit-modal-label">Profile Update</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <form action="" method="post">
-                    @csrf
-                    <div class="form-group row mb-3">
-                        <div class="col-md-3">
-                            <label for="name" class="col-form-label">Your Name:</label>
+            <form action="{{ route('freelancer.profile.update') }}" method="post" enctype="multipart/form-data">
+                @csrf
+                <div class="modal-header">
+                    <h5 class="modal-title text-uppercase" id="profile-edit-modal-label">Profile Update</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                        <div class="form-group row mb-3">
+                            <div class="col-md-3">
+                                <label for="name" class="col-form-label">Your Name:</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" name="name" class="form-control " id="name" value="{{ auth()->user()->name }}" readonly>
+                            </div>
+                        </div> 
+                        <div class="form-group row mb-3">
+                            <div class="col-md-3">
+                                <label for="phone" class="col-form-label">Your Phone:</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" name="phone" class="form-control " id="phone" value="{{ auth()->user()->phone }}" readonly>
+                            </div>
                         </div>
-                        <div class="col-md-9">
-                            <input type="text" name="name" class="form-control " id="name" placeholder="Type Your Name">
+                        <div class="form-group row mb-3">
+                            <div class="col-md-3">
+                                <label for="email" class="col-form-label">Your Email:</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" name="email" class="form-control " id="email" value="{{ old('email')}}" placeholder="test@example" required>
+                            </div>
                         </div>
-                    </div> 
-                    <div class="form-group row mb-3">
-                        <div class="col-md-3">
-                            <label for="email" class="col-form-label">Your Email:</label>
+                        <div class="form-group row mb-3">
+                            <div class="col-md-3">
+                                <label for="photo" class="col-form-label">Your photo:</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="file" name="photo" class="form-control " id="photo"  placeholder="Select Your Photo" required >
+                            </div>
                         </div>
-                        <div class="col-md-9">
-                            <input type="text" name="email" class="form-control " id="email" placeholder="test@example" readonly>
+                        <div class="form-group row mb-3">
+                            <div class="col-md-3">
+                                <label for="address" class="col-form-label">Your Address:</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" name="address" class="form-control " id="address" value="{{ old('address') }}" placeholder="Type Your Address" required>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group row mb-3">
-                        <div class="col-md-3">
-                            <label for="phone" class="col-form-label">Your Phone:</label>
+                        <div class="form-group row mb-3">
+                            <div class="col-md-3">
+                                <label for="about" class="col-form-label">About</label>
+                            </div>
+                            <div class="col-md-9">
+                                <textarea name="about" id="about" class="form-control" required></textarea>
+                            </div>
                         </div>
-                        <div class="col-md-9">
-                            <input type="text" name="phone" class="form-control " id="phone" placeholder="Type Your Phone Number">
-                        </div>
-                    </div>
-                    <div class="form-group row mb-3">
-                        <div class="col-md-3">
-                            <label for="address" class="col-form-label">Your Address:</label>
-                        </div>
-                        <div class="col-md-9">
-                            <input type="text" name="address" class="form-control " id="address" placeholder="Type Your Address">
-                        </div>
-                    </div>
-                </form>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-custom">Update</button>
-              </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-custom" >Update</button>
+                </div>
+            </form>
         </div>
     </div>
-  </div>
-</div>
+  </div> 
   {{-- Modal end --}}
     
 @endsection

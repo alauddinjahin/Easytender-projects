@@ -48,22 +48,17 @@ Route::group(['prefix'=>'admin', 'middleware' => ['auth','is_admin']], function 
 });
 
 Route::group(['prefix'=>'client', 'middleware' => ['auth','is_client']], function () {
-    // Route::get('/',function(){
-    //     return view('frontend.pages.myaccount.client-dashboard');
-    // });
-
     Route::get('/', [DashboardController::class,'clientDashboard'])->name('client.dashboard');
-    Route::post('/profile-update',[ProfileController::class,'profileUpdate'])->name('profile.update');
-
+    Route::post('/profile-update',[ProfileController::class,'profileUpdate'])->name('client.profile.update');
+    
     Route::get('/offer-tender', function(){
         return view('frontend.pages.tender.offertender');
     });
 });
 
 Route::group(['prefix'=>'freelancer', 'middleware' => ['auth','is_freelancer']], function () {
-    Route::get('/',function(){
-        return view('frontend.pages.myaccount.freelancer-dashboard');
-    });
+    Route::get('/',[DashboardController::class, 'freelancerDashboard'])->name('freelancer.dashboard');
+    Route::post('/profile-update',[ProfileController::class,'freelancerProfileUpdate'])->name('freelancer.profile.update');
 
     Route::get('/my-offer', function(){
         return view('frontend.pages.tender.myoffer');
