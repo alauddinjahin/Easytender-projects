@@ -15,11 +15,11 @@ return new class extends Migration
     {
         Schema::create('tenders', function (Blueprint $table) {
             $table->id();
-            $table->integer('batch_id');
-            $table->bigInteger('vat_id');
+            $table->string('batch_id')->nullable();
+            $table->string('vat_id');
             $table->string('tender_method_id')->nullable();
             $table->string('tender_method');
-            $table->dateTime('last_selling_date');
+            $table->date('last_selling_date');
             $table->double('service_charge');
             $table->double('total_charge')->nullable();
             $table->string('status');

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TenderController;
 use App\Http\Controllers\TenderMethodController;
 use Illuminate\Support\Facades\Route;
 
@@ -50,6 +51,7 @@ Route::group(['prefix'=>'admin', 'middleware' => ['auth','is_admin']], function 
 Route::group(['prefix'=>'client', 'middleware' => ['auth','is_client']], function () {
     Route::get('/', [DashboardController::class,'clientDashboard'])->name('client.dashboard');
     Route::post('/profile-update',[ProfileController::class,'profileUpdate'])->name('client.profile.update');
+    Route::post('tender-store',[TenderController::class,'store'])->name('client.tender.store');
     
     Route::get('/offer-tender', function(){
         return view('frontend.pages.tender.offertender');

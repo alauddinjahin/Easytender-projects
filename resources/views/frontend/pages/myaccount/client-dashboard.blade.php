@@ -114,15 +114,29 @@
             </div>
 
             <div class="tabcontent col-9" id="offer-new-Job">
-                <div class="row profile-content p-4">  
-                    <form action="" method="post">
+                <div class="row profile-content p-4"> 
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+                    @if (session('success'))
+                        <div class="alert alert-success alert-dismissible fade show m-3" role="alert">
+                            <strong>{{session('success')}}</strong>
+                        </div>
+                    @endif
+                    <form action="{{ route('client.tender.store') }}" method="post">
                         @csrf
                         <div class="form-group row mb-3">
                             <div class="col-md-3">
                                 <label for="vat-id" class="col-form-label">Vat Id</label>
                             </div>
                             <div class="col-md-9">
-                                <select name="vat_id" id="vat_id" multiple data-placeholder="Type Your vat-id" title="Type then press enter!"></select>
+                                <select name="vat_id[]" id="vat_id" multiple data-placeholder="Type Your vat-id" title="Type then press enter!" required></select>
                             </div>
                         </div> 
                         <div class="form-group row mb-3">
@@ -130,10 +144,10 @@
                                 <label for="method-selection" class="col-form-label">Select Method:</label>
                             </div>
                             <div class="col-md-9">
-                                <select name="method_selection" id="method-selection" class="form-control">
+                                <select name="tender_method" id="method-selection" class="form-control" required>
                                     <option value="">Select Method</option>
                                     @foreach ($tender_methods as $item)
-                                        <option value="{{ $item->id }}">{{ $item->short_name }}</option>
+                                        <option value="{{ $item->short_name }}">{{ $item->short_name }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -143,7 +157,7 @@
                                 <label for="last-selling-date" class="col-form-label">Last Selling Date</label>
                             </div>
                             <div class="col-md-9">
-                                <input type="date" name="last_selling_date" class="form-control " id="last-selling-date" >
+                                <input type="date" name="last_selling_date" class="form-control " id="last-selling-date" required>
                             </div>
                         </div>
                         <div class="form-group row mb-3">
@@ -151,7 +165,7 @@
                                 <label for="charge" class="col-form-label">Service Charge:</label>
                             </div>
                             <div class="col-md-9">
-                                <input type="number" name="charge" class="form-control " id="charge" placeholder="Type Service charge">
+                                <input type="number" name="service_charge" class="form-control " id="charge" placeholder="Type Service charge" required>
                             </div>
                         </div>
                         <div class="form-group row mb-3">
@@ -159,7 +173,7 @@
                                 <label class="col-form-label">Total Charge:</label>
                             </div>
                             <div class="col-md-9">
-                                <input type="number" name="total_charge" class="form-control " id="total-charge" placeholder="0.00" readonly>
+                                <input type="number" name="total_charge" class="form-control " id="total-charge" placeholder="0.00" required readonly>
                             </div>
                         </div>
                         <div class="form-group row mb-3">
@@ -168,14 +182,14 @@
                             </div>
                             <div class="col-md-9">
                                 <div class="d-flex gap-4"> 
-                                    <label for="publish" class="d-flex gap-1"><input type="radio" name="publish_status" id="publish"> <small>Publish</small></label>
-                                    <label for="unpublish" class="d-flex gap-1"><input type="radio" name="publish_status" id="unpublish" checked> <small>Unpublish</small></label>
+                                    <label for="publish" class="d-flex gap-1"><input type="radio" name="status" id="publish" value="publish"> <small>Publish</small></label>
+                                    <label for="unpublish" class="d-flex gap-1"><input type="radio" name="status" id="unpublish" value="unpublish" checked> <small>Unpublish</small></label>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group row mb-3">
                             <div class="col-md-12">
-                                <button type="button" class="btn btn-custom float-end">Create Offer</button>
+                                <button type="submit" class="btn btn-custom float-end">Create Offer</button>
                             </div>
                         </div>
 
