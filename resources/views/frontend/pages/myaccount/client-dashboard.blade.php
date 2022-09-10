@@ -122,7 +122,7 @@
                                 <label for="vat-id" class="col-form-label">Vat Id</label>
                             </div>
                             <div class="col-md-9">
-                                <select name="vat_id" id="vat_id" multiple data-placeholder="Type Your vat-id"></select>
+                                <select name="vat_id" id="vat_id" multiple data-placeholder="Type Your vat-id" title="Type then press enter!"></select>
                             </div>
                         </div> 
                         <div class="form-group row mb-3">
@@ -131,10 +131,10 @@
                             </div>
                             <div class="col-md-9">
                                 <select name="method_selection" id="method-selection" class="form-control">
-                                    <option value="">MLT</option>
-                                    <option value="">MLM</option>
-                                    <option value="">MLT</option>
-                                    <option value="">MLT</option>
+                                    <option value="">Select Method</option>
+                                    @foreach ($tender_methods as $item)
+                                        <option value="{{ $item->id }}">{{ $item->short_name }}</option>
+                                    @endforeach
                                 </select>
                             </div>
                         </div>
