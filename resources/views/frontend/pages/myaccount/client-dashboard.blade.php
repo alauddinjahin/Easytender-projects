@@ -198,158 +198,167 @@
             </div> 
 
             <div class="tabcontent col-9" id="Offered-list">
-                <div class="table-responsive">
-                    <table id="Offered-list-table" class="table table-striped nowrap">
-                        <thead>
-                            <tr class="text-center">
-                                <th>SL</th>
-                                <th>JOb ID</th>
-                                <th>Vat ID</th>
-                                <th>Charge</th>
-                                <th>Last Salling Date</th>
-                                <th>Method</th>
-                                <th>Status</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>02</td>
-                                <td>Tiger Nixon</td>
-                                <td>1212</td>
-                                <td>61</td>
-                                <td>2011-04-25</td>
-                                <td>LTM</td>
-                                <td>
-                                    <span class="badge bg-info">Publish</span>
-                                </td>
-                                <td>
-                                    <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
-                                    <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>03</td>
-                                <td>Tiger Nixon</td>
-                                <td>1212, 76, 564</td>
-                                <td>61</td>
-                                <td>2011-04-25</td>
-                                <td>LTM</td>
-                                <td>
-                                    <span class="badge bg-warning">UnPublish</span>
-                                </td>
-                                <td>
-                                    <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
-                                    <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>04</td>
-                                <td>Tiger Nixon</td>
-                                <td>1212, 76, 564</td>
-                                <td>61</td>
-                                <td>2011-04-25</td>
-                                <td>LTM</td>
-                                <td>
-                                    <span class="badge bg-primary">Processing</span>
-                                </td>
-                                <td>
-                                    <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
-                                    <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>05</td>
-                                <td>Tiger Nixon</td>
-                                <td>1212, 76, 564</td>
-                                <td>61</td>
-                                <td>2011-04-25</td>
-                                <td>LTM</td>
-                                <td>
-                                    <span class="badge bg-success">Completed</span>
-                                </td>
-                                <td>
-                                    <a class="btn btn-primary btn-edit d-none" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
-                                    <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>Tiger Nixon</td>
-                                <td>1212, 76, 564</td>
-                                <td>61</td>
-                                <td>2011-04-25</td>
-                                <td>LTM</td>
-                                <td>
-                                    <span class="badge bg-primary">Processing</span>
-                                </td>
-                                <td>
-                                    <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
-                                    <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>Tiger Nixon</td>
-                                <td>1212, 76, 564</td>
-                                <td>61</td>
-                                <td>2011-04-25</td>
-                                <td>LTM</td>
-                                <td>
-                                    <span class="badge bg-danger">Failed</span>
-                                </td>
-                                <td>
-                                    <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
-                                    <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>05</td>
-                                <td>Tiger Nixon</td>
-                                <td>1212, 76, 564</td>
-                                <td>61</td>
-                                <td>2011-04-25</td>
-                                <td>LTM</td>
-                                <td>
-                                    <span class="badge bg-success">Completed</span>
-                                </td>
-                                <td>
-                                    <a class="btn btn-primary btn-edit d-none" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
-                                    <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>Tiger Nixon</td>
-                                <td>1212, 76, 564</td>
-                                <td>61</td>
-                                <td>2011-04-25</td>
-                                <td>LTM</td>
-                                <td>
-                                    <span class="badge bg-primary">Processing</span>
-                                </td>
-                                <td>
-                                    <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
-                                    <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>Tiger Nixon</td>
-                                <td>1212, 76, 564</td>
-                                <td>61</td>
-                                <td>2011-04-25</td>
-                                <td>LTM</td>
-                                <td>
-                                    <span class="badge bg-primary">Processing</span>
-                                </td>
-                                <td>
-                                    <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
-                                    <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="card ">
+                    <div class="card-header">
+                        My Offered Job List
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive pb-3">
+                            <table id="Offered-list-table" class="table table-striped nowrap">
+                                <thead>
+                                    <tr class="text-center">
+                                        <th>SL</th>
+                                        <th>JOb ID</th>
+                                        <th>Vat ID</th>
+                                        <th>Charge</th>
+                                        <th>Last Salling Date</th>
+                                        <th>Method</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ($all_tender as $tender)
+                                        <tr>
+                                            <td>{{ $loop->iteration }}</td>
+                                            <td>{{ $tender->batch_id }}</td>
+                                            <td>{{ $tender->vat_id }}</td>
+                                            <td>{{ $tender->service_charge }}</td>
+                                            <td>{{ $tender->last_selling_date }}</td>
+                                            <td>{{ $tender->tender_method }}</td>
+                                            <td>
+                                                <span class="badge @if ($tender->status == "publish") bg-primary @elseif($tender->status == "unpublish") bg-info @elseif($tender->status == "complete") bg-success @elseif($tender->status == "failed") bg-danger @endif">{{ $tender->status }}</span>
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
+                                                <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                    {{-- <tr>
+                                        <td>03</td>
+                                        <td>Tiger Nixon</td>
+                                        <td>1212, 76, 564</td>
+                                        <td>61</td>
+                                        <td>2011-04-25</td>
+                                        <td>LTM</td>
+                                        <td>
+                                            <span class="badge bg-warning">UnPublish</span>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
+                                            <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>04</td>
+                                        <td>Tiger Nixon</td>
+                                        <td>1212, 76, 564</td>
+                                        <td>61</td>
+                                        <td>2011-04-25</td>
+                                        <td>LTM</td>
+                                        <td>
+                                            <span class="badge bg-primary">Processing</span>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
+                                            <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>05</td>
+                                        <td>Tiger Nixon</td>
+                                        <td>1212, 76, 564</td>
+                                        <td>61</td>
+                                        <td>2011-04-25</td>
+                                        <td>LTM</td>
+                                        <td>
+                                            <span class="badge bg-success">Completed</span>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-primary btn-edit d-none" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
+                                            <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>01</td>
+                                        <td>Tiger Nixon</td>
+                                        <td>1212, 76, 564</td>
+                                        <td>61</td>
+                                        <td>2011-04-25</td>
+                                        <td>LTM</td>
+                                        <td>
+                                            <span class="badge bg-primary">Processing</span>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
+                                            <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>01</td>
+                                        <td>Tiger Nixon</td>
+                                        <td>1212, 76, 564</td>
+                                        <td>61</td>
+                                        <td>2011-04-25</td>
+                                        <td>LTM</td>
+                                        <td>
+                                            <span class="badge bg-danger">Failed</span>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
+                                            <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>05</td>
+                                        <td>Tiger Nixon</td>
+                                        <td>1212, 76, 564</td>
+                                        <td>61</td>
+                                        <td>2011-04-25</td>
+                                        <td>LTM</td>
+                                        <td>
+                                            <span class="badge bg-success">Completed</span>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-primary btn-edit d-none" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
+                                            <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>01</td>
+                                        <td>Tiger Nixon</td>
+                                        <td>1212, 76, 564</td>
+                                        <td>61</td>
+                                        <td>2011-04-25</td>
+                                        <td>LTM</td>
+                                        <td>
+                                            <span class="badge bg-primary">Processing</span>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
+                                            <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>01</td>
+                                        <td>Tiger Nixon</td>
+                                        <td>1212, 76, 564</td>
+                                        <td>61</td>
+                                        <td>2011-04-25</td>
+                                        <td>LTM</td>
+                                        <td>
+                                            <span class="badge bg-primary">Processing</span>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
+                                            <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
+                                        </td>
+                                    </tr> --}}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div> 
             

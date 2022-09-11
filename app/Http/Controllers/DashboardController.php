@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Profile;
+use App\Models\Tender;
 use App\Models\TenderMethod;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -27,7 +28,8 @@ class DashboardController extends Controller
     {
         $client_profile = Profile::firstWhere('user_id', Auth::user()->id);
         $tender_methods = TenderMethod::all();
-        return view('frontend.pages.myaccount.client-dashboard', compact('client_profile','tender_methods'));
+        $all_tender =Tender::where('created_by',Auth::user()->id)->get();
+        return view('frontend.pages.myaccount.client-dashboard', compact('client_profile','tender_methods','all_tender'));
     }
 
     public function freelancerDashboard()
