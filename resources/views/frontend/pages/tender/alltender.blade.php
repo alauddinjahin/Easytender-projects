@@ -25,290 +25,66 @@
                 <button class="btn float-end active" id="listView" title="List view"><i class="fa fa-bars"></i></button> 
                 <button class="btn float-end " id="gridView" title="Grid view"><i class="fa fa-th-large"></i></button>
             </div>
-            <div class="col-md-4  m-0 p-0">
-                <div class="all-vat-card px-3 py-4">
-                    <table class="all-vat-card-wrap">
-                        <tr >
-                            <th>JOB ID</th>
-                            <td>&nbsp;:&nbsp;</td>
-                            <td><span>121212</span></td>
-                        </tr>   
-                        <tr>
-                            <th>Tender ID</th>
-                            <td>&nbsp;:&nbsp;</td>
-                            <td><span>121212</span></td>
-                        </tr>
-                        <tr>
-                            <th>Last Droping Date & Time</th>
-                            <td>&nbsp;:&nbsp;</td>
-                            <td><span>03/08/2022</span></td>
-                        </tr>   
-                        <tr>
-                            <th>Method</th>
-                            <td>&nbsp;:&nbsp;</td>
-                            <td><span>MLM</span></td>
-                        </tr>
-                        <tr>
-                            <th>Service Charge</th>
-                            <td>&nbsp;:&nbsp;</td>
-                            <td><span>500TK</span></td>
-                        </tr> 
-                    </table>
-                    <div class="custom-apply-btn">
-                        <a href="#">Apply</a>
+            @foreach ($all_tender as $item)
+                <div class="col-md-4  m-0 p-0">
+                    <div class="all-vat-card px-3 py-4">
+                        <table class="all-vat-card-wrap">
+                            <tr >
+                                <th>JOB ID</th>
+                                <td>&nbsp;:&nbsp;</td>
+                                <td><span>{{ $item->id }}</span></td>
+                            </tr>   
+                            <tr >
+                                <th>Vat ID</th>
+                                <td>&nbsp;:&nbsp;</td>
+                                <td><span>{{ $item->vat_id }}</span></td>
+                            </tr>   
+                            <tr>
+                                <th>Last Droping Date</th>
+                                <td>&nbsp;:&nbsp;</td>
+                                <td><span>{{ $item->last_selling_date }}</span></td>
+                            </tr>   
+                            <tr>
+                                <th>Method</th>
+                                <td>&nbsp;:&nbsp;</td>
+                                <td><span>{{ $item->tender_method }}</span></td>
+                            </tr>
+                            <tr>
+                                <th>Service Charge</th>
+                                <td>&nbsp;:&nbsp;</td>
+                                <td><span>{{ $item->service_charge }} BDT</span></td>
+                            </tr> 
+                        </table>
+                        <div class="custom-apply-btn">
+                            <a href="#" class="apply-btn" role="button">Apply</a>
+                        </div>
                     </div>
                 </div>
-            </div>
+            @endforeach
 
-            <div class="col-md-4 m-0 p-0">
-                <div class="all-vat-card px-3 py-4">
-                    <table class="all-vat-card-wrap">
-                        <tr>
-                            <th>JOB ID</th>
-                            <td>&nbsp;:&nbsp;</td>
-                            <td><span>121212</span></td>
-                        </tr>   
-                        <tr>
-                            <th>Tender ID</th>
-                            <td>&nbsp;:&nbsp;</td>
-                            <td><span>121212</span></td>
-                        </tr>
-                        <tr>
-                            <th>Last Droping Date & Time</th>
-                            <td>&nbsp;:&nbsp;</td>
-                            <td><span>03/08/2022</span></td>
-                        </tr>   
-                        <tr>
-                            <th>Method</th>
-                            <td>&nbsp;:&nbsp;</td>
-                            <td><span>MLM</span></td>
-                        </tr>
-                        <tr>
-                            <th>Service Charge</th>
-                            <td>&nbsp;:&nbsp;</td>
-                            <td><span>500TK</span></td>
-                        </tr> 
-                    </table>
-                    <div class="custom-apply-btn">
-                        <a href="#">Apply</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 m-0 p-0">
-                <div class="all-vat-card px-3 py-4">
-                    <table class="all-vat-card-wrap">
-                        <tr>
-                            <th>JOB ID</th>
-                            <td>&nbsp;:&nbsp;</td>
-                            <td><span>121212</span></td>
-                        </tr>   
-                        <tr>
-                            <th>Tender ID</th>
-                            <td>&nbsp;:&nbsp;</td>
-                            <td><span>121212</span></td>
-                        </tr>
-                        <tr>
-                            <th>Last Droping Date & Time</th>
-                            <td>&nbsp;:&nbsp;</td>
-                            <td><span>03/08/2022</span></td>
-                        </tr>   
-                        <tr>
-                            <th>Method</th>
-                            <td>&nbsp;:&nbsp;</td>
-                            <td><span>MLM</span></td>
-                        </tr>
-                        <tr>
-                            <th>Service Charge</th>
-                            <td>&nbsp;:&nbsp;</td>
-                            <td><span>500TK</span></td>
-                        </tr> 
-                    </table>
-                    <div class="custom-apply-btn">
-                        <a href="#">Apply</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 m-0 p-0">
-                <div class="all-vat-card px-3 py-4">
-                    <table class="all-vat-card-wrap">
-                        <tr>
-                            <th>JOB ID</th>
-                            <td>&nbsp;:&nbsp;</td>
-                            <td><span>121212</span></td>
-                        </tr>   
-                        <tr>
-                            <th>Tender ID</th>
-                            <td>&nbsp;:&nbsp;</td>
-                            <td><span>121212</span></td>
-                        </tr>
-                        <tr>
-                            <th>Last Droping Date & Time</th>
-                            <td>&nbsp;:&nbsp;</td>
-                            <td><span>03/08/2022</span></td>
-                        </tr>   
-                        <tr>
-                            <th>Method</th>
-                            <td>&nbsp;:&nbsp;</td>
-                            <td><span>MLM</span></td>
-                        </tr>
-                        <tr>
-                            <th>Service Charge</th>
-                            <td>&nbsp;:&nbsp;</td>
-                            <td><span>500TK</span></td>
-                        </tr> 
-                    </table>
-                    <div class="custom-apply-btn">
-                        <a href="#">Apply</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 m-0 p-0">
-                <div class="all-vat-card px-3 py-4">
-                    <table class="all-vat-card-wrap">
-                        <tr>
-                            <th>JOB ID</th>
-                            <td>&nbsp;:&nbsp;</td>
-                            <td><span>121212</span></td>
-                        </tr>   
-                        <tr>
-                            <th>Tender ID</th>
-                            <td>&nbsp;:&nbsp;</td>
-                            <td><span>121212</span></td>
-                        </tr>
-                        <tr>
-                            <th>Last Droping Date & Time</th>
-                            <td>&nbsp;:&nbsp;</td>
-                            <td><span>03/08/2022</span></td>
-                        </tr>   
-                        <tr>
-                            <th>Method</th>
-                            <td>&nbsp;:&nbsp;</td>
-                            <td><span>MLM</span></td>
-                        </tr>
-                        <tr>
-                            <th>Service Charge</th>
-                            <td>&nbsp;:&nbsp;</td>
-                            <td><span>500TK</span></td>
-                        </tr> 
-                    </table>
-                    <div class="custom-apply-btn">
-                        <a href="#">Apply</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 m-0 p-0">
-                <div class="all-vat-card px-3 py-4">
-                    <table class="all-vat-card-wrap">
-                        <tr>
-                            <th>JOB ID</th>
-                            <td>&nbsp;:&nbsp;</td>
-                            <td><span>121212</span></td>
-                        </tr>   
-                        <tr>
-                            <th>Tender ID</th>
-                            <td>&nbsp;:&nbsp;</td>
-                            <td><span>121212</span></td>
-                        </tr>
-                        <tr>
-                            <th>Last Droping Date & Time</th>
-                            <td>&nbsp;:&nbsp;</td>
-                            <td><span>03/08/2022</span></td>
-                        </tr>   
-                        <tr>
-                            <th>Method</th>
-                            <td>&nbsp;:&nbsp;</td>
-                            <td><span>MLM</span></td>
-                        </tr>
-                        <tr>
-                            <th>Service Charge</th>
-                            <td>&nbsp;:&nbsp;</td>
-                            <td><span>500TK</span></td>
-                        </tr> 
-                    </table>
-                    <div class="custom-apply-btn">
-                        <a href="#">Apply</a>
-                    </div>
-                </div>
-            </div>
             {{-- End grid view --}}
             <div class="table-responsive">
                 <table class="table table-bordered table-striped" id="all-tender-table">
                     <tr>
                         <th>Job Id</th>
-                        <th>Tender Id</th>
+                        <th>Vat Id</th>
                         <th>Last Droping Date</th>
                         <th>Method</th>
                         <th>Service Chare</th>
                         <th>Action </th>
                     </tr>
-                    <tr>
-                        <td>12121</td>
-                        <td>456767</td>
-                        <td>2022-08-09 12:23:13</td>
-                        <td>MLM</td>
-                        <td>500TK</td>
-                        <td class="text-center"><div class="custom-apply-btn"><a href="#">Apply</a></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>12121</td>
-                        <td>456767</td>
-                        <td>2022-08-09 12:23:13</td>
-                        <td>MLM</td>
-                        <td>500TK</td>
-                        <td class="text-center"><div class="custom-apply-btn"><a href="#">Apply</a></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>12121</td>
-                        <td>456767</td>
-                        <td>2022-08-09 12:23:13</td>
-                        <td>MLM</td>
-                        <td>500TK</td>
-                        <td class="text-center"><div class="custom-apply-btn"><a href="#">Apply</a></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>12121</td>
-                        <td>456767</td>
-                        <td>2022-08-09 12:23:13</td>
-                        <td>MLM</td>
-                        <td>500TK</td>
-                        <td class="text-center"><div class="custom-apply-btn"><a href="#">Apply</a></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>12121</td>
-                        <td>456767</td>
-                        <td>2022-08-09 12:23:13</td>
-                        <td>MLM</td>
-                        <td>500TK</td>
-                        <td class="text-center"><div class="custom-apply-btn"><a href="#">Apply</a></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>12121</td>
-                        <td>456767</td>
-                        <td>2022-08-09 12:23:13</td>
-                        <td>MLM</td>
-                        <td>500TK</td>
-                        <td class="text-center"><div class="custom-apply-btn"><a href="#">Apply</a></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>12121</td>
-                        <td>456767</td>
-                        <td>2022-08-09 12:23:13</td>
-                        <td>MLM</td>
-                        <td>500TK</td>
-                        <td class="text-center"><div class="custom-apply-btn"><a href="#">Apply</a></div>
-                        </td>
-                    </tr>
-                    
+                    @foreach ($all_tender as $item)
+                        <tr>
+                            <td>{{ $item->id }}</td>
+                            <td>{{ $item->vat_id }}</td>
+                            <td>{{ $item->last_selling_date }}</td>
+                            <td>{{ $item->tender_method }}</td>
+                            <td>{{ $item->service_charge }} BDT</td>
+                            <td class="text-center">
+                                <div class="custom-apply-btn"><a href="#" class="apply-btn" role="button" >Apply</a></div>
+                            </td>
+                        </tr>
+                    @endforeach
                 </table>
             </div>
             

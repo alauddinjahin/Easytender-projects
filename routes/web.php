@@ -1,10 +1,11 @@
 <?php
 
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\TenderController;
-use App\Http\Controllers\TenderMethodController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TenderController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\TenderMethodController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,24 +18,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('frontend.home');
-});
-
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth'])->name('dashboard');
 
-Route::get('/about-us', function(){
-    return view('frontend.pages.aboutus');
-});
-
-
-Route::get('/contact-us', function(){
-    return view('frontend.pages.contactus');
-});
-
-Route::get('/all-tender', function(){
-    return view('frontend.pages.tender.alltender');
-});
+Route::get('/',[HomeController::class,'home'])->name('home');
+Route::get('/about-us',[HomeController::class,'aboutUs'])->name('about_us');
+Route::get('/contact-us',[HomeController::class,'contactUs'])->name('contact_us');
+Route::get('/all-tender',[HomeController::class,'allTender'])->name('all_tender');
 
 
 Route::group(['prefix'=>'admin', 'middleware' => ['auth','is_admin']], function () {
