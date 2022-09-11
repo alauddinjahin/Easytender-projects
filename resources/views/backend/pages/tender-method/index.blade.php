@@ -14,7 +14,7 @@
                             <strong>{{session('success')}}</strong>
                         </div>
                     @endif
-                    <table class="table table-bordered table-striped text-center">
+                    <table class="table table-bordered table-striped text-center" id="tender-method-table">
                         <thead class="bg-light ">
                             <tr>
                                 <th>Sl No</th>
@@ -43,3 +43,16 @@
 
     </div>
 @endsection
+@push('css')
+    <link rel="stylesheet" href="{{ asset('frontend/vendor/datatable/css/jquery.dataTables.min.css') }}">
+@endpush
+
+@push('js')
+    <script src="{{ asset('frontend/vendor/datatable/jquery.dataTables.min.js')}}"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#tender-method-table").DataTable();
+        })(jQuery)
+    </script>
+@endpush

@@ -540,7 +540,6 @@
                                 <option selected value="0000001">0000001</option>
                                 <option selected value="0000002">0000002</option>
                             </select>
-                            <!-- <input type="text" name="vat_id" class="form-control" tags="true" id="vat-id" placeholder="Type Your vat-id"> -->
                         </div>
                     </div> 
                     <div class="form-group row mb-3">
@@ -716,7 +715,8 @@
                 el.prop('disabled', true);
             },
             success(res){
-                console.log(res);
+                // console.log(res);
+                showEditModal(res);
             },
             error(err){
                console.log(err);
@@ -751,6 +751,11 @@
         });
     }
 
+    function showEditModal(tender_data) { 
+        // console.log(tender_data);
+        $('#edit-vat_id').val(tender_data.vat_id);
+        $('#tenderEditrModalToggle').modal('show');
+     }
 </script>
 
 @endpush
