@@ -227,134 +227,16 @@
                                             <td>{{ $tender->last_selling_date }}</td>
                                             <td>{{ $tender->tender_method }}</td>
                                             <td>
-                                                <span class="badge @if ($tender->status == "publish") bg-primary @elseif($tender->status == "unpublish") bg-info @elseif($tender->status == "complete") bg-success @elseif($tender->status == "failed") bg-danger @endif">{{ $tender->status }}</span>
+                                                <span class="badge @if ($tender->status == "publish") bg-info @elseif($tender->status == "unpublish") bg-warning @elseif($tender->status == "complete") bg-success @elseif($tender->status == "failed") bg-danger @elseif($tender->status == "processing") bg-primary @endif">{{ $tender->status }}</span>
                                             </td>
                                             <td>
-                                                <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
-                                                <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
+                                                <a href="#" class="btn btn-primary btn-edit" data-id="{{ $tender->id }}" role="button">Edit</a>
+                                                {{-- <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a> --}}
+                                                {{-- <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a> --}}
+                                                <a href="#" class="btn btn-danger btn-bids" data-id="{{ $tender->id }}" role="button">Bids</a>
                                             </td>
                                         </tr>
                                     @endforeach
-                                    {{-- <tr>
-                                        <td>03</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>1212, 76, 564</td>
-                                        <td>61</td>
-                                        <td>2011-04-25</td>
-                                        <td>LTM</td>
-                                        <td>
-                                            <span class="badge bg-warning">UnPublish</span>
-                                        </td>
-                                        <td>
-                                            <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
-                                            <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>04</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>1212, 76, 564</td>
-                                        <td>61</td>
-                                        <td>2011-04-25</td>
-                                        <td>LTM</td>
-                                        <td>
-                                            <span class="badge bg-primary">Processing</span>
-                                        </td>
-                                        <td>
-                                            <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
-                                            <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>05</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>1212, 76, 564</td>
-                                        <td>61</td>
-                                        <td>2011-04-25</td>
-                                        <td>LTM</td>
-                                        <td>
-                                            <span class="badge bg-success">Completed</span>
-                                        </td>
-                                        <td>
-                                            <a class="btn btn-primary btn-edit d-none" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
-                                            <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>01</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>1212, 76, 564</td>
-                                        <td>61</td>
-                                        <td>2011-04-25</td>
-                                        <td>LTM</td>
-                                        <td>
-                                            <span class="badge bg-primary">Processing</span>
-                                        </td>
-                                        <td>
-                                            <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
-                                            <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>01</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>1212, 76, 564</td>
-                                        <td>61</td>
-                                        <td>2011-04-25</td>
-                                        <td>LTM</td>
-                                        <td>
-                                            <span class="badge bg-danger">Failed</span>
-                                        </td>
-                                        <td>
-                                            <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
-                                            <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>05</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>1212, 76, 564</td>
-                                        <td>61</td>
-                                        <td>2011-04-25</td>
-                                        <td>LTM</td>
-                                        <td>
-                                            <span class="badge bg-success">Completed</span>
-                                        </td>
-                                        <td>
-                                            <a class="btn btn-primary btn-edit d-none" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
-                                            <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>01</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>1212, 76, 564</td>
-                                        <td>61</td>
-                                        <td>2011-04-25</td>
-                                        <td>LTM</td>
-                                        <td>
-                                            <span class="badge bg-primary">Processing</span>
-                                        </td>
-                                        <td>
-                                            <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
-                                            <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>01</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>1212, 76, 564</td>
-                                        <td>61</td>
-                                        <td>2011-04-25</td>
-                                        <td>LTM</td>
-                                        <td>
-                                            <span class="badge bg-primary">Processing</span>
-                                        </td>
-                                        <td>
-                                            <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a>
-                                            <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a>
-                                        </td>
-                                    </tr> --}}
                                 </tbody>
                             </table>
                         </div>
@@ -752,7 +634,9 @@
             $(document).on('keyup', '#charge', updateTotalCharge);
             $(document).on('change', '#edit-vat_id', updateTotalChargeintoModal);
             $(document).on('keyup', '#charge-edit', updateTotalChargeintoModal);
-
+            
+            $(document).on('click', '.btn-edit', tenderUpdateModal);
+            $(document).on('click', '.btn-bids', triggerBidUsers);
             init();
         });
     })(jQuery)
@@ -816,6 +700,55 @@
     
     function updateTotalChargeintoModal() {
         $("#total-charge-edit").val($("#charge-edit").val() * $("#edit-vat_id option").length);
+    }
+
+    function tenderUpdateModal() {
+        const el = $(this);
+        const payload   = {
+            tender_id : el.data('id')
+        }
+        $.ajax({
+            url      : '/api/get-tender',
+            method   : 'GET',
+            dataType : 'json',
+            data     : payload,
+            beforeSend() {
+                el.prop('disabled', true);
+            },
+            success(res){
+                console.log(res);
+            },
+            error(err){
+               console.log(err);
+            },
+            complete() {
+                el.prop('disabled', false);
+            }
+        });
+    }
+    function triggerBidUsers(){
+        const el = $(this);
+        const payload   = {
+            tender_id : el.data('id')
+        }
+        $.ajax({
+            url      : '/api/get-bided-users',
+            method   : 'GET',
+            dataType : 'json',
+            data     : payload,
+            beforeSend() {
+                el.prop('disabled', true);
+            },
+            success(res){
+                console.log(res);
+            },
+            error(err){
+               console.log(err);
+            },
+            complete() {
+                el.prop('disabled', false);
+            }
+        });
     }
 
 </script>
