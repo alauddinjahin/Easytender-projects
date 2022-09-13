@@ -741,6 +741,7 @@
             },
             success(res){
                 console.log(res);
+                $('#freelancerModalToggle').modal('show');
             },
             error(err){
                console.log(err);
@@ -752,8 +753,8 @@
     }
 
     function showEditModal(tender_data) { 
-        // console.log(tender_data);
-        $('#edit-vat_id').val(tender_data.vat_id);
+        console.log(tender_data);
+        // $('#edit-vat_id').val(tender_data.vat_id);
         $('#tenderEditrModalToggle').modal('show');
      }
 </script>
