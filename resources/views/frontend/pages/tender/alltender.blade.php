@@ -108,7 +108,7 @@
                     @endforeach
                 </table>
             </div>
-            
+            {{ $all_tender->links('pagination::bootstrap-5') }}
         </div>
     </div>
     
