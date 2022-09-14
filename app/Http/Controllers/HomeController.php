@@ -13,7 +13,7 @@ class HomeController extends Controller
     }
     public function allTender()
     {
-        $all_tender = Tender::where('status','publish')->paginate(50);
+        $all_tender = Tender::where('status','publish')->paginate(20);
         return view('frontend.pages.tender.alltender',compact('all_tender'));
     }
 

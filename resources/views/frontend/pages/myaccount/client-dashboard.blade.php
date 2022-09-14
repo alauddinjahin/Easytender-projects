@@ -209,6 +209,7 @@
                                     <tr class="text-center">
                                         <th>SL</th>
                                         <th>JOb ID</th>
+                                        <th>Batch ID</th>
                                         <th>Vat ID</th>
                                         <th>Charge</th>
                                         <th>Last Salling Date</th>
@@ -221,9 +222,10 @@
                                     @foreach ($all_tender as $tender)
                                         <tr>
                                             <td>{{ $loop->iteration }}</td>
+                                            <td>{{ $tender->id }}</td>
                                             <td>{{ $tender->batch_id }}</td>
                                             <td>{{ $tender->vat_id }}</td>
-                                            <td>{{ $tender->service_charge }}</td>
+                                            <td>{{ $tender->total_charge }} BDT</td>
                                             <td>{{ $tender->last_selling_date }}</td>
                                             <td>{{ $tender->tender_method }}</td>
                                             <td>
@@ -231,8 +233,6 @@
                                             </td>
                                             <td>
                                                 <a href="#" class="btn btn-primary btn-edit" data-id="{{ $tender->id }}" role="button">Edit</a>
-                                                {{-- <a class="btn btn-primary btn-edit" data-bs-toggle="modal" href="#tenderEditrModalToggle" role="button">Edit</a> --}}
-                                                {{-- <a class="btn btn-danger btn-bids" data-bs-toggle="modal" href="#freelancerModalToggle" role="button">Bids</a> --}}
                                                 <a href="#" class="btn btn-danger btn-bids" data-id="{{ $tender->id }}" role="button">Bids</a>
                                             </td>
                                         </tr>
@@ -294,6 +294,7 @@
                 <table id="freelancers-table" class="table table-striped nowrap">
                     <thead>
                         <tr class="text-center">
+                            <th>#</th>
                             <th>JOb ID</th>
                             <th>User ID</th>
                             <th>Vat ID</th>
@@ -304,16 +305,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Tiger Nixon</td>
-                            <td><a href="" title="click to view freelancer profile">System Architect</a></td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td>2011-04-25</td>
-                            <td>LTM</td>
-                            <td> <button class="btn btn-danger" data-bs-target="#approvalModal" data-bs-toggle="modal" data-bs-dismiss="modal">Approval</button></td>
-                        </tr>
-                        <tr>
+                        {{-- <tr>
                             <td>Tiger Nixon</td>
                             <td>System Architect</td>
                             <td>Edinburgh</td>
@@ -321,88 +313,7 @@
                             <td>2011-04-25</td>
                             <td>LTM</td>
                             <td> <button class="btn btn-danger" data-bs-target="#approvalModal" data-bs-toggle="modal" data-bs-dismiss="modal">Approval</button></td>
-                        </tr>
-                        <tr>
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td>2011-04-25</td>
-                            <td>LTM</td>
-                            <td> <button class="btn btn-danger" data-bs-target="#approvalModal" data-bs-toggle="modal" data-bs-dismiss="modal">Approval</button></td>
-                        </tr>
-                        <tr>
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td>2011-04-25</td>
-                            <td>LTM</td>
-                            <td> <button class="btn btn-danger" data-bs-target="#approvalModal" data-bs-toggle="modal" data-bs-dismiss="modal">Approval</button></td>
-                        </tr>
-                        <tr>
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td>2011-04-25</td>
-                            <td>LTM</td>
-                            <td> <button class="btn btn-danger" data-bs-target="#approvalModal" data-bs-toggle="modal" data-bs-dismiss="modal">Approval</button></td>
-                        </tr>
-                        <tr>
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td>2011-04-25</td>
-                            <td>LTM</td>
-                            <td> <button class="btn btn-danger" data-bs-target="#approvalModal" data-bs-toggle="modal" data-bs-dismiss="modal">Approval</button></td>
-                        </tr>
-                        <tr>
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td>2011-04-25</td>
-                            <td>LTM</td>
-                            <td> <button class="btn btn-danger" data-bs-target="#approvalModal" data-bs-toggle="modal" data-bs-dismiss="modal">Approval</button></td>
-                        </tr>
-                        <tr>
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td>2011-04-25</td>
-                            <td>LTM</td>
-                            <td> <button class="btn btn-danger" data-bs-target="#approvalModal" data-bs-toggle="modal" data-bs-dismiss="modal">Approval</button></td>
-                        </tr>
-                        <tr>
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td>2011-04-25</td>
-                            <td>LTM</td>
-                            <td> <button class="btn btn-danger" data-bs-target="#approvalModal" data-bs-toggle="modal" data-bs-dismiss="modal">Approval</button></td>
-                        </tr>
-                        <tr>
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td>2011-04-25</td>
-                            <td>LTM</td>
-                            <td> <button class="btn btn-danger" data-bs-target="#approvalModal" data-bs-toggle="modal" data-bs-dismiss="modal">Approval</button></td>
-                        </tr>
-                        <tr>
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td>2011-04-25</td>
-                            <td>LTM</td>
-                            <td> <button class="btn btn-danger" data-bs-target="#approvalModal" data-bs-toggle="modal" data-bs-dismiss="modal">Approval</button></td>
-                        </tr>
+                        </tr> --}}
                     </tbody>
                 </table>
             </div>
@@ -740,8 +651,9 @@
                 el.prop('disabled', true);
             },
             success(res){
-                console.log(res);
-                $('#freelancerModalToggle').modal('show');
+                // console.log(res);
+                showBidedUsers(res);
+                // $('#freelancerModalToggle').modal('show');
             },
             error(err){
                console.log(err);
@@ -756,7 +668,28 @@
         console.log(tender_data);
         // $('#edit-vat_id').val(tender_data.vat_id);
         $('#tenderEditrModalToggle').modal('show');
-     }
+    }
+
+    function showBidedUsers(res) {
+        // console.log(res);
+        const tbody =[];
+        $.each(res, (index, value) => { 
+            tbody.push(`
+            <tr>
+                <td>${index+1}</td>    
+                <td>${value.tender_id}</td>    
+                <td>${value.freelancer_name}</td>    
+                <td>${value.vat_id}</td>    
+                <td>${value.total_charge}</td>    
+                <td>${value.last_selling_date}</td>    
+                <td>${value.tender_method}</td>  
+                <td><button class="btn btn-danger btn-apporval" role="button" data-freelancer-id="${value.freelancr_id}" data-tender-id="${value.tender_id}">Approval</button></td>  
+            </tr>`);
+        });
+        $("#freelancers-table tbody").html(tbody.join(''));
+        $('#freelancerModalToggle').modal('show');
+
+    }
 </script>
 
 @endpush
