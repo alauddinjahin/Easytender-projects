@@ -13,7 +13,7 @@ class HomeController extends Controller
     }
     public function allTender()
     {
-        $all_tender = Tender::all();
+        $all_tender = Tender::where('status','publish')->get();
         return view('frontend.pages.tender.alltender',compact('all_tender'));
     }
 
@@ -26,4 +26,5 @@ class HomeController extends Controller
     {
         return view('frontend.pages.aboutus');
     }
+
 }

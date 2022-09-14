@@ -47,6 +47,7 @@ Route::group(['prefix'=>'client', 'middleware' => ['auth','is_client']], functio
 Route::group(['prefix'=>'freelancer', 'middleware' => ['auth','is_freelancer']], function () {
     Route::get('/',[DashboardController::class, 'freelancerDashboard'])->name('freelancer.dashboard');
     Route::post('/profile-update',[ProfileController::class,'freelancerProfileUpdate'])->name('freelancer.profile.update');
+    Route::get('/apply-job/{id}',[TenderController::class,'applyJob'])->name('apply.job');
 
     Route::get('/my-offer', function(){
         return view('frontend.pages.tender.myoffer');

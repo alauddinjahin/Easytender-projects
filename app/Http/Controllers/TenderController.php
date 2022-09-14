@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Bid;
 use App\Models\Tender;
 use App\Models\TenderItem;
 use Illuminate\Support\Str;
@@ -13,32 +14,7 @@ use Illuminate\Support\Facades\Auth;
 
 class TenderController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         $request->validate(Tender::$rules);
@@ -73,48 +49,25 @@ class TenderController extends Controller
         }
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Tender  $tender
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Tender $tender)
-    {
-        //
-    }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Tender  $tender
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Tender $tender)
+    public function applyJob($id)
     {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Tender  $tender
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Tender $tender)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Tender  $tender
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Tender $tender)
-    {
-        //
+        try {
+            $tender = Tender::find($id);
+            $bid_is_exist =  Bid::where('tender_id',$id)->where('freelancr_id',Auth::user()->id)->first();
+            
+            if (!is_null($bid_is_exist)) 
+                throw new Exception("You are already bided", 404);
+            
+            $bid = Bid::create([
+                'client_id'=> $tender->created_by,
+                'freelancr_id'=> Auth::user()->id,
+                'tender_id'=> $id,
+                'is_approve'=> 0,
+            ]);
+            return redirect()->back()->with('success', 'Bid Successfully!');
+        } catch (Exception $e) {
+            return redirect()->back()->withErrors($e->getMessage());
+        }
     }
 }

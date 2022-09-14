@@ -35,6 +35,11 @@
                                 <td><span>{{ $item->id }}</span></td>
                             </tr>   
                             <tr >
+                                <th>Batch ID</th>
+                                <td>&nbsp;:&nbsp;</td>
+                                <td><span>{{ $item->batch_id }}</span></td>
+                            </tr>   
+                            <tr >
                                 <th>Vat ID</th>
                                 <td>&nbsp;:&nbsp;</td>
                                 <td><span>{{ $item->vat_id }}</span></td>
@@ -56,7 +61,7 @@
                             </tr> 
                         </table>
                         <div class="custom-apply-btn">
-                            <a href="#" class="apply-btn" role="button">Apply</a>
+                            <a href="{{ route('apply.job',$item->id) }}" class="apply-btn" role="button">Apply</a>
                         </div>
                     </div>
                 </div>
@@ -67,6 +72,7 @@
                 <table class="table table-bordered table-striped" id="all-tender-table">
                     <tr>
                         <th>Job Id</th>
+                        <th>Batch </th>
                         <th>Vat Id</th>
                         <th>Last Droping Date</th>
                         <th>Method</th>
@@ -76,12 +82,13 @@
                     @foreach ($all_tender as $item)
                         <tr>
                             <td>{{ $item->id }}</td>
+                            <td>{{ $item->batch_id }}</td>
                             <td>{{ $item->vat_id }}</td>
                             <td>{{ $item->last_selling_date }}</td>
                             <td>{{ $item->tender_method }}</td>
-                            <td>{{ $item->service_charge }} BDT</td>
+                            <td>{{ $item->total_charge }} BDT</td>
                             <td class="text-center">
-                                <div class="custom-apply-btn"><a href="#" class="apply-btn" role="button" >Apply</a></div>
+                                <div class="custom-apply-btn"><a href="{{ route('apply.job',$item->id) }}" class="apply-btn" role="button" >Apply</a></div>
                             </td>
                         </tr>
                     @endforeach
