@@ -25,6 +25,20 @@
                 <button class="btn float-end active" id="listView" title="List view"><i class="fa fa-bars"></i></button> 
                 <button class="btn float-end " id="gridView" title="Grid view"><i class="fa fa-th-large"></i></button>
             </div>
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+            @if (session('success'))
+                <div class="alert alert-success alert-dismissible fade show m-3" role="alert">
+                    <strong>{{session('success')}}</strong>
+                </div>
+            @endif
             @foreach ($all_tender as $item)
                 <div class="col-md-4  m-0 p-0">
                     <div class="all-vat-card px-3 py-4">
@@ -57,7 +71,7 @@
                             <tr>
                                 <th>Service Charge</th>
                                 <td>&nbsp;:&nbsp;</td>
-                                <td><span>{{ $item->service_charge }} BDT</span></td>
+                                <td><span>{{ $item->total_charge }} BDT</span></td>
                             </tr> 
                         </table>
                         <div class="custom-apply-btn">
