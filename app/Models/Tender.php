@@ -15,7 +15,6 @@ class Tender extends Model
         'tender_method_id',
         'tender_method',
         'last_selling_date',
-        'service_charge',
         'total_charge',
         'status',
         'created_by',
@@ -23,7 +22,6 @@ class Tender extends Model
 
     public static $rules = [
         'vat_id'            => 'required',
-        // 'tender_method_id'  => 'required',
         'tender_method'     => 'required',
         'last_selling_date' => 'required',
         'service_charge'    => 'required',

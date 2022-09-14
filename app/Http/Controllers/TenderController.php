@@ -3,8 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Tender;
+use App\Models\TenderItem;
 use Illuminate\Support\Str;
+use App\Models\TenderMethod;
+use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
 class TenderController extends Controller
@@ -38,21 +42,35 @@ class TenderController extends Controller
     public function store(Request $request)
     {
         $request->validate(Tender::$rules);
-        $batch_id = Str::random(10);
-        foreach ($request->vat_id as $key => $value) {
-            Tender::create([
-                'batch_id'          => $batch_id,
-                'vat_id'            => $value,
-                'tender_method'     => $request->tender_method,
+        try {
+            DB::beginTransaction();
+            $tender_method = TenderMethod::find($request->tender_method);
+            $tender = Tender::create([
+                'vat_id'            => implode(", ", $request->vat_id),
+                'tender_method_id'  => $tender_method->id,
+                'tender_method'     => $tender_method->short_name,
                 'last_selling_date' => $request->last_selling_date,
-                'service_charge'    => $request->service_charge,
                 'total_charge'      => $request->total_charge,
                 'status'            => $request->status,
                 'created_by'        => Auth::user()->id,
             ]);
-        }
-        return redirect()->back()->with('success','Offer created successfully!');
+            $batch_id = date('ymd') . str_pad($tender->id, 4, 0, STR_PAD_LEFT);
+            Tender::where('id', $tender->id)->update(['batch_id'=>$batch_id]);
 
+            foreach ($request->vat_id as $key => $value) {
+                TenderItem::create([
+                    'tender_id'      => $tender->id,
+                    'batch_id'       => $batch_id,
+                    'vat_id'         => $value,
+                    'service_charge' => $request->service_charge,
+                ]);
+            }
+            DB::commit();
+            return redirect()->back()->with('success','Tender created successfully!');
+        } catch (Exception $e) {
+            DB::rollBack();
+            return redirect()->back()->withErrors($e->getMessage());
+        }
     }
 
     /**

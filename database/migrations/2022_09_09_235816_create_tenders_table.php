@@ -20,7 +20,6 @@ return new class extends Migration
             $table->string('tender_method_id')->nullable();
             $table->string('tender_method');
             $table->date('last_selling_date');
-            $table->double('service_charge');
             $table->double('total_charge')->nullable();
             $table->string('status');
             $table->integer('created_by');

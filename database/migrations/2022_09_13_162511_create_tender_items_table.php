@@ -19,6 +19,7 @@ return new class extends Migration
             $table->foreign('tender_id')->references('id')->on('tenders')->restrictOnDelete();
             $table->string('batch_id');
             $table->string('vat_id');
+            $table->double('service_charge');
             $table->timestamps();
         });
     }

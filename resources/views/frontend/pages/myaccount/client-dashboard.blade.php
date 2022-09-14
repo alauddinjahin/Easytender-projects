@@ -147,7 +147,7 @@
                                 <select name="tender_method" id="method-selection" class="form-control" required>
                                     <option value="">Select Method</option>
                                     @foreach ($tender_methods as $item)
-                                        <option value="{{ $item->short_name }}">{{ $item->short_name }}</option>
+                                        <option value="{{ $item->id }}">{{ $item->short_name }}</option>
                                     @endforeach
                                 </select>
                             </div>

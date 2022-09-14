@@ -27,10 +27,7 @@ Route::get('/all-tender',[HomeController::class,'allTender'])->name('all_tender'
 
 
 Route::group(['prefix'=>'admin', 'middleware' => ['auth','is_admin']], function () {
-    Route::get('/', function(){
-        return view('backend.admindashboard');
-    });
-
+    Route::get('/',[DashboardController::class,'adminDashboard'])->name('admin.dashboard');
     Route::get('/tender-methods',[TenderMethodController::class, 'index'])->name('admin.tender.methods');
     Route::get('/tender-method-create',[TenderMethodController::class, 'create'])->name('tender_method_create');
     Route::post('/method-create',[TenderMethodController::class, 'store'])->name('method.create');

@@ -24,6 +24,11 @@ class DashboardController extends Controller
         }
     }
 
+    public function adminDashboard()
+    {
+        return view('backend.admindashboard');
+    }
+
     public function clientDashboard()
     {
         $client_profile = Profile::firstWhere('user_id', Auth::user()->id);
