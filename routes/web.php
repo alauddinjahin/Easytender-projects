@@ -38,6 +38,7 @@ Route::group(['prefix'=>'client', 'middleware' => ['auth','is_client']], functio
     Route::get('/', [DashboardController::class,'clientDashboard'])->name('client.dashboard');
     Route::post('/profile-update',[ProfileController::class,'profileUpdate'])->name('client.profile.update');
     Route::post('tender-store',[TenderController::class,'store'])->name('client.tender.store');
+    Route::post('upload-file-to-freelancer',[TenderController::class,'upload_file_to_freelancer'])->name('upload_file_to_freelancer');
     
     Route::get('/offer-tender', function(){
         return view('frontend.pages.tender.offertender');

@@ -30,7 +30,9 @@ class ClientDashboardApiController extends Controller
                         tenders.status,
                         users.name as freelancer_name,
                         users.phone,
+                        bids.id as bid_id,
                         bids.freelancr_id,
+                        bids.client_id,
                         bids.is_approve
                     ')
                     ->where('tender_id',$request->tender_id)

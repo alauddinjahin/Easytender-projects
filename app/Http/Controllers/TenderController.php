@@ -70,4 +70,9 @@ class TenderController extends Controller
             return redirect()->back()->withErrors($e->getMessage());
         }
     }
+
+    public function upload_file_to_freelancer(Request $request)
+    {
+        dd($request->all());
+    }
 }

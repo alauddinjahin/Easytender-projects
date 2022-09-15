@@ -304,7 +304,7 @@
                             <th>Action</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="pb-4">
                         {{-- <tr>
                             <td>Tiger Nixon</td>
                             <td>System Architect</td>
@@ -322,7 +322,7 @@
     </div>
   </div>
 
-  <div class="modal fade" id="approvalModal" aria-hidden="true" aria-labelledby="approvalModal" tabindex="-1">
+  <div class="modal fade" id="approvalModal" data-bs-backdrop="static" aria-hidden="true" aria-labelledby="approvalModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
@@ -330,11 +330,12 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <form action="#" method="post">
+          <form action="{{ route('upload_file_to_freelancer') }}" method="post" enctype="multipart/form-data" id="upload-attachment-form">
+            @csrf
             <div class="row mb-3">
                 <label for="phone" class="col-md-3 col-form-label">Phone</label>
                 <div class="col-md-9">
-                  <input type="email" class="form-control" id="phone">
+                  <input type="text" name="phone" class="form-control" id="phone" >
                 </div>
             </div>
             <div class="row mb-3">
@@ -342,7 +343,7 @@
                 <div class="col-md-9">
                     <div class="row" id="file-upload">
                         <div class="col-11 mb-2">
-                            <input type="file" class="form-control" id="file">
+                            <input type="file" name="attachment[]" class="form-control" id="file">
                         </div>
                         <div class="col-1">
                             <button class="btn btn-success float-end" id="btn-add-file-upload" type="button" title="Add more file"><i class="fa fa-plus"></i></button>
@@ -547,6 +548,7 @@
             
             $(document).on('click', '.btn-edit', tenderUpdateModal);
             $(document).on('click', '.btn-bids', triggerBidUsers);
+            $(document).on('click', '.btn-apporval', triggerBtnApproval);
             init();
         });
     })(jQuery)
@@ -683,12 +685,28 @@
                 <td>${value.total_charge}</td>    
                 <td>${value.last_selling_date}</td>    
                 <td>${value.tender_method}</td>  
-                <td><button class="btn btn-danger btn-apporval" role="button" data-freelancer-id="${value.freelancr_id}" data-tender-id="${value.tender_id}">Approval</button></td>  
+                <td><button class="btn btn-danger btn-apporval" role="button" data-bid-id="${value.bid_id}" data-freelancer-id="${value.freelancr_id}" data-tender-id="${value.tender_id}" data-client-id="${value.client_id}">Approval</button></td>  
             </tr>`);
         });
         $("#freelancers-table tbody").html(tbody.join(''));
         $('#freelancerModalToggle').modal('show');
 
+    }
+
+    function triggerBtnApproval(){
+        const el = $(this);
+        const tender_id = el.data('tender-id')
+        const client_id = el.data('client-id')
+        const freelancer_id= el.data('freelancer-id')
+        // $("<input>").attr("type", "hidden").appendTo("#upload-attachment-form");
+        const fields = `
+                        <input type='hidden' name='tender_id' value='${tender_id}'>
+                        <input type='hidden' name='client_id' value='${client_id}'>
+                        <input type='hidden' name='freelancer_id' value='${freelancer_id}'>
+                    `;
+        $("#upload-attachment-form").append(fields);
+        $('#freelancerModalToggle').modal('hide');
+        $('#approvalModal').modal('show');
     }
 </script>
 
