@@ -78,16 +78,27 @@ class TenderController extends Controller
 
         if ($request->file('attachment')) {
             foreach ($request->attachment as $k => $v) {
-                // dd($v);
+                $filename = 'bid-attachment/'.$v->getClientOriginalName();
+                $v->move(public_path('bid-attachment'), $filename);
                $bid_attachment = BidAttachment::create([
-                    'bid_id'=>$request->bid_id,
-                    'client_id'=>$request->client_id,
-                    'freelancr_id'=>$request->freelancr_id,
-                    'tender_id'=>$request->tender_id,
-                    'phone'=>$request->phone,
-                    'attachment'=>'0'
+                    'bid_id'       => $request->bid_id,
+                    'client_id'    => $request->client_id,
+                    'freelancr_id' => $request->freelancr_id,
+                    'tender_id'    => $request->tender_id,
+                    'phone'        => $request->phone,
+                    'attachment'   => $filename
                 ]);
             }
+            if ($bid_attachment) {
+                Bid::where('id',$request->bid_id)->update([
+                    'is_approve'=> 1,
+                ]);
+
+                Tender::where('id',$request->tender_id)->update([
+                    'status'=>'approved',
+                ]);
+            }
+            return redirect()->route('client.dashboard')->with('success','Bid approval successfully!');
         }
     }
 }
