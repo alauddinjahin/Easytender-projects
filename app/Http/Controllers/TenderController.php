@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Bid;
+use App\Models\BidAttachment;
 use App\Models\Tender;
 use App\Models\TenderItem;
 use Illuminate\Support\Str;
@@ -49,7 +50,6 @@ class TenderController extends Controller
         }
     }
 
-
     public function applyJob($id)
     {
         try {
@@ -73,6 +73,21 @@ class TenderController extends Controller
 
     public function upload_file_to_freelancer(Request $request)
     {
-        dd($request->all());
+        // dd($request->all());
+        $request->validate(BidAttachment::$rules);
+
+        if ($request->file('attachment')) {
+            foreach ($request->attachment as $k => $v) {
+                // dd($v);
+               $bid_attachment = BidAttachment::create([
+                    'bid_id'=>$request->bid_id,
+                    'client_id'=>$request->client_id,
+                    'freelancr_id'=>$request->freelancr_id,
+                    'tender_id'=>$request->tender_id,
+                    'phone'=>$request->phone,
+                    'attachment'=>'0'
+                ]);
+            }
+        }
     }
 }

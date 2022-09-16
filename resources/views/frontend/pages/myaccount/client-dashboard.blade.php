@@ -20,7 +20,20 @@
 <!-- Start content -->
 <div class="rs-about style2">
     <div class="container py-5">
-
+        @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+    @if (session('success'))
+        <div class="alert alert-success alert-dismissible fade show m-3" role="alert">
+            <strong>{{session('success')}}</strong>
+        </div>
+    @endif
         <div class="row">
             <div class="tab tab-menu col-md-3">
                 <span class="menu-header">User Information</span>
@@ -115,20 +128,6 @@
 
             <div class="tabcontent col-9" id="offer-new-Job">
                 <div class="row profile-content p-4"> 
-                    @if ($errors->any())
-                        <div class="alert alert-danger">
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    @endif
-                    @if (session('success'))
-                        <div class="alert alert-success alert-dismissible fade show m-3" role="alert">
-                            <strong>{{session('success')}}</strong>
-                        </div>
-                    @endif
                     <form action="{{ route('client.tender.store') }}" method="post">
                         @csrf
                         <div class="form-group row mb-3">
@@ -589,7 +588,7 @@
         let id = new Date().getTime();
         const inputText = `
                 <div class="col-11 mb-2">
-                    <input type="file" class="form-control " id="file_${id}">
+                    <input type="file" name="attachment[]" class="form-control " id="file_${id}">
                 </div>
                 <div class="col-1">
                     <button class="btn btn-danger float-end btn-remove-file-upload" data-fileid="file_${id}" type="button" title="Remove file"><i class="fa fa-times"></i></button>
@@ -695,14 +694,16 @@
 
     function triggerBtnApproval(){
         const el = $(this);
+        const bid_id = el.data('bid-id')
         const tender_id = el.data('tender-id')
         const client_id = el.data('client-id')
         const freelancer_id= el.data('freelancer-id')
         // $("<input>").attr("type", "hidden").appendTo("#upload-attachment-form");
         const fields = `
+                        <input type='hidden' name='bid_id' value='${bid_id}'>
                         <input type='hidden' name='tender_id' value='${tender_id}'>
                         <input type='hidden' name='client_id' value='${client_id}'>
-                        <input type='hidden' name='freelancer_id' value='${freelancer_id}'>
+                        <input type='hidden' name='freelancr_id' value='${freelancer_id}'>
                     `;
         $("#upload-attachment-form").append(fields);
         $('#freelancerModalToggle').modal('hide');
