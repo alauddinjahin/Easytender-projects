@@ -148,7 +148,7 @@
                                         @endif
                                     </td>
                                     <td>
-                                        <a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#jobDetailsModal" role="button">Job Details</a>
+                                        <a class="btn btn-danger btn-job-dtails" data-bs-toggle="modal" data-tender-id="{{ $item->tender_id }}" role="button">Job Details</a>
                                     </td>
                                 </tr>
                             @endforeach
@@ -321,7 +321,7 @@
         $(document).ready(function(){
             $("#my-job-list-table, #payment-history-table, #freelancers-table").DataTable();
             
-            $(document).on('click', '.btn-freelancers', tenderDetails);
+            $(document).on('click', '.btn-job-dtails', tenderDetails);
         });
     })(jQuery)
 
@@ -345,7 +345,21 @@
     document.getElementById("defaultOpen").click();
 
     function tenderDetails() {
-        // $("#freelancers-modal").modal('show');
+        const el = $(this);
+        const payload   = {
+            tender_id : el.data('tender-id')
+        }
+        console.log(payload);
+        $.ajax({
+            type: "GET",
+            url: "/api/get-tender-by-id",
+            data: payload,
+            dataType: "json",
+            success(response) {
+                console.log(response);
+            }
+        });
+        $("#jobDetailsModal").modal('show');
     }
 
 </script>

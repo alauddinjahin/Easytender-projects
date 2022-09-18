@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\ClientDashboardApiController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +23,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/get-tender',[ClientDashboardApiController::class,'getTender']);
 Route::get('/get-bided-users',[ClientDashboardApiController::class,'getBiddedUsers']);
+Route::get('/get-tender-by-id',[DashboardController::class,'getTenderById']);

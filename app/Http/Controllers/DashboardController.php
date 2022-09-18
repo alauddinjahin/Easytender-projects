@@ -67,4 +67,8 @@ class DashboardController extends Controller
         $start_job = Tender::find($id)->update(['status'=>'processing']);
         return redirect()->route('freelancer.dashboard')->with('success','Job Started successfully');
     }
+    public function getTenderById(Request $request)
+    {
+        dd($request->all());
+    }
 }
