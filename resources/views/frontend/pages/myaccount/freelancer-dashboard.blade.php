@@ -130,62 +130,29 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>System Architect</td>
-                                <td>Tiger Nixon</td>
-                                <td>Edinburgh</td>
-                                <td>610 BDT</td>
-                                <td>2011-04-25</td>
-                                <td>LTM</td>
-                                <td>
-                                    <span class="badge bg-info">Start Job</span>
-                                </td>
-                                <td>
-                                    <a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#jobDetailsModal" role="button">Job Details</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>System Architect</td>
-                                <td>Tiger Nixon</td>
-                                <td>Edinburgh</td>
-                                <td>610 BDT</td>
-                                <td>2011-04-25</td>
-                                <td>LTM</td>
-                                <td>
-                                    <span class="badge bg-primary">Processing</span>
-                                </td>
-                                <td>
-                                    <a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#jobDetailsModal" role="button">Job Details</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>System Architect</td>
-                                <td>Tiger Nixon</td>
-                                <td>Edinburgh</td>
-                                <td>610 BDT</td>
-                                <td>2011-04-25</td>
-                                <td>LTM</td>
-                                <td>
-                                    <span class="badge bg-success">Completed</span>
-                                </td>
-                                <td>
-                                    <a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#jobDetailsModal" role="button">Job Details</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>System Architect</td>
-                                <td>Tiger Nixon</td>
-                                <td>Edinburgh</td>
-                                <td>610 BDT</td>
-                                <td>2011-04-25</td>
-                                <td>LTM</td>
-                                <td>
-                                    <span class="badge bg-danger">Failed</span>
-                                </td>
-                                <td>
-                                    <a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#jobDetailsModal" role="button">Job Details</a>
-                                </td>
-                            </tr>
+                            @foreach ($my_jobs as $item)
+                                <tr>
+                                    <td>{{ $item->client_name }}</td>
+                                    <td>{{ $item->tender_id }}</td>
+                                    <td>{{ $item->vat_id }}</td>
+                                    <td>{{ $item->total_charge }}</td>
+                                    <td>{{ $item->last_selling_date }}</td>
+                                    <td>{{ $item->tender_method }}</td>
+                                    <td>
+                                        @if ($item->status === 'approved')
+                                            <a href="{{ route('start_job',$item->tender_id) }}" class="badge bg-info p-1" title="click for start job">Start Job</a>
+                                        @elseif($item->status === 'processing')
+                                            <span class="badge bg-primary">Processing</span>
+                                        @else
+                                            <span class="badge bg-warning">Applyed</span>
+                                        @endif
+                                    </td>
+                                    <td>
+                                        <a class="btn btn-danger btn-freelancers" data-bs-toggle="modal" href="#jobDetailsModal" role="button">Job Details</a>
+                                    </td>
+                                </tr>
+                            @endforeach
+                            
                         </tbody>
                     </table>
                 </div>

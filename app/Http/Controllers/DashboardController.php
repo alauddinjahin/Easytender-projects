@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Bid;
 use App\Models\Profile;
 use App\Models\Tender;
 use App\Models\TenderMethod;
@@ -40,7 +41,30 @@ class DashboardController extends Controller
     public function freelancerDashboard()
     {
         $freelancer_profile = Profile::firstWhere('user_id', Auth::user()->id);
-        return view('frontend.pages.myaccount.freelancer-dashboard',compact('freelancer_profile'));
+        $my_jobs = Bid::join('tenders','tenders.id','bids.tender_id')
+                        ->join('users','users.id','tenders.created_by')
+                        ->selectRaw('
+                            tenders.id as tender_id,
+                            tenders.batch_id,
+                            tenders.vat_id,
+                            tenders.tender_method,
+                            tenders.last_selling_date,
+                            tenders.total_charge,
+                            tenders.status,
+                            tenders.created_by as client_name,
+                            bids.id as bid_id,
+                            bids.is_approve,
+                            users.name as client_name
+                        ')
+                        ->where('bids.freelancr_id',Auth::user()->id)
+                        ->get();
+                        // dd($my_jobs);
+        return view('frontend.pages.myaccount.freelancer-dashboard',compact('freelancer_profile','my_jobs'));
     }
 
+    public function start_job($id)
+    {
+        $start_job = Tender::find($id)->update(['status'=>'processing']);
+        return redirect()->route('freelancer.dashboard')->with('success','Job Started successfully');
+    }
 }
