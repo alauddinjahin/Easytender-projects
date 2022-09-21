@@ -41,7 +41,7 @@
             @endif
             @foreach ($all_tender as $item)
                 <div class="col-md-4  m-0 p-0">
-                    <div class="all-vat-card px-3 py-4">
+                    <div class="all-vat-card px-3 py-4" style="display: none">
                         <table class="all-vat-card-wrap">
                             <tr >
                                 <th>JOB ID</th>
