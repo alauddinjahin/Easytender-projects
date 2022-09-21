@@ -290,7 +290,7 @@ class SslCommerzNotification extends AbstractSslCommerz
         $this->data['total_amount'] = $info['total_amount']; // decimal (10,2)	Mandatory - The amount which will process by SSLCommerz. It shall be decimal value (10,2). Example : 55.40. The transaction amount must be from 10.00 BDT to 500000.00 BDT
         $this->data['currency'] = $info['currency']; // string (3)	Mandatory - The currency type must be mentioned. It shall be three characters. Example : BDT, USD, EUR, SGD, INR, MYR, etc. If the transaction currency is not BDT, then it will be converted to BDT based on the current convert rate. Example : 1 USD = 82.22 BDT.
         $this->data['tran_id'] = $info['tran_id']; // string (30)	Mandatory - Unique transaction ID to identify your order in both your end and SSLCommerz
-        $this->data['product_category'] = $info['product_category']; // string (50)	Mandatory - Mention the product category. It is a open field. Example - clothing,shoes,watches,gift,healthcare, jewellery,top up,toys,baby care,pants,laptop,donation,etc
+        // $this->data['product_category'] = $info['product_category']; // string (50)	Mandatory - Mention the product category. It is a open field. Example - clothing,shoes,watches,gift,healthcare, jewellery,top up,toys,baby care,pants,laptop,donation,etc
 
         // Set the SUCCESS, FAIL, CANCEL Redirect URL before setting the other parameters
         $this->setSuccessUrl();
@@ -398,8 +398,8 @@ class SslCommerzNotification extends AbstractSslCommerz
     public function setProductInfo(array $info)
     {
 
-        $this->data['product_name'] = (isset($info['product_name'])) ? $info['product_name'] : ''; // String (256)	Mandatory - Mention the product name briefly. Mention the product name by coma separate. Example: Computer,Speaker
-        $this->data['product_category'] = (isset($info['product_category'])) ? $info['product_category'] : ''; // String (100)	Mandatory - Mention the product category. Example: Electronic or topup or bus ticket or air ticket
+        $this->data['product_name'] = (isset($info['product_name'])) ? $info['product_name'] : 'test'; // String (256)	Mandatory - Mention the product name briefly. Mention the product name by coma separate. Example: Computer,Speaker
+        $this->data['product_category'] = (isset($info['product_category'])) ? $info['product_category'] : 'test'; // String (100)	Mandatory - Mention the product category. Example: Electronic or topup or bus ticket or air ticket
 
         /*
          * String (100)
@@ -412,7 +412,7 @@ class SslCommerzNotification extends AbstractSslCommerz
             5) travel-vertical
             6) telecom-vertical
         */
-        $this->data['product_profile'] = (isset($info['product_profile'])) ? $info['product_profile'] : '';
+        $this->data['product_profile'] = (isset($info['product_profile'])) ? $info['product_profile'] : 'xcv';
 
         $this->data['hours_till_departure'] = (isset($info['hours_till_departure'])) ? $info['hours_till_departure'] : null; // string (30)	Mandatory, if product_profile is airline-tickets - Provide the remaining time of departure of flight till at the time of purchasing the ticket. Example: 12 hrs or 36 hrs
         $this->data['flight_type'] = (isset($info['flight_type'])) ? $info['flight_type'] : null; // string (30)	Mandatory, if product_profile is airline-tickets - Provide the flight type. Example: Oneway or Return or Multistop

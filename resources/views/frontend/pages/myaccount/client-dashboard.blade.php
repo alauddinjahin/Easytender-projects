@@ -356,14 +356,13 @@
             </div>
             <div class="row mb-3">
                 <div class="col-md-12">
-                    <button type="submit" class="btn btn-danger float-end">Submit</button>
-                    <button id="sslczPayBtn">Submit</button>
+                    <!-- <button type="submit" class="btn btn-danger float-end">Submit</button> -->
                     @php
                         $orderData = [
-                            [
-                                'tender_id'=>1,
-                                'client_id'=>1,
-                            ] 
+                            'tender_id'=>1,
+                            'payment_by'=>1,
+                            'freelancer_id'=>1,
+                            'amount'=>100,
                         ];   
                     @endphp
                     <button class="your-button-class" id="sslczPayBtn"

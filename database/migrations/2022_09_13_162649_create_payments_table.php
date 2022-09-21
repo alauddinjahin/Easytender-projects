@@ -24,7 +24,7 @@ return new class extends Migration
             $table->foreignId('freelancer_id');
             $table->foreign('freelancer_id')->references('id')->on('users')->restrictOnDelete();
             $table->string('payment_method');
-            $table->string('transation_id');
+            $table->string('transaction_id');
             $table->double('amount')->default(0);
             $table->string('status')->default('pending');
             $table->string('currency');
