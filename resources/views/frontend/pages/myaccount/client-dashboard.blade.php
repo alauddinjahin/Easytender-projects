@@ -357,12 +357,20 @@
             <div class="row mb-3">
                 <div class="col-md-12">
                     <button type="submit" class="btn btn-danger float-end">Submit</button>
+                    <button id="sslczPayBtn">Submit</button>
+                    @php
+                        $orderData = [
+                            [
+                                'tender_id'=>1,
+                                'client_id'=>1,
+                            ] 
+                        ];   
+                    @endphp
                     <button class="your-button-class" id="sslczPayBtn"
-                        token="if you have any token validation"
-                        postdata="your javascript arrays or objects which requires in backend"
-                        order="If you already have the transaction generated for current order"
+                        postdata=""
+                        order="{{ json_encode($orderData) }}"
                         endpoint="/pay-via-ajax"> Pay Now
-                </button>
+                    </button>
                 </div>
             </div>
             
@@ -704,11 +712,21 @@
 
     function triggerBtnApproval(){
         const el = $(this);
+        console.log($('#sslczPayBtn').val());
+
         const bid_id = el.data('bid-id')
         const tender_id = el.data('tender-id')
         const client_id = el.data('client-id')
         const freelancer_id= el.data('freelancer-id')
-        // $("<input>").attr("type", "hidden").appendTo("#upload-attachment-form");
+
+        // const reqData = {
+        //     bid_id       : el.data('bid-id'),
+        //     tender_id    : el.data('tender-id'),
+        //     client_id    : el.data('client-id'),
+        //     freelancer_id: el.data('freelancer-id')
+        // }
+        // $('sslczPayBtn').attr({order:reqData});
+
         const fields = `
                         <input type='hidden' name='bid_id' value='${bid_id}'>
                         <input type='hidden' name='tender_id' value='${tender_id}'>
